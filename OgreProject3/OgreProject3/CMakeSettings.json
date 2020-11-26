@@ -1,0 +1,35 @@
+﻿{
+    "configurations": [
+        {
+            "buildCommandArgs": "-v",
+            "buildRoot": "${projectDir}\\out\\build\\${name}",
+            "cmakeCommandArgs": "",
+            "configurationType": "Debug",
+            "ctestCommandArgs": "",
+            "generator": "Ninja",
+            "inheritEnvironments": [ "msvc_x64_x64" ],
+            "installRoot": "${projectDir}\\out\\install\\${name}",
+            "name": "x64-Debug",
+            "cmakeToolchain": "",
+            "variables": []
+        },
+        {
+            "name": "x64-Release",
+            "generator": "Ninja",
+            "configurationType": "Release",
+            "inheritEnvironments": [ "msvc_x64_x64" ],
+            "buildRoot": "${projectDir}\\out\\build\\${name}",
+            "installRoot": "${projectDir}\\out\\install\\${name}",
+            "cmakeCommandArgs": "",
+            "buildCommandArgs": "-v",
+            "ctestCommandArgs": "",
+            "variables": [
+                {
+                    "name": "_VCPKG_INSTALLED_DIR",
+                    "value": "E:/GRAPHICSPROJECT/vcpkg/vcpkg/installed",
+                    "type": "PATH"
+                }
+            ]
+        }
+    ]
+}
