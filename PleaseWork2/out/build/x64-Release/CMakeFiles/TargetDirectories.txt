@@ -1,3 +1,0 @@
-C:/Users/Rytis/Desktop/Graphics/RoadCrossingSimulator/PleaseWork2/out/build/x64-Release/CMakeFiles/0_PleaseWork2.dir
-C:/Users/Rytis/Desktop/Graphics/RoadCrossingSimulator/PleaseWork2/out/build/x64-Release/CMakeFiles/edit_cache.dir
-C:/Users/Rytis/Desktop/Graphics/RoadCrossingSimulator/PleaseWork2/out/build/x64-Release/CMakeFiles/rebuild_cache.dir

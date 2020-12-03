@@ -411,4 +411,5 @@ We use optional third-party analytics cookies to understand how you use GitHub.c
 
 # Project settings
 OgreProject3/CMakeSettings.json
+.out/
 out/
