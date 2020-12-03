@@ -12,13 +12,10 @@ int main(int argc, char* argv[])
     cout << "Hello." << endl;
     try
     {
-    
-
         App app;
         app.initApp();
         app.getRoot()->startRendering();
         app.closeApp();
-
     }
     catch (Ogre::Exception& e)
     {

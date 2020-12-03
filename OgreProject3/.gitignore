@@ -409,4 +409,7 @@ Blog
 About
 We use optional third-party analytics cookies to understand how you use GitHub.com so we can build better products. .
 
- 
+# Project settings
+OgreProject3/CMakeSettings.json
+out/
+*.vs/

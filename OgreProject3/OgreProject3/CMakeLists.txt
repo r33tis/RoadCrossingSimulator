@@ -13,8 +13,10 @@ add_executable (OgreProject3 "OgreProject3.cpp" "App.cpp")
 # TODO: Add tests and install targets if needed.
 
 find_package(OGRE CONFIG REQUIRED)
+#find_package(OpenGL REQUIRED COMPONENTS OpenGL)
 # Note: 6 target(s) were omitted.
-target_link_libraries(OgreProject3 PRIVATE OgreMain OgreBites OgrePaging OgreVolume OgreRTShaderSystem)
+target_link_libraries(OgreProject3 PRIVATE OgreMain OgreBites OgrePaging OgreVolume OgreRTShaderSystem )
+#target_link_libraries(OgreProject3 PRIVATE OpenGL)
 #target_link_libraries(OgreProject3 PRIVATE ${OGRE_LIBRARIES})
 
 set("OGRE_CONFIG_DIR" "./conf")

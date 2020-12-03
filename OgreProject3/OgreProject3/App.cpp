@@ -1,11 +1,16 @@
 #include "App.h"
+Ogre::SceneNode* triangleNode;
 
+bool move_left, move_right, move_forw, move_backw, move_up, move_down;
 
 void App::setup(void)
 {
     // do not forget to call the base first
     OgreBites::ApplicationContext::setup();
     
+    // set inital variable values
+    move_left = move_right = move_forw = move_backw = move_up = move_down = false;
+
     // register for input events
     addInputListener(this);
 
@@ -57,7 +62,7 @@ void App::setup(void)
     triangle->end();
 
 
-    Ogre::SceneNode* triangleNode = scnMgr->getRootSceneNode()->createChildSceneNode();
+    triangleNode = scnMgr->getRootSceneNode()->createChildSceneNode();
     triangleNode->attachObject(triangle);
 
 
@@ -65,4 +70,59 @@ void App::setup(void)
 
     /*Ogre::Light* light = scnMgr->createLight("MainLight");
     light->setPosition(20, 80, 50);*/
+}
+
+bool App::keyPressed(const OgreBites::KeyboardEvent& evt)
+{
+    std::cout << "Captured keypress" << 'n';
+    if (evt.keysym.sym == OgreBites::SDLK_ESCAPE)
+    {
+        std::cout << "Pressed escape" << '\n';
+        getRoot()->queueEndRendering();
+    }
+
+    return true;
+}
+
+bool App::textInput(const OgreBites::TextInputEvent& evt)
+{
+    std::cout << "Captured text input" << 'n';
+    char c = *evt.chars;
+    if (c == 'q') {
+        move_up = true;
+    }
+    else if (c == 'w') {
+        move_forw = true;
+    }
+    else if (c == 'e') {
+        move_down = true;
+    }
+    else if (c == 'a') {
+        move_left = true;
+    }
+    else if (c == 's') {
+        move_backw = true;
+    }
+    else if (c == 'd') {
+        move_right = true;
+    }
+
+    return true;
+}
+
+bool App::frameEnded(const Ogre::FrameEvent& evt)
+{
+    float unit = 0.1f;
+    float x = 0, y = 0, z = 0;
+    if (move_up) { y += unit; }
+    if (move_forw) { z -= unit; }
+    if (move_down) { y -= unit; }
+    if (move_left) { x -= unit; }
+    if (move_backw) { z += unit; }
+    if (move_right) { x += unit; }
+    move_left = move_right = move_forw = move_backw = move_up = move_down = false;
+
+    triangleNode->translate(x, y, z);
+
+    return true;
 }
