@@ -17,6 +17,9 @@ void App::setup(void)
     // get a pointer to the already created root
     Ogre::Root* root = getRoot();
     Ogre::SceneManager* scnMgr = root->createSceneManager();
+	
+	// add resource folder to resourcegroupmanager
+    Ogre::ResourceGroupManager::getSingleton().addResourceLocation("resources", "FileSystem");
 
     // register our scene with the RTSS
     Ogre::RTShader::ShaderGenerator* shadergen = Ogre::RTShader::ShaderGenerator::getSingletonPtr();
@@ -43,27 +46,11 @@ void App::setup(void)
     getRenderWindow()->addViewport(cam);
 
     // finally something to render
-    /*Ogre::Entity* ent = scnMgr->createEntity("Sinbad.mesh");
+    Ogre::Entity* ent = scnMgr->createEntity("Cube.mesh");
     Ogre::SceneNode* node = scnMgr->getRootSceneNode()->createChildSceneNode();
-    node->attachObject(ent);*/
-
-    Ogre::ManualObject* triangle = scnMgr->createManualObject("Triangle");
-
-    // ~ glBegin, glVertex, glEnd
-    // "BaseWhiteNoLighting" is a built-in name for a basic non-lit material
-    triangle->begin("BaseWhiteNoLighting");
-    triangle->position(0, 0.5, 0);            // ~ glVertex.
-                                              // Contrary to OpenGL we *first* must create the vertex
-    triangle->colour(Ogre::ColourValue::Red); // .. and then provide its attributes such as color (~ glColor)
-    triangle->position(-0.5, -0.5, 0);
-    triangle->colour(Ogre::ColourValue::Green);
-    triangle->position(0.5, -0.5, 0);
-    triangle->colour(Ogre::ColourValue::Blue);
-    triangle->end();
-
-
-    triangleNode = scnMgr->getRootSceneNode()->createChildSceneNode();
-    triangleNode->attachObject(triangle);
+    node->attachObject(ent);
+    node->setDirection(0.0F, 0.0F, M_PI);
+    node->setPosition(0, 5, 2);
 
 
     scnMgr->setAmbientLight(Ogre::ColourValue(.5, .5, .5));
