@@ -1,17 +1,18 @@
+#pragma once
+
 #include <Ogre.h>
 #include <OgreShaderGenerator.h>
 #include <OgreApplicationContext.h> 
-#include <OgreFrameListener.h>
-#include <iostream>
+#include "PlayerCharacter.h"
 
-class App
-	: public OgreBites::ApplicationContext
-	, public OgreBites::InputListener
-	, public Ogre::FrameListener
+class App : public OgreBites::ApplicationContext, public OgreBites::InputListener
 {
-	void App::setup(void);
-	
-	bool keyPressed(const OgreBites::KeyboardEvent& evt);
-	bool textInput(const OgreBites::TextInputEvent& evt);
-	bool frameEnded(const Ogre::FrameEvent& evt);
+protected:
+	PlayerCharacter* player;
+	OIS::InputManager* InputManager;
+	OIS::Keyboard* Keyboard;
+	OIS::Mouse* Mouse;
+public:
+	void setup(void);
+	void update(Real elapsedTime, OIS::Keyboard* keyboard);
 };
