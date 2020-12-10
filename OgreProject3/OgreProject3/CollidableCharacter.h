@@ -12,8 +12,8 @@ public:
 template <class T>
 inline bool CollidableCharacter::placeMeeting(float x, float z)
 {
-    CharacterHandler handler = CharacterHandler::getInstance();
-    std::vector<Character*> characters = handler.listClassCharacters<T>();
+    CharacterHandler* handler = CharacterHandler::getInstance();
+    std::vector<Character*> characters = handler->listClassCharacters<T>();
 
     AxisAlignedBox bbox = this->getBbox();
     for (Character* c : characters) {

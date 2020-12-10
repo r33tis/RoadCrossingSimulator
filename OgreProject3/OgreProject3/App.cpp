@@ -49,7 +49,7 @@ void App::setup(void)
 
     scnMgr->showBoundingBoxes(true);
 
-    this->characterHandler = &CharacterHandler::getInstance();
+    this->characterHandler = CharacterHandler::getInstance();
     this->characterHandler->init(scnMgr);
     this->characterHandler->createCharacter<PlayerCharacter>(0, 5, 2);
     this->characterHandler->createCharacter<DummyCharacter>(0, 5, 2);

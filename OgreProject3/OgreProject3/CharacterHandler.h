@@ -7,13 +7,14 @@ class CharacterHandler
 {
 private:
 	std::vector<Character*> characters;
+	std::queue<Character*> deleteQueue;
 	SceneManager* sceneMgr;
 	CharacterHandler() {};
 public:
 	// creation and singleton pattern
-	static CharacterHandler& getInstance() {
+	static CharacterHandler* getInstance() {
 		static CharacterHandler instance;
-		return instance;
+		return &instance;
 	}
 	void init(SceneManager* sceneMgr);
 	void update(Real elapsedTime, OIS::Keyboard* input);
