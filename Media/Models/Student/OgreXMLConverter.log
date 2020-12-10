@@ -1,0 +1,20 @@
+17:42:15: Creating resource group General
+17:42:15: Creating resource group OgreInternal
+17:42:15: Creating resource group OgreAutodetect
+17:42:15: Registering ResourceManager for type Mesh
+17:42:15: Registering ResourceManager for type Material
+17:42:15: Registering ResourceManager for type Skeleton
+17:42:15: XMLSkeletonSerializer: reading XML data from C:\Users\eston\Documents\GitHub\RoadCrossingSimulator2\Media\Models\Student\Cube.skeleton.xml...
+17:42:15: XMLSkeletonSerializer: Reading Bones name...
+17:42:15: XMLSkeletonSerializer: Reading Hierarchy data...
+17:42:15: XMLSkeletonSerializer: Reading Bones data...
+17:42:15: XMLSkeletonSerializer: Reading Animations data...
+17:42:15: XMLSkeletonSerializer: Finished. Running SkeletonSerializer...
+17:42:15: Exporting bones..
+17:42:15: Bones exported.
+17:42:15: Exporting animations, count=1
+17:42:15: Exporting animation: Walk
+17:42:15: Animation exported.
+17:42:15: Unregistering ResourceManager for type Skeleton
+17:42:15: Unregistering ResourceManager for type Material
+17:42:15: Unregistering ResourceManager for type Mesh

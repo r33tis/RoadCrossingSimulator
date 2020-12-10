@@ -35,7 +35,7 @@ void App::setup(void)
 
     // also need to tell where we are
     Ogre::SceneNode* camNode = scnMgr->getRootSceneNode()->createChildSceneNode();
-    camNode->setPosition(0, 15, 0);
+    camNode->setPosition(0, 35, 15);
     camNode->lookAt(Ogre::Vector3(0, 1, 0), Ogre::Node::TS_PARENT);
 
     // create the camera
