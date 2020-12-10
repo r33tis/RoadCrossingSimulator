@@ -9,7 +9,7 @@
 using namespace Ogre;
 using namespace std;
 
-class PlayerCharacter : public CollidableCharacter {
+class DummyCharacter : public CollidableCharacter {
 public:
     void create(SceneManager* mSceneMgr, float x, float y, float z);
     void update(Real elapsedTime, OIS::Keyboard* input);

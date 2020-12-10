@@ -4,6 +4,7 @@
 #include <math.h>
 #include "PlayerCharacter.h"
 #include <OgreFrameListener.h>
+#include "DummyCharacter.h"
 
 
 
@@ -46,20 +47,16 @@ void App::setup(void)
     // and tell it to render into the main window
     getRenderWindow()->addViewport(cam);
 
-    // finally something to render
-    /*Ogre::Entity* ent = scnMgr->createEntity("Cube.mesh");
-    Ogre::SceneNode* node = scnMgr->getRootSceneNode()->createChildSceneNode();
-    node->attachObject(ent);
-    node->setDirection(0.0F, 0.0F, M_PI);
-    node->setPosition(0, 5, 2);*/
+    scnMgr->showBoundingBoxes(true);
 
-    player = new PlayerCharacter("Player", scnMgr);
-
-
+    this->characterHandler = &CharacterHandler::getInstance();
+    this->characterHandler->init(scnMgr);
+    this->characterHandler->createCharacter<PlayerCharacter>(0, 5, 2);
+    this->characterHandler->createCharacter<DummyCharacter>(0, 5, 2);
 
     scnMgr->setAmbientLight(Ogre::ColourValue(.5, .5, .5));
 }
 
 void App::update(Real elapsedTime, OIS::Keyboard* keyboard) {
-    player->update(elapsedTime, keyboard);
+    this->characterHandler->update(elapsedTime, keyboard);
 }

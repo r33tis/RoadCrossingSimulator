@@ -4,11 +4,12 @@
 #include <OgreShaderGenerator.h>
 #include <OgreApplicationContext.h> 
 #include "PlayerCharacter.h"
+#include "CharacterHandler.h"
 
 class App : public OgreBites::ApplicationContext, public OgreBites::InputListener
 {
 protected:
-	PlayerCharacter* player;
+	CharacterHandler* characterHandler;
 	OIS::InputManager* InputManager;
 	OIS::Keyboard* Keyboard;
 	OIS::Mouse* Mouse;
