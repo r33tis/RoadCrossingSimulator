@@ -10,6 +10,7 @@ class LaneHandler
 private:
 	float leftBound;
 	float rightBound;
+	float laneLength;
 	std::vector<Lane*> lanes;
 	std::random_device rd;
 	std::mt19937 gen;
@@ -23,7 +24,7 @@ public:
 		static LaneHandler instance;
 		return &instance;
 	}
-	void init(SceneManager* sceneMgr, float leftBound, float rightBound, float speedMin, float speedMax, float spawnMin, float spawnMax);
+	void init(SceneManager* sceneMgr, float laneLength, float leftBound, float rightBound, float speedMin, float speedMax, float spawnMin, float spawnMax);
 	void update(Real elaspedTime, OIS::Keyboard* input);
 public:
 	void createLanes(int n);
@@ -62,7 +63,6 @@ inline Lane* LaneHandler::createLane(float z)
 
 inline void LaneHandler::createLanes(int n)
 {
-	float laneLength = 1.0;
 	for (int i = 0; i < n; i++) {
 		Lane* lane = createLane(- float(i) * laneLength);
 		lanes.push_back(lane);

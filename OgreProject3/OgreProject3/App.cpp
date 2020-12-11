@@ -31,25 +31,11 @@ void App::setup(void)
     lightNode->setPosition(0, 10, 15);
     lightNode->attachObject(light);
 
-    // also need to tell where we are
-    Ogre::SceneNode* camNode = scnMgr->getRootSceneNode()->createChildSceneNode();
-    camNode->setPosition(0, 35, 15);
-    camNode->lookAt(Ogre::Vector3(0, 1, 0), Ogre::Node::TS_PARENT);
-
-    // create the camera
-    Ogre::Camera* cam = scnMgr->createCamera("myCam");
-    cam->setNearClipDistance(1); // specific to this sample
-    cam->setAutoAspectRatio(true);
-    camNode->attachObject(cam);
-
-    // and tell it to render into the main window
-    getRenderWindow()->addViewport(cam);
-
     scnMgr->showBoundingBoxes(true);
 
     this->tileHandler = TileHandler::getInstance();
     this->tileHandler->init(scnMgr);
-    this->tileHandler->createTiles(-50, 50, -50, 50, 1.0);
+    this->tileHandler->createTiles(-50, 50, -50, 50, 10.0);
 
     this->characterHandler = CharacterHandler::getInstance();
     this->characterHandler->init(scnMgr);
@@ -58,14 +44,22 @@ void App::setup(void)
     this->characterHandler->createCharacter<DummyCharacter>(0, 5, 2);
 
     this->laneHandler = LaneHandler::getInstance();
-    this->laneHandler->init(scnMgr, -15, 15, 0.5, 1.5, 5.0, 10.0);
+    this->laneHandler->init(scnMgr, 10.0, -15, 15, 0.5, 1.5, 5.0, 10.0);
     this->laneHandler->createLanes(10);
 
-    scnMgr->setAmbientLight(Ogre::ColourValue(.5, .5, .5));
+    this->cameraHandler = CameraHandler::getInstance();
+    this->cameraHandler->init(scnMgr, player, 1.0);
+    auto cam = this->cameraHandler->createCamera();
+    getRenderWindow()->addViewport(cam);
+
+    this->gameController = GameController::getInstance();
+    this->gameController->init(scnMgr, player, 90.0);
 }
 
 void App::update(Real elapsedTime, OIS::Keyboard* keyboard) {
     this->characterHandler->update(elapsedTime, keyboard);
     this->tileHandler->update(elapsedTime);
     this->laneHandler->update(elapsedTime, keyboard);
+    this->cameraHandler->update(elapsedTime, keyboard);
+    this->gameController->update(elapsedTime, keyboard);
 }

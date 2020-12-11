@@ -44,7 +44,3 @@ public:
     SceneNode* getMainNode();
     void loadModel(const char* meshName, const char* textureName);
 };
-
-
-
-

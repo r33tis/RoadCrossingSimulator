@@ -1,7 +1,8 @@
 #include "LaneHandler.h"
 
-void LaneHandler::init(SceneManager* sceneMgr, float leftBound, float rightBound, float speedMin, float speedMax, float spawnMin, float spawnMax)
+void LaneHandler::init(SceneManager* sceneMgr, float laneLength, float leftBound, float rightBound, float speedMin, float speedMax, float spawnMin, float spawnMax)
 {
+	this->laneLength = laneLength;
 	this->leftBound = leftBound;
 	this->rightBound = rightBound;
 	this->lanes = std::vector<Lane*>();
