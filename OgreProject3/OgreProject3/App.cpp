@@ -6,8 +6,6 @@
 #include <OgreFrameListener.h>
 #include "DummyCharacter.h"
 
-
-
 void App::setup(void)
 {
     // do not forget to call the base first
@@ -49,14 +47,24 @@ void App::setup(void)
 
     scnMgr->showBoundingBoxes(true);
 
+    this->tileHandler = TileHandler::getInstance();
+    this->tileHandler->init(scnMgr);
+    this->tileHandler->createTiles(-10, -100, 10, 100, 1);
+
     this->characterHandler = CharacterHandler::getInstance();
     this->characterHandler->init(scnMgr);
     this->characterHandler->createCharacter<PlayerCharacter>(0, 5, 2);
     this->characterHandler->createCharacter<DummyCharacter>(0, 5, 2);
+
+    this->laneHandler = LaneHandler::getInstance();
+    this->laneHandler->init(scnMgr, -15, 15, 0.5, 1.5, 5.0, 10.0);
+    this->laneHandler->createLanes(10);
 
     scnMgr->setAmbientLight(Ogre::ColourValue(.5, .5, .5));
 }
 
 void App::update(Real elapsedTime, OIS::Keyboard* keyboard) {
     this->characterHandler->update(elapsedTime, keyboard);
+    this->tileHandler->update(elapsedTime);
+    this->laneHandler->update(elapsedTime);
 }
