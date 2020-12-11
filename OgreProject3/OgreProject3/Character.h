@@ -20,7 +20,7 @@ protected:
 public:
     Character() {
         std::ostringstream oss;
-        oss << "char_" << (long) this;
+        oss << "char_" << (long)this;
         mName = oss.str().c_str();
         std::cout << "created character with name " << mName << "\n";
     }
@@ -38,6 +38,10 @@ public:
     AxisAlignedBox getBbox() {
         return this->mMainNode->_getWorldAABB();
     }
+    float getX();
+    float getY();
+    float getZ();
+    void loadModel(const char* meshName, const char* textureName);
 };
 
 

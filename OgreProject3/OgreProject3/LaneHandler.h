@@ -11,8 +11,6 @@ private:
 	float leftBound;
 	float rightBound;
 	std::vector<Lane*> lanes;
-	std::vector<Car*> cars;
-	std::queue<Car*> deleteQueue;
 	std::random_device rd;
 	std::mt19937 gen;
 	std::uniform_real_distribution<> speedDis;
@@ -26,14 +24,12 @@ public:
 		return &instance;
 	}
 	void init(SceneManager* sceneMgr, float leftBound, float rightBound, float speedMin, float speedMax, float spawnMin, float spawnMax);
-	void update(Real elaspedTime);
+	void update(Real elaspedTime, OIS::Keyboard* input);
 public:
 	void createLanes(int n);
 	Lane* createLane(float z);
 	Car* createCar(Lane* lane);
-	void deleteCar(Car* car);
 	std::vector<Lane*> listLanes();
-	std::vector<Car*> listCars();
 };
 
 inline Car* LaneHandler::createCar(Lane* lane) {
@@ -42,15 +38,11 @@ inline Car* LaneHandler::createCar(Lane* lane) {
 	if (speed < 0.0) { x = rightBound + speed; }
 	float z = lane->z;
 
-	Car* car = new Car();
-	car->create(sceneMgr, x, 0, z, speed);
-	cars.push_back(car);
+	CharacterHandler* charHandler = CharacterHandler::getInstance();
+	Car* car = (Car*) charHandler->createCharacter<Car>(x, 0, z);
+	car->setSpeed(speed);
 
 	return car;
-}
-
-inline void LaneHandler::deleteCar(Car* car) {
-	deleteQueue.push(car);
 }
 
 inline Lane* LaneHandler::createLane(float z)

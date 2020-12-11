@@ -1,4 +1,5 @@
 #include "TileHandler.h"
+#include <iostream>
 
 void TileHandler::init(SceneManager* sceneMgr) {
 	this->sceneMgr = sceneMgr;
@@ -12,12 +13,12 @@ void TileHandler::update(Real elapsedTime) {
 	}
 }
 
-void TileHandler::listTiles()
+std::vector<SceneNode*> TileHandler::listTiles()
 {
 	return tiles;
 }
 
-void CreateTiles(float x0, float x1, float z0, float z1, float a) {
+void TileHandler::createTiles(float x0, float x1, float z0, float z1, float a) {
 	
 	if (x0 > x1 || z0 > z1 || a <= 0.0f) {
 		std::cout << "attempted to create grid with invalid shape\n";
@@ -28,7 +29,7 @@ void CreateTiles(float x0, float x1, float z0, float z1, float a) {
 	while (z < z1) {
 		float x = x0;
 		while (x < x1) {
-			createTile(x, z, Ogre::ColourValue::Red);
+			createTile(x, z, 1.0, ColourValue::Red);
 			x += a;
 		}
 		z += a;

@@ -11,8 +11,9 @@ class Car : public CollidableCharacter {
 private:
     float speed;
 public:
-    void create(SceneManager* mSceneMgr, float x, float y, float z, float speed);
-    void update(Real elapsedTime);
-    Real x();
+    void create(SceneManager* mSceneMgr, float x, float y, float z);
+    void update(Real elapsedTime, OIS::Keyboard* input);
+    void setSpeed(float speed);
+    //Real x();
 };
 

@@ -5,7 +5,6 @@ void LaneHandler::init(SceneManager* sceneMgr, float leftBound, float rightBound
 	this->leftBound = leftBound;
 	this->rightBound = rightBound;
 	this->lanes = std::vector<Lane*>();
-	this->cars = std::vector<Car*>();
 	this->gen = std::mt19937(rd());
 	this->speedDis = std::uniform_real_distribution<> (speedMin, speedMax);
 	this->spawnDis = std::uniform_real_distribution<> (spawnMin, spawnMax);
@@ -13,30 +12,27 @@ void LaneHandler::init(SceneManager* sceneMgr, float leftBound, float rightBound
 	this->sceneMgr = sceneMgr;
 }
 
-void LaneHandler::update(Real elapsedTime)
+void LaneHandler::update(Real elapsedTime, OIS::Keyboard* input)
 {
+	CharacterHandler* characterHandler = CharacterHandler::getInstance();
+
 	for (Lane* lane : lanes) {
 		lane->update(elapsedTime);
 		if (lane->timeUntilSpawn <= 0.0) {
 			lane->timeUntilSpawn = lane->spawnTime;
+
 			createCar(lane);
 		}
 	}
 
-	for (Car* car : cars) {
-		car->update(elapsedTime);
-		float x = car->x();
-		if (x < leftBound || x > rightBound) {
-			deleteCar(car);
-		}
-	}
+	std::vector<Character*> cars = characterHandler->listClassCharacters<Car>();
 
-	while (!deleteQueue.empty()) {
-		Car* c = deleteQueue.front();
-		if (std::find(cars.begin(), cars.end(), c) != cars.end()) {
-			cars.erase(std::remove(cars.begin(), cars.end(), c), cars.end());
-			delete c;
+	for (Character* car : cars) {
+		car->update(elapsedTime, input);
+		float x = car->getX();
+
+		if (x < leftBound || x > rightBound) {
+			characterHandler->deleteCharacter(car);
 		}
-		deleteQueue.pop();
 	}
 }

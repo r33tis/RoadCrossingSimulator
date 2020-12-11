@@ -66,5 +66,5 @@ void App::setup(void)
 void App::update(Real elapsedTime, OIS::Keyboard* keyboard) {
     this->characterHandler->update(elapsedTime, keyboard);
     this->tileHandler->update(elapsedTime);
-    this->laneHandler->update(elapsedTime);
+    this->laneHandler->update(elapsedTime, keyboard);
 }
