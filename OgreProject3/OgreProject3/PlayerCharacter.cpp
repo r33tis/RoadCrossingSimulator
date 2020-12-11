@@ -1,5 +1,6 @@
 #include "PlayerCharacter.h"
 #include <sstream>
+#include "DummyCharacter.h"
 
 void PlayerCharacter::create(SceneManager* sceneMgr, float x, float y, float z) {
     mSceneMgr = sceneMgr;
@@ -13,16 +14,17 @@ void PlayerCharacter::create(SceneManager* sceneMgr, float x, float y, float z) 
 
 void PlayerCharacter::initFlashlight() {
     Light* spotLight = this->mSceneMgr->createLight("SpotLight");
-    spotLight->setDiffuseColor(254, 255, 213);
-    spotLight->setSpecularColor(254, 255, 213);
-    spotLight->setType(Light::LT_SPOTLIGHT)
+    spotLight->setDiffuseColour(0.4, 0.3, 0.3);
+    spotLight->setSpecularColour(0.4, 0.3, 0.3);
+    spotLight->setType(Light::LT_SPOTLIGHT);
     
     flashlightNode = this->mSceneMgr->getRootSceneNode()->createChildSceneNode();
-    flashlightNode->attachObject(spotLight);
+    //flashlightNode->attachObject(spotLight);
     flashlightNode->setDirection(0, -1, -2);
     flashlightNode->setPosition(Vector3(0,1,-0.1));
+    mMainNode->attachObject(spotLight);
 
-    spotLight->setSpotlightRange(Degree(), Degree());
+    spotLight->setSpotlightRange(Degree(35), Degree(50));
 }
 
 void PlayerCharacter::update(Real elapsedTime, OIS::Keyboard* input) {

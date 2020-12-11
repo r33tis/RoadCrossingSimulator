@@ -35,7 +35,7 @@ void TileHandler::createTiles(float x0, float x1, float z0, float z1, float a) {
 	while (z < z1) {
 		float x = x0;
 		while (x < x1) {
-			createTile(x, z, 1.0, ColourValue::Red);
+			createTile(x, z, a, ColourValue::Red);
 			x += a;
 		}
 		z += a;

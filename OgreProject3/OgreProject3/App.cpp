@@ -26,10 +26,10 @@ void App::setup(void)
     shadergen->addSceneManager(scnMgr);
 
     // without light we would just get a black screen    
-    Ogre::Light* light = scnMgr->createLight("MainLight");
+    /*Ogre::Light* light = scnMgr->createLight("MainLight");
     Ogre::SceneNode* lightNode = scnMgr->getRootSceneNode()->createChildSceneNode();
-    lightNode->setPosition(0, 10, 15);
-    lightNode->attachObject(light);
+    lightNode->setPosition(0, 350, 15);
+    lightNode->attachObject(light);*/
 
     scnMgr->showBoundingBoxes(true);
 
