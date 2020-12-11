@@ -2,12 +2,16 @@
 #include <sstream>
 #include "DummyCharacter.h"
 
+
 void PlayerCharacter::create(SceneManager* sceneMgr, float x, float y, float z) {
     mSceneMgr = sceneMgr;
     mMainNode = mSceneMgr->getRootSceneNode()->createChildSceneNode(mName);
     mMainNode->translate(Vector3(x, y, z));
 
     this->loadModel("Cube", "studentColors.PNG");
+
+    targetPosition = Vector3(x, y, z);
+    velocity = Vector3(0, 0, 0);
 }
 
 void PlayerCharacter::update(Real elapsedTime, OIS::Keyboard* input) {
@@ -20,16 +24,33 @@ void PlayerCharacter::update(Real elapsedTime, OIS::Keyboard* input) {
     }
 
     if (input->isKeyDown(OIS::KC_W)) {
-        mMainNode->translate(mMainNode->getOrientation() * Vector3(0, 0, 5 * elapsedTime));
+        targetPosition.z = round(getZ() / 5.0) * 5.0 + 5;
     }
     if (input->isKeyDown(OIS::KC_S)) {
-        mMainNode->translate(mMainNode->getOrientation() * Vector3(0, 0, -3 * elapsedTime));
+        targetPosition.z = round(getZ() / 5.0) * 5.0 - 5;
     }
     if (input->isKeyDown(OIS::KC_A)) {
-        mMainNode->yaw(Radian(2 * elapsedTime));
+        targetPosition.x = round(getX() / 5.0) * 5.0 - 5;
     }
     if (input->isKeyDown(OIS::KC_D)) {
-        mMainNode->yaw(Radian(-2 * elapsedTime));
+        targetPosition.x = round(getX() / 5.0) * 5.0 + 5;
     }
+    auto position = mMainNode->getPosition();
+    auto step = (targetPosition - position);
+    Vector3 dir;
+    if (step.length() > 1.0) {
+        dir = step.normalisedCopy();
+    }
+    else {
+        dir = step;
+    }
+    float maxSpeed = 2.0;
+
+    velocity += (dir * 0.3);
+    velocity -= velocity.normalisedCopy() * min(step.length(), Ogre::Real(0.1));
+    velocity = velocity.normalisedCopy() * min(min(velocity.length(), step.length()), maxSpeed);
+
+
+    mMainNode->translate(velocity);
 }
 

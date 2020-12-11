@@ -10,6 +10,9 @@ using namespace Ogre;
 using namespace std;
 
 class PlayerCharacter : public CollidableCharacter {
+protected:
+    Vector3 targetPosition;
+    Vector3 velocity;
 public:
     void create(SceneManager* mSceneMgr, float x, float y, float z);
     void update(Real elapsedTime, OIS::Keyboard* input);
