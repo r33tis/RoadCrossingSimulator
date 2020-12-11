@@ -20,7 +20,7 @@ protected:
 public:
     Character() {
         std::ostringstream oss;
-        oss << "char_" << (long)this;
+        oss << "char_" << (long)this << " " << rand();
         mName = oss.str().c_str();
         std::cout << "created character with name " << mName << "\n";
     }
@@ -41,6 +41,7 @@ public:
     float getX();
     float getY();
     float getZ();
+    SceneNode* getMainNode();
     void loadModel(const char* meshName, const char* textureName);
 };
 

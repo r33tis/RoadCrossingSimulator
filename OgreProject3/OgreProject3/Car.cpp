@@ -11,7 +11,7 @@ void Car::create(SceneManager* sceneMgr, float x, float y, float z) {
 }
 
 void Car::update(Real elapsedTime, OIS::Keyboard* input) {
-    mMainNode->translate(Vector3(0, 0, speed));
+    mMainNode->translate(Vector3(speed, 0, 0));
 }
 
 void Car::setSpeed(float speed) {
