@@ -56,10 +56,15 @@ void App::setup(void)
     this->characterHandler->createCharacter<PlayerCharacter>(0, 5, 2);
     this->characterHandler->createCharacter<DummyCharacter>(0, 5, 2);
 
+    this->laneHandler = LaneHandler::getInstance();
+    this->laneHandler->init(scnMgr, -15, 15, 0.5, 1.5, 5.0, 10.0);
+    this->laneHandler->createLanes(10);
+
     scnMgr->setAmbientLight(Ogre::ColourValue(.5, .5, .5));
 }
 
 void App::update(Real elapsedTime, OIS::Keyboard* keyboard) {
     this->characterHandler->update(elapsedTime, keyboard);
     this->tileHandler->update(elapsedTime);
+    this->laneHandler->update(elapsedTime);
 }

@@ -72,7 +72,7 @@ inline void LaneHandler::createLanes(int n)
 {
 	float laneLength = 1.0;
 	for (int i = 0; i < n; i++) {
-		Lane* lane = createLane(float(i) * laneLength);
+		Lane* lane = createLane(- float(i) * laneLength);
 		lanes.push_back(lane);
 	}
 }

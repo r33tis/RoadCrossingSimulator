@@ -6,12 +6,14 @@
 #include "PlayerCharacter.h"
 #include "CharacterHandler.h"
 #include "TileHandler.h"
+#include "LaneHandler.h"
 
 class App : public OgreBites::ApplicationContext, public OgreBites::InputListener
 {
 protected:
 	CharacterHandler* characterHandler;
 	TileHandler* tileHandler;
+	LaneHandler* laneHandler;
 	OIS::InputManager* InputManager;
 	OIS::Keyboard* Keyboard;
 	OIS::Mouse* Mouse;
