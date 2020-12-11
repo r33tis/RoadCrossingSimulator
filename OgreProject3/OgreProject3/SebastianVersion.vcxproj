@@ -147,14 +147,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\Documents\GitHub\RoadCrossingSimulator2\OgreProject3\OgreProject3\CameraHandler.cpp" />
-    <ClCompile Include="..\..\..\..\..\Documents\GitHub\RoadCrossingSimulator2\OgreProject3\OgreProject3\GameController.cpp" />
     <ClCompile Include="App.cpp" />
+    <ClCompile Include="CameraHandler.cpp" />
     <ClCompile Include="Car.cpp" />
     <ClCompile Include="Character.cpp" />
     <ClCompile Include="CharacterHandler.cpp" />
     <ClCompile Include="CollidableCharacter.cpp" />
     <ClCompile Include="DummyCharacter.cpp" />
+    <ClCompile Include="GameController.cpp" />
     <ClCompile Include="Lane.cpp" />
     <ClCompile Include="LaneHandler.cpp" />
     <ClCompile Include="OgreProject3.cpp" />
@@ -163,9 +163,9 @@
     <ClCompile Include="TileHandler.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\Documents\GitHub\RoadCrossingSimulator2\OgreProject3\OgreProject3\CameraHandler.h" />
     <ClInclude Include="..\..\..\..\..\Documents\GitHub\RoadCrossingSimulator2\OgreProject3\OgreProject3\GameController.h" />
     <ClInclude Include="App.h" />
+    <ClInclude Include="CameraHandler.h" />
     <ClInclude Include="Car.h" />
     <ClInclude Include="Character.h" />
     <ClInclude Include="CharacterHandler.h" />

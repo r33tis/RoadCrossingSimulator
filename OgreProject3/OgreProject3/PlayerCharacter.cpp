@@ -14,8 +14,8 @@ void PlayerCharacter::create(SceneManager* sceneMgr, float x, float y, float z) 
 
 void PlayerCharacter::initFlashlight() {
     Light* spotLight = this->mSceneMgr->createLight("SpotLight");
-    spotLight->setDiffuseColour(254, 255, 213);
-    spotLight->setSpecularColour(254, 255, 213);
+    spotLight->setDiffuseColour(0.4, 0.3, 0.3);
+    spotLight->setSpecularColour(0.4, 0.3, 0.3);
     spotLight->setType(Light::LT_SPOTLIGHT);
     
     flashlightNode = this->mSceneMgr->getRootSceneNode()->createChildSceneNode();

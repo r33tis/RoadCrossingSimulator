@@ -51,10 +51,10 @@
     <ClCompile Include="TileHandler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\Documents\GitHub\RoadCrossingSimulator2\OgreProject3\OgreProject3\GameController.cpp">
+    <ClCompile Include="CameraHandler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\Documents\GitHub\RoadCrossingSimulator2\OgreProject3\OgreProject3\CameraHandler.cpp">
+    <ClCompile Include="GameController.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -92,7 +92,7 @@
     <ClInclude Include="..\..\..\..\..\Documents\GitHub\RoadCrossingSimulator2\OgreProject3\OgreProject3\GameController.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\Documents\GitHub\RoadCrossingSimulator2\OgreProject3\OgreProject3\CameraHandler.h">
+    <ClInclude Include="CameraHandler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

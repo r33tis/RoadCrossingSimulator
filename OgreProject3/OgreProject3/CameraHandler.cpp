@@ -10,9 +10,11 @@ void CameraHandler::init(SceneManager* sceneMgr, Character* quarry, float speed)
 
 void CameraHandler::update(Real elapsedTime, OIS::Keyboard* input) {
 	if (t >= 0.0 && t <= 1.0) {
-		t += elapsedTime;
-		Vector3 position = Math::lerp(lastPoint, quarry->getWorldPosition(), t);
-	}
+        t += elapsedTime;
+        Vector3 position = quarry->getWorldPosition();
+        Vector3 offset = Vector3(0, 35, 15);
+        camNode->setPosition(position + offset);
+    }
 
 	if (
 		input->isKeyDown(OIS::KC_W) ||
