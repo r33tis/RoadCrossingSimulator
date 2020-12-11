@@ -18,6 +18,11 @@ float Character::getZ()
 	return this->mMainNode->getPosition().z;
 }
 
+SceneNode* Character::getMainNode()
+{
+    return mMainNode;
+}
+
 void Character::loadModel(const char* meshName, const char* textureName) {
     auto textureManager = TextureManager::getSingletonPtr();
     MaterialManager& lMaterialManager = MaterialManager::getSingleton();

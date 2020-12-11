@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 #include <Ogre.h>
+#include <iostream>
 
 using namespace Ogre;
 
@@ -9,6 +10,7 @@ class TileHandler
 private:
 	std::vector<Ogre::SceneNode*> tiles;
 	SceneManager* sceneMgr;
+	Ogre::MaterialPtr tileMaterial;
 	TileHandler() {};
 public:
 	static TileHandler* getInstance() {
@@ -27,8 +29,13 @@ inline Ogre::SceneNode* TileHandler::createTile(float x, float z, float a, Ogre:
 {
 	float half = a * 0.5f;
 
-	Ogre::ManualObject* triangle1 = sceneMgr->createManualObject("Triangle1");
-	triangle1->begin("BaseWhiteNoLighting");
+	std::ostringstream name1;
+	name1 << "triangle" << x << " " << z << "1";
+	std::ostringstream name2;
+	name2 << "triangle" << x << " " << z << "2";
+
+	Ogre::ManualObject* triangle1 = sceneMgr->createManualObject(name1.str().c_str());
+	triangle1->begin(tileMaterial);
 	triangle1->position(half, 0, -half);
 	triangle1->colour(c);
 	triangle1->position(-half, 0, -half);
@@ -37,8 +44,9 @@ inline Ogre::SceneNode* TileHandler::createTile(float x, float z, float a, Ogre:
 	triangle1->colour(c);
 	triangle1->end();
 
-	Ogre::ManualObject* triangle2 = sceneMgr->createManualObject("Triangle2");
-	triangle2->begin("BaseWhiteNoLighting");
+	Ogre::ManualObject* triangle2 = sceneMgr->createManualObject(name2.str().c_str());
+	
+	triangle2->begin(tileMaterial);
 	triangle2->position(half, 0, -half);
 	triangle2->colour(c);
 	triangle2->position(-half, 0, half);

@@ -49,11 +49,12 @@ void App::setup(void)
 
     this->tileHandler = TileHandler::getInstance();
     this->tileHandler->init(scnMgr);
-    this->tileHandler->createTiles(-10, -100, 10, 100, 1);
+    this->tileHandler->createTiles(-50, 50, -50, 50, 1.0);
 
     this->characterHandler = CharacterHandler::getInstance();
     this->characterHandler->init(scnMgr);
-    this->characterHandler->createCharacter<PlayerCharacter>(0, 5, 2);
+    auto player = this->characterHandler->createCharacter<PlayerCharacter>(0, 5, 2);
+
     this->characterHandler->createCharacter<DummyCharacter>(0, 5, 2);
 
     this->laneHandler = LaneHandler::getInstance();

@@ -28,7 +28,7 @@ void PlayerCharacter::initFlashlight() {
 void PlayerCharacter::update(Real elapsedTime, OIS::Keyboard* input) {
     if (this->placeMeeting<DummyCharacter>(0, 0)) {
         mMainNode->setScale(Vector3(1.5, 1.5, 1.5));
-        cout << "collision!";
+        //cout << "collision!";
     }
     else {
         mMainNode->setScale(Vector3(1, 1, 1));
