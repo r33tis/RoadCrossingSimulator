@@ -13,5 +13,8 @@ class PlayerCharacter : public CollidableCharacter {
 public:
     void create(SceneManager* mSceneMgr, float x, float y, float z);
     void update(Real elapsedTime, OIS::Keyboard* input);
+private:
+    void initFlashlight();
+    SceneNode* flashlightNode;
 };
 

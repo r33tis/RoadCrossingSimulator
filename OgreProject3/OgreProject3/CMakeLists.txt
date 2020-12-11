@@ -8,7 +8,7 @@ project ("OgreProject3")
 set(CMAKE_CXX_STANDARD 11)
 
 # Add source to this project's executable.
-add_executable (OgreProject3 "OgreProject3.cpp" "App.cpp" "TileHandler.h" "LaneHandler.h" "LaneHandler.cpp" "Lane.h" "Lane.cpp" "Car.cpp" "Car.h")
+add_executable (OgreProject3 "OgreProject3.cpp" "App.cpp" "TileHandler.h" "LaneHandler.h" "LaneHandler.cpp" "Lane.h" "Lane.cpp" "Car.cpp" "Car.h" "CameraHandler.h" "GameController.h" "GameController.cpp" "CameraHandler.cpp")
 
 # TODO: Add tests and install targets if needed.
 
