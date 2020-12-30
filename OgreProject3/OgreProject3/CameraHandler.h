@@ -11,6 +11,7 @@ private:
 	Character* quarry;
 	SceneManager* sceneMgr;
 	Vector3 lastPoint;
+	Vector3 offSet;
 	float t;
 	float speed;
 	CameraHandler() {};

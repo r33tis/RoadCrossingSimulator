@@ -49,6 +49,7 @@ void Character::loadModel(const char* meshName, const char* textureName) {
 
     mEntity = mSceneMgr->createEntity(mName, buf);
     mEntity->setMaterialName(meshName);
+    mEntity->setCastShadows(false);
 
     mMainNode->attachObject(mEntity);
 }

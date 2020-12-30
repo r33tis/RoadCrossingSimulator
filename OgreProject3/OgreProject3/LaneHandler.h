@@ -4,6 +4,7 @@
 #include <Ogre.h>
 #include "Lane.h"
 #include "Car.h"
+#include "SpaceClamper.h"
 
 class LaneHandler
 {
@@ -16,6 +17,7 @@ private:
 	std::mt19937 gen;
 	std::uniform_real_distribution<> speedDis;
 	std::uniform_real_distribution<> spawnDis;
+	std::uniform_real_distribution<> pauseDis;
 	std::uniform_real_distribution<> coinDis;
 	SceneManager* sceneMgr;
 	LaneHandler() {};
@@ -24,7 +26,7 @@ public:
 		static LaneHandler instance;
 		return &instance;
 	}
-	void init(SceneManager* sceneMgr, float laneLength, float leftBound, float rightBound, float speedMin, float speedMax, float spawnMin, float spawnMax);
+	void init(SceneManager* sceneMgr, float laneLength, float leftBound, float rightBound, float speedMin, float speedMax, float spawnMin, float spawnMax, float pauseMin, float pauseMax);
 	void update(Real elaspedTime, OIS::Keyboard* input);
 public:
 	void createLanes(int n);
@@ -63,8 +65,16 @@ inline Lane* LaneHandler::createLane(float z)
 
 inline void LaneHandler::createLanes(int n)
 {
+	int lanesUntilPause = 0;
 	for (int i = 0; i < n; i++) {
-		Lane* lane = createLane(- float(i) * laneLength);
-		lanes.push_back(lane);
+		if (lanesUntilPause <= 0) {
+			// Would a pause lane still be a lane, just of a different kind?
+			lanesUntilPause = pauseDis(gen);
+		}
+		else {
+			Lane* lane = createLane(SpaceClamper::getInstance()->clampZ(-float(i) * laneLength));
+			lanes.push_back(lane);
+			lanesUntilPause--;
+		}
 	}
 }

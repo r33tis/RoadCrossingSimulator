@@ -4,7 +4,6 @@
 #include "Character.h"
 
 using namespace Ogre;
-using namespace std;
 
 class GameController
 {
@@ -14,6 +13,8 @@ private:
 	float bestDistance;
 	Character* quarry;
 	SceneManager* sceneMgr;
+	Light* sky;
+	SceneNode* skyNode;
 	GameController() {};
 public:
 	static GameController* getInstance() {
@@ -22,5 +23,5 @@ public:
 	}
 	void init(SceneManager* sceneMgr, Character* quarry, float endTime);
 	void update(Real elapsedTIme, OIS::Keyboard* input);
-	void updateAmbience();
+	void updateSky(Real elapsedTime);
 };

@@ -1,6 +1,6 @@
 #include "LaneHandler.h"
 
-void LaneHandler::init(SceneManager* sceneMgr, float laneLength, float leftBound, float rightBound, float speedMin, float speedMax, float spawnMin, float spawnMax)
+void LaneHandler::init(SceneManager* sceneMgr, float laneLength, float leftBound, float rightBound, float speedMin, float speedMax, float spawnMin, float spawnMax, float pauseMin, float pauseMax)
 {
 	this->laneLength = laneLength;
 	this->leftBound = leftBound;
@@ -9,6 +9,7 @@ void LaneHandler::init(SceneManager* sceneMgr, float laneLength, float leftBound
 	this->gen = std::mt19937(rd());
 	this->speedDis = std::uniform_real_distribution<> (speedMin, speedMax);
 	this->spawnDis = std::uniform_real_distribution<> (spawnMin, spawnMax);
+	this->pauseDis = std::uniform_real_distribution<> (pauseMin, pauseMax);
 	this->coinDis = std::uniform_real_distribution<>(-1.0, 1.0);
 	this->sceneMgr = sceneMgr;
 }

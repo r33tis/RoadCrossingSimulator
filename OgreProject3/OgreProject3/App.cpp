@@ -1,10 +1,11 @@
 #define _USE_MATH_DEFINES
 
 #include "App.h"
-#include <math.h>
 #include "PlayerCharacter.h"
-#include <OgreFrameListener.h>
 #include "DummyCharacter.h"
+#include "SpaceClamper.h"
+#include <math.h>
+#include <OgreFrameListener.h>
 
 void App::setup(void)
 {
@@ -17,6 +18,7 @@ void App::setup(void)
     // get a pointer to the already created root
     Ogre::Root* root = getRoot();
     Ogre::SceneManager* scnMgr = root->createSceneManager();
+    //scnMgr->setShadowTechnique(ShadowTechnique::SHADOWTYPE_STENCIL_ADDITIVE);
 
     // add resource folder to resourcegroupmanager
     Ogre::ResourceGroupManager::getSingleton().addResourceLocation("resources", "FileSystem");
@@ -33,19 +35,24 @@ void App::setup(void)
 
     scnMgr->showBoundingBoxes(true);
 
+    float worldWidth = 60.0;
+    float worldLength = 1800.0;
+    float laneLength = 10.0;
+
+    SpaceClamper::getInstance()->init(laneLength, laneLength, laneLength, SpaceClamper::clampMode::centre);
+
     this->tileHandler = TileHandler::getInstance();
-    this->tileHandler->init(scnMgr);
-    this->tileHandler->createTiles(-50, 50, -50, 50, 10.0);
+    this->tileHandler->init(scnMgr, 10.0);
+    this->tileHandler->createTiles(-worldWidth / 2.0, worldWidth / 2.0, -worldLength, laneLength);
 
     this->characterHandler = CharacterHandler::getInstance();
     this->characterHandler->init(scnMgr);
-    auto player = this->characterHandler->createCharacter<PlayerCharacter>(0, 5, 2);
-
-    this->characterHandler->createCharacter<DummyCharacter>(0, 5, 2);
+    auto player = this->characterHandler->createCharacter<PlayerCharacter>(0, 0, SpaceClamper::getInstance()->clampZ(0.0));
+    player->getMainNode()->yaw(Radian(Degree(180)));
 
     this->laneHandler = LaneHandler::getInstance();
-    this->laneHandler->init(scnMgr, 10.0, -15, 15, 0.5, 1.5, 5.0, 10.0);
-    this->laneHandler->createLanes(10);
+    this->laneHandler->init(scnMgr, laneLength, -worldWidth/2.0, worldWidth/2.0, 0.5, 1.5, 5.0, 10.0, 3.0, 5.0);
+    this->laneHandler->createLanes(worldLength / laneLength);
 
     this->cameraHandler = CameraHandler::getInstance();
     this->cameraHandler->init(scnMgr, player, 1.0);
@@ -53,7 +60,7 @@ void App::setup(void)
     getRenderWindow()->addViewport(cam);
 
     this->gameController = GameController::getInstance();
-    this->gameController->init(scnMgr, player, 90.0);
+    this->gameController->init(scnMgr, player, 10.0);
 }
 
 void App::update(Real elapsedTime, OIS::Keyboard* keyboard) {

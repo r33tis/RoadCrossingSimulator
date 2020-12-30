@@ -17,12 +17,10 @@ void Car::update(Real elapsedTime, OIS::Keyboard* input) {
 void Car::setSpeed(float speed) {
     this->speed = speed;
 
-    //TODO: Rotation according to direction (speed)
     if (speed > 0.0) {
         mMainNode->yaw(Radian(Degree(-90)));
     }
     else {
         mMainNode->yaw(Radian(Degree(90)));
     }
-    std::cout << "unhandled rotation for new car !!!\n";
 }

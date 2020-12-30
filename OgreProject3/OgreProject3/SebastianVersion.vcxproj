@@ -160,6 +160,7 @@
     <ClCompile Include="OgreProject3.cpp" />
     <ClCompile Include="PlayerCharacter.cpp" />
     <ClCompile Include="PlayerCharacter.h" />
+    <ClCompile Include="SpaceClamper.cpp" />
     <ClCompile Include="TileHandler.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -171,6 +172,7 @@
     <ClInclude Include="CharacterHandler.h" />
     <ClInclude Include="CollidableCharacter.h" />
     <ClInclude Include="DummyCharacter.h" />
+    <ClInclude Include="SpaceClamper.h" />
     <ClInclude Include="Lane.h" />
     <ClInclude Include="LaneHandler.h" />
     <ClInclude Include="OgreProject3.h" />

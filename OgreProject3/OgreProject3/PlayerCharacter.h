@@ -15,6 +15,8 @@ public:
     void update(Real elapsedTime, OIS::Keyboard* input);
 private:
     void initFlashlight();
+    float speed;
+    float indirectSpeed;
     SceneNode* flashlightNode;
 };
 

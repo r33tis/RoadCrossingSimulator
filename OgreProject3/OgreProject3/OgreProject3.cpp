@@ -59,6 +59,6 @@ int main(int argc, char* argv[])
             e.getFullDescription().c_str() << std::endl;
     }
     
-	cout << "Hello CMake." << endl;
+	cout << "Bye!" << endl;
 	return 0;
 }
