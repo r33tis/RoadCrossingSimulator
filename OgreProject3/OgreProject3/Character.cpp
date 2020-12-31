@@ -43,13 +43,14 @@ void Character::loadModel(const char* meshName, const char* textureName) {
         
         MaterialPtr lMaterial = lMaterialManager.create(meshName, ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME);
         lMaterial->getTechnique(0)->getPass(0)->createTextureUnitState(textureName);
+        lMaterial->setReceiveShadows(false);
     }
     std::string buf(meshName);
     buf.append(".mesh");
 
     mEntity = mSceneMgr->createEntity(mName, buf);
     mEntity->setMaterialName(meshName);
-    mEntity->setCastShadows(false);
-
+    mEntity->setCastShadows(true);
+    
     mMainNode->attachObject(mEntity);
 }

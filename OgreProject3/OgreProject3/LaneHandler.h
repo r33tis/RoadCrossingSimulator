@@ -57,7 +57,7 @@ inline Lane* LaneHandler::createLane(float z)
 	float sign = 1.0;
 	if (coinDis(gen) <= 0.0) { sign = -1.0; }
 	lane->speed = (speedDis(gen)) * sign;
-	lane->spawnTime = spawnDis(gen);
+	lane->spawnTime = spawnDis(gen) * 0.5;
 	lane->timeUntilSpawn = lane->spawnTime;
 
 	return lane;

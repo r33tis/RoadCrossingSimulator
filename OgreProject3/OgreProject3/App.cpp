@@ -18,7 +18,9 @@ void App::setup(void)
     // get a pointer to the already created root
     Ogre::Root* root = getRoot();
     Ogre::SceneManager* scnMgr = root->createSceneManager();
-    //scnMgr->setShadowTechnique(ShadowTechnique::SHADOWTYPE_STENCIL_ADDITIVE);
+    scnMgr->setShadowTextureSettings(2048, 12);
+    scnMgr->setShadowTechnique(ShadowTechnique::SHADOWTYPE_TEXTURE_ADDITIVE);
+    scnMgr->setShadowTextureSelfShadow(true);
 
     // add resource folder to resourcegroupmanager
     Ogre::ResourceGroupManager::getSingleton().addResourceLocation("resources", "FileSystem");
@@ -33,7 +35,7 @@ void App::setup(void)
     lightNode->setPosition(0, 350, 15);
     lightNode->attachObject(light);*/
 
-    scnMgr->showBoundingBoxes(true);
+    scnMgr->showBoundingBoxes(false);
 
     float worldWidth = 60.0;
     float worldLength = 1800.0;
@@ -60,7 +62,7 @@ void App::setup(void)
     getRenderWindow()->addViewport(cam);
 
     this->gameController = GameController::getInstance();
-    this->gameController->init(scnMgr, player, 10.0);
+    this->gameController->init(scnMgr, player, 100.0);
 }
 
 void App::update(Real elapsedTime, OIS::Keyboard* keyboard) {

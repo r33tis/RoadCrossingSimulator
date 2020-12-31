@@ -6,21 +6,41 @@ void TileHandler::init(SceneManager* sceneMgr, float tileSize) {
 	this->sceneMgr = sceneMgr;
 	this->tiles = std::vector<Ogre::SceneNode*>();
 
+	auto textureManager = TextureManager::getSingletonPtr();
+
+	auto textureName = "road.png";
+	Image imageOgre;
+	imageOgre.load(textureName, ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME);
+	TexturePtr m_texture;
+	m_texture = textureManager->createManual(
+		textureName,
+		ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME,
+		TEX_TYPE_2D,
+		imageOgre.getWidth(), imageOgre.getHeight(),
+		0, PF_X8R8G8B8);
+	m_texture->loadImage(imageOgre);
+
+
 	this->tileMaterial = Ogre::MaterialManager::getSingleton().create("tile material", Ogre::ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME, true);
-	//this->tileMaterial->getTechnique(0)->getPass(0)->setAmbient(Ogre::ColourValue(0.2, 0.2, 0.3, 1.0));
+	this->tileMaterial->getTechnique(0)->getPass(0)->createTextureUnitState(textureName);
+	//this->tileMaterial->getTechnique(0)->getPass(0)->setAmbient(Ogre::ColourValue(0.8, 0.8, 0.8, 1.0));
 	this->tileMaterial->getTechnique(0)->getPass(0)->setDiffuse(Ogre::ColourValue(0.8, 0.8, 0.8, 1.0));
+	//this->tileMaterial->getTechnique(0)->getPass(0)->setSpecular(Ogre::ColourValue(0.8, 0.8, 0.8, 1.0));
 	this->tileMaterial->setColourWriteEnabled(true);
+	this->tileMaterial->setReceiveShadows(true);
 
 	this->tileSize = tileSize;
 	this->meshName = "ground";
 	Plane plane(Vector3::UNIT_Y, 0);
-	MeshManager::getSingleton().createPlane(
+	auto tile = MeshManager::getSingleton().createPlane(
 		this->meshName, RGN_DEFAULT,
 		plane,
 		this->tileSize, this->tileSize, 20, 20,
 		true,
-		1, 5, 5,
+		1, 1, 1,
 		Vector3::UNIT_Z);
+
+	tile->prepareForShadowVolume();
 
 	std::cout << "tilehandler singleton init\n";
 }
