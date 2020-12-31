@@ -21,8 +21,8 @@ void PlayerCharacter::create(SceneManager* sceneMgr, float x, float y, float z) 
 
 void PlayerCharacter::initFlashlight() {
     Light* spotLight = this->mSceneMgr->createLight("SpotLight");
-    spotLight->setDiffuseColour(0.4, 0.3, 0.3);
-    spotLight->setSpecularColour(0.4, 0.3, 0.3);
+    spotLight->setDiffuseColour(0.7, 0.6, 0.6);
+    spotLight->setSpecularColour(0.7, 0.6, 0.6);
     spotLight->setType(Light::LT_SPOTLIGHT);
     spotLight->setCastShadows(true);
     

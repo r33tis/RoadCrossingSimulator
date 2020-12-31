@@ -10,6 +10,7 @@ private:
 	std::queue<Character*> deleteQueue;
 	SceneManager* sceneMgr;
 	CharacterHandler() {};
+	int characterCount;
 public:
 	// creation and singleton pattern
 	static CharacterHandler* getInstance() {
@@ -37,6 +38,10 @@ template<class T>
 inline Character* CharacterHandler::createCharacter(float x, float y, float z)
 {
 	Character* object = new T();
+	std::ostringstream oss;
+	oss << characterCount;
+	object->_setName(oss.str().c_str());
+	this->characterCount++;
 	object->create(sceneMgr, x, y, z);
 	characters.push_back(object);
 	return object;

@@ -3,6 +3,7 @@
 void CharacterHandler::init(SceneManager* sceneMgr) {
 	this->sceneMgr = sceneMgr;
 	this->deleteQueue = std::queue<Character*>();
+	this->characterCount = 0;
 	std::cout << "characterhandler singleton init\n";
 }
 

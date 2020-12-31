@@ -18,17 +18,18 @@ protected:
     SceneManager* mSceneMgr;
     String mName; // ogre requires a name for scene nodes
 public:
-    Character() {
-        std::ostringstream oss;
-        oss << "char_" << (long)this << " " << rand();
-        mName = oss.str().c_str();
-        std::cout << "created character with name " << mName << "\n";
-    }
+    Character() {}
     ~Character() {
         mMainNode->detachAllObjects();
         delete mEntity;
         mMainNode->removeAndDestroyAllChildren();
         mSceneMgr->destroySceneNode(mName);
+    }
+    void _setName(const char* mName) {
+        std::ostringstream oss;
+        oss << "char_" << mName;
+        this->mName = oss.str().c_str();
+        std::cout << "created character with name " << this->mName << "\n";
     }
     virtual void create(SceneManager* mSceneMgr, float x, float y, float z) = 0;
     virtual void update(Real elapsedTime, OIS::Keyboard* input) = 0;
