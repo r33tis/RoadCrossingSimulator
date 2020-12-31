@@ -46,7 +46,7 @@ void PlayerCharacter::setMoveTarget(int offx, int offy, int offz) {
 }
 
 float easeInOutQuad(float t) {
-    return t < 0.5 ? 2 * std::pow(t, 2) : -1 + 2 * (2 - t) * t;
+    return t < 0.5 ? 2.0 * std::pow(t, 2.0) : -1.0 + 2.0 * (2.0 - t) * t;
 }
 
 void PlayerCharacter::update(Real elapsedTime, OIS::Keyboard* input) {
@@ -68,10 +68,12 @@ void PlayerCharacter::update(Real elapsedTime, OIS::Keyboard* input) {
     }
     else {
         auto position = lastPosition + (targetPosition - lastPosition) * easeInOutQuad(movementFulfilled);
+        position.y = (0.5 - std::abs(0.5 - easeInOutQuad(movementFulfilled))) * 7.0;
+        
+        std::cout << easeInOutQuad(movementFulfilled) << "\n";
         
         mMainNode->setPosition(position);
         mMainNode->lookAt(targetPosition, Ogre::Node::TS_WORLD, Ogre::Vector3::UNIT_Z);
-        mMainNode->setOrientation(-mMainNode->getOrientation());
 
         movementFulfilled += 0.1;
     }
