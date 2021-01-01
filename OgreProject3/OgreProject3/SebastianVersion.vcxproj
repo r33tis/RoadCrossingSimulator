@@ -135,7 +135,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)\dependencies\ois\include;$(ProjectDir)\dependencies\ogre\include;$(ProjectDir)\dependencies\ogre\include\OgreMain;$(ProjectDir)\dependencies\ogre\include\RTShaderSystem;$(ProjectDir)\dependencies\ogre\include\Dependencies;$(ProjectDir)\dependencies\ogre\include\Bites</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\dependencies\ois\include;$(ProjectDir)\dependencies\ogre\include;$(ProjectDir)\dependencies\ogre\include\OgreMain;$(ProjectDir)\dependencies\ogre\include\RTShaderSystem;$(ProjectDir)\dependencies\ogre\include\Dependencies;$(ProjectDir)\dependencies\ogre\include\Bites;$(ProjectDir)\dependencies\ogre\include\Overlay</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -143,7 +143,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(ProjectDir)\dependencies\ois\lib;$(ProjectDir)\dependencies\ogre\lib\MinSizeRel;$(ProjectDir)\dependencies\ogre\lib\Dependencies;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>OgreMain.lib;OgreBites.lib;OgreRTShaderSystem.lib;OIS.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>OgreMain.lib;OgreBites.lib;OgreRTShaderSystem.lib;OIS.lib;OgreOverlay.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
