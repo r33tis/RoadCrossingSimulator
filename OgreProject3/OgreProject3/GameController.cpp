@@ -37,8 +37,10 @@ void GameController::updateSky(Real elapsedTime) {
 	if (v < 0.0) { v = 0.0; }
 	else if (v > 1.0) { v = 1.0; }
 	else {
-		this->skyNode->pitch(Radian(Degree(elapsedTime)));
-		this->skyNode->roll(Radian(Degree(elapsedTime)));
+		float shift = elapsedTime * 100 / endTime;
+		this->skyNode->pitch(Radian(Degree(shift)));
+		this->skyNode->roll(Radian(Degree(shift)));
+		this->skyNode->yaw(Radian(Degree(shift)));
 	}
 
 	//TODO: Different bands of light die down at different rates, so we get a cool sunset.

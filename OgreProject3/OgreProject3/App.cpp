@@ -62,7 +62,7 @@ void App::setup(void)
     getRenderWindow()->addViewport(cam);
 
     this->gameController = GameController::getInstance();
-    this->gameController->init(scnMgr, player, 100.0);
+    this->gameController->init(scnMgr, player, 120.0);
 }
 
 void App::update(Real elapsedTime, OIS::Keyboard* keyboard, OIS::Mouse* mouse) {

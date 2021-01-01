@@ -2,6 +2,7 @@
 #include "DummyCharacter.h"
 #include <OgreLight.h>
 #include <sstream>
+#include "Car.h"
 
 void PlayerCharacter::create(SceneManager* sceneMgr, float x, float y, float z) {
     mSceneMgr = sceneMgr;
@@ -34,7 +35,7 @@ void PlayerCharacter::initFlashlight() {
     flashlightNode->addChild(flashlight);
     flashlightNode->setPosition(Vector3(0, 6, -0.1));
 
-    spotLight->setSpotlightRange(Degree(35), Degree(50));
+    spotLight->setSpotlightRange(Degree(45), Degree(60));
 }
 
 void PlayerCharacter::setMoveTarget(int offx, int offy, int offz) {
@@ -49,8 +50,18 @@ float easeInOutQuad(float t) {
     return t < 0.5 ? 2.0 * std::pow(t, 2.0) : -1.0 + 2.0 * (2.0 - t) * t;
 }
 
+
 void PlayerCharacter::update(Real elapsedTime, OIS::Keyboard* keyboard, OIS::Mouse* mouse) {
-    if (movementFulfilled >= 1.0) {
+    if (this->placeMeeting<Car>(0, 0)) {
+        std::cout << "collision!\n";
+        auto startPos = Vector3(0, 0, 0);
+        lastPosition = startPos;
+        targetPosition = startPos;
+        mMainNode->setPosition(Vector3(0, 0, 0));
+    }
+
+    // Cheat ahead
+    if (movementFulfilled >= 0.7) {
         mMainNode->setPosition(targetPosition);
         lastPosition = this->getWorldPosition();
         if (keyboard->isKeyDown(OIS::KC_W)) {
@@ -68,28 +79,18 @@ void PlayerCharacter::update(Real elapsedTime, OIS::Keyboard* keyboard, OIS::Mou
     }
     else {
         auto position = lastPosition + (targetPosition - lastPosition) * easeInOutQuad(movementFulfilled);
-        position.y = (0.5 - std::abs(0.5 - easeInOutQuad(movementFulfilled))) * 7.0;
-        
-        std::cout << easeInOutQuad(movementFulfilled) << "\n";
+        position.y = (0.5 - std::abs(0.5 - easeInOutQuad(movementFulfilled))) * 4.0;
         
         mMainNode->setPosition(position);
-        mMainNode->lookAt(targetPosition, Ogre::Node::TS_WORLD, Ogre::Vector3::UNIT_Z);
+        auto lookAtPosition = targetPosition;
+        lookAtPosition.y = position.y;
 
-        movementFulfilled += 0.1;
+        mMainNode->lookAt(lookAtPosition, Ogre::Node::TS_WORLD, Ogre::Vector3::UNIT_Z);
+
+        movementFulfilled += 0.15;
     }
     
-    int shiftX = mouse->getMouseState().X.abs;
-    int shiftY = mouse->getMouseState().Y.abs;
-    int shiftZ = mouse->getMouseState().Z.abs;
-    std::cout << shiftX << "|" << shiftY << "|" << shiftZ << "\n";
-
-    flashlightNode->yaw(Radian(shiftX * elapsedTime));
-
-    //if (keyboard->isKeyDown(OIS::KC_Q)) {
-    //    flashlightNode->yaw(Radian(4 * elapsedTime));
-    //}
-    //if (keyboard->isKeyDown(OIS::KC_E)) {
-    //    flashlightNode->yaw(Radian(-4 * elapsedTime));
-    //}
+    int shiftX = mouse->getMouseState().X.rel;
+    flashlightNode->yaw(Radian(-shiftX * elapsedTime * 0.1));
 }
 
