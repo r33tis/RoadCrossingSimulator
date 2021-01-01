@@ -2,6 +2,7 @@
 #include "DummyCharacter.h"
 #include <OgreLight.h>
 #include <sstream>
+#include "Car.h"
 
 void PlayerCharacter::create(SceneManager* sceneMgr, float x, float y, float z) {
     mSceneMgr = sceneMgr;
@@ -50,6 +51,14 @@ float easeInOutQuad(float t) {
 }
 
 void PlayerCharacter::update(Real elapsedTime, OIS::Keyboard* input) {
+    if (this->placeMeeting<Car>(0, 0)) {
+        std::cout << "collision!\n";
+        auto startPos = Vector3(0, 0, 0);
+        lastPosition = startPos;
+        targetPosition = startPos;
+        mMainNode->setPosition(Vector3(0, 0, 0));
+    }
+
     if (movementFulfilled >= 1.0) {
         mMainNode->setPosition(targetPosition);
         lastPosition = this->getWorldPosition();
