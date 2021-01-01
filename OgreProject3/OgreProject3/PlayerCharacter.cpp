@@ -68,12 +68,13 @@ void PlayerCharacter::update(Real elapsedTime, OIS::Keyboard* input) {
     }
     else {
         auto position = lastPosition + (targetPosition - lastPosition) * easeInOutQuad(movementFulfilled);
-        position.y = (0.5 - std::abs(0.5 - easeInOutQuad(movementFulfilled))) * 7.0;
-        
-        std::cout << easeInOutQuad(movementFulfilled) << "\n";
+        position.y = (0.5 - std::abs(0.5 - easeInOutQuad(movementFulfilled))) * 4.0;
         
         mMainNode->setPosition(position);
-        mMainNode->lookAt(targetPosition, Ogre::Node::TS_WORLD, Ogre::Vector3::UNIT_Z);
+        auto lookAtPosition = targetPosition;
+        lookAtPosition.y = position.y;
+
+        mMainNode->lookAt(lookAtPosition, Ogre::Node::TS_WORLD, Ogre::Vector3::UNIT_Z);
 
         movementFulfilled += 0.1;
     }
