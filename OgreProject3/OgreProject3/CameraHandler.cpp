@@ -55,7 +55,7 @@ Camera* CameraHandler::createCamera() {
 	cam->setAutoAspectRatio(true);
 	if (true) {
 		cam->setProjectionType(ProjectionType::PT_ORTHOGRAPHIC);
-		float scale = 30.0f; // Your scale here.
+		float scale = 20.0f; // Your scale here.
 		float w = cam->getOrthoWindowWidth();
 		float h = cam->getOrthoWindowHeight();
 		Matrix4 p = BuildScaledOrthoMatrix(w / scale / -2.0f,

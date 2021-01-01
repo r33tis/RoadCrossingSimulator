@@ -17,9 +17,9 @@ std::vector<Character*> CharacterHandler::listCharacters()
 	return characters;
 }
 
-void CharacterHandler::update(Real elapsedTime, OIS::Keyboard* input) {
+void CharacterHandler::update(Real elapsedTime, OIS::Keyboard* keyboard, OIS::Mouse* mouse) {
 	for (Character* character : characters) {
-		character->update(elapsedTime, input);
+		character->update(elapsedTime, keyboard, mouse);
 	}
 
 	while (!deleteQueue.empty()) {

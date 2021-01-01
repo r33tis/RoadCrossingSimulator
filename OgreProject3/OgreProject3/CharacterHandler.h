@@ -18,7 +18,7 @@ public:
 		return &instance;
 	}
 	void init(SceneManager* sceneMgr);
-	void update(Real elapsedTime, OIS::Keyboard* input);
+	void update(Real elapsedTime, OIS::Keyboard* keyboard, OIS::Mouse* mouse);
 
 public:
 

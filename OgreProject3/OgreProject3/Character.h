@@ -32,7 +32,7 @@ public:
         std::cout << "created character with name " << this->mName << "\n";
     }
     virtual void create(SceneManager* mSceneMgr, float x, float y, float z) = 0;
-    virtual void update(Real elapsedTime, OIS::Keyboard* input) = 0;
+    virtual void update(Real elapsedTime, OIS::Keyboard* keyboard, OIS::Mouse* mouse) = 0;
     Vector3 getWorldPosition() {
         return mMainNode->_getDerivedPosition();
     }

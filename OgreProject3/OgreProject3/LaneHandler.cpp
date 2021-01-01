@@ -14,7 +14,7 @@ void LaneHandler::init(SceneManager* sceneMgr, float laneLength, float leftBound
 	this->sceneMgr = sceneMgr;
 }
 
-void LaneHandler::update(Real elapsedTime, OIS::Keyboard* input)
+void LaneHandler::update(Real elapsedTime, OIS::Keyboard* keyboard, OIS::Mouse* mouse)
 {
 	CharacterHandler* characterHandler = CharacterHandler::getInstance();
 
@@ -30,7 +30,7 @@ void LaneHandler::update(Real elapsedTime, OIS::Keyboard* input)
 	std::vector<Character*> cars = characterHandler->listClassCharacters<Car>();
 
 	for (Character* car : cars) {
-		car->update(elapsedTime, input);
+		car->update(elapsedTime, keyboard, mouse);
 		float x = car->getX();
 
 		if (x < leftBound || x > rightBound) {

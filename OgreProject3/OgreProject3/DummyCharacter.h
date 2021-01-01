@@ -12,6 +12,6 @@ using namespace std;
 class DummyCharacter : public CollidableCharacter {
 public:
     void create(SceneManager* mSceneMgr, float x, float y, float z);
-    void update(Real elapsedTime, OIS::Keyboard* input);
+    void update(Real elapsedTime, OIS::Keyboard* keyboard, OIS::Mouse* mouse);
 };
 

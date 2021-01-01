@@ -49,20 +49,20 @@ float easeInOutQuad(float t) {
     return t < 0.5 ? 2.0 * std::pow(t, 2.0) : -1.0 + 2.0 * (2.0 - t) * t;
 }
 
-void PlayerCharacter::update(Real elapsedTime, OIS::Keyboard* input) {
+void PlayerCharacter::update(Real elapsedTime, OIS::Keyboard* keyboard, OIS::Mouse* mouse) {
     if (movementFulfilled >= 1.0) {
         mMainNode->setPosition(targetPosition);
         lastPosition = this->getWorldPosition();
-        if (input->isKeyDown(OIS::KC_W)) {
+        if (keyboard->isKeyDown(OIS::KC_W)) {
             setMoveTarget(0, 0, -1);
         }
-        if (input->isKeyDown(OIS::KC_S)) {
+        if (keyboard->isKeyDown(OIS::KC_S)) {
             setMoveTarget(0, 0, 1);
         }
-        if (input->isKeyDown(OIS::KC_A)) {
+        if (keyboard->isKeyDown(OIS::KC_A)) {
             setMoveTarget(-1, 0, 0);
         }
-        if (input->isKeyDown(OIS::KC_D)) {
+        if (keyboard->isKeyDown(OIS::KC_D)) {
             setMoveTarget(1, 0, 0);
         }
     }
@@ -77,5 +77,19 @@ void PlayerCharacter::update(Real elapsedTime, OIS::Keyboard* input) {
 
         movementFulfilled += 0.1;
     }
+    
+    int shiftX = mouse->getMouseState().X.abs;
+    int shiftY = mouse->getMouseState().Y.abs;
+    int shiftZ = mouse->getMouseState().Z.abs;
+    std::cout << shiftX << "|" << shiftY << "|" << shiftZ << "\n";
+
+    flashlightNode->yaw(Radian(shiftX * elapsedTime));
+
+    //if (keyboard->isKeyDown(OIS::KC_Q)) {
+    //    flashlightNode->yaw(Radian(4 * elapsedTime));
+    //}
+    //if (keyboard->isKeyDown(OIS::KC_E)) {
+    //    flashlightNode->yaw(Radian(-4 * elapsedTime));
+    //}
 }
 

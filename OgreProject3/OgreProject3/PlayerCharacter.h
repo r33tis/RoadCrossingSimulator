@@ -16,7 +16,7 @@ protected:
     float movementFulfilled;
 public:
     void create(SceneManager* mSceneMgr, float x, float y, float z);
-    void update(Real elapsedTime, OIS::Keyboard* input);
+    void update(Real elapsedTime, OIS::Keyboard* keyboard, OIS::Mouse* mouse);
 private:
     void initFlashlight();
     void setMoveTarget(int x, int y, int z);

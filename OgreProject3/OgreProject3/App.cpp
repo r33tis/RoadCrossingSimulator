@@ -37,7 +37,7 @@ void App::setup(void)
 
     scnMgr->showBoundingBoxes(false);
 
-    float worldWidth = 60.0;
+    float worldWidth = 120.0;
     float worldLength = 1800.0;
     float laneLength = 10.0;
 
@@ -65,10 +65,10 @@ void App::setup(void)
     this->gameController->init(scnMgr, player, 100.0);
 }
 
-void App::update(Real elapsedTime, OIS::Keyboard* keyboard) {
-    this->characterHandler->update(elapsedTime, keyboard);
+void App::update(Real elapsedTime, OIS::Keyboard* keyboard, OIS::Mouse* mouse) {
+    this->characterHandler->update(elapsedTime, keyboard, mouse);
     this->tileHandler->update(elapsedTime);
-    this->laneHandler->update(elapsedTime, keyboard);
+    this->laneHandler->update(elapsedTime, keyboard, mouse);
     this->cameraHandler->update(elapsedTime, keyboard);
     this->gameController->update(elapsedTime, keyboard);
 }

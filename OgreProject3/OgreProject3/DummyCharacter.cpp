@@ -9,5 +9,5 @@ void DummyCharacter::create(SceneManager* sceneMgr, float x, float y, float z) {
     this->loadModel("Car", "carColors.png");
 }
 
-void DummyCharacter::update(Real elapsedTime, OIS::Keyboard* input) {
+void DummyCharacter::update(Real elapsedTime, OIS::Keyboard* keyboard, OIS::Mouse* mouse) {
 }

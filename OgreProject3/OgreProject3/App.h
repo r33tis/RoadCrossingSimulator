@@ -23,5 +23,5 @@ protected:
 	OIS::Mouse* Mouse;
 public:
 	void setup(void);
-	void update(Real elapsedTime, OIS::Keyboard* keyboard);
+	void update(Real elapsedTime, OIS::Keyboard* keyboard, OIS::Mouse* mouse);
 };

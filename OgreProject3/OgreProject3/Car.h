@@ -12,7 +12,7 @@ private:
     float speed;
 public:
     void create(SceneManager* mSceneMgr, float x, float y, float z);
-    void update(Real elapsedTime, OIS::Keyboard* input);
+    void update(Real elapsedTime, OIS::Keyboard* keyboard, OIS::Mouse* mouse);
     void setSpeed(float speed);
     //Real x();
 };

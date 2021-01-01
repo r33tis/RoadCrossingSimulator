@@ -48,7 +48,7 @@ int main(int argc, char* argv[])
 			// Each render surface (window/rtt/mrt) that is 'auto-updated' has got its 'update' function called.
 			app.getRoot()->renderOneFrame();
 			keyboard->capture();
-			app.update(deltaTime, keyboard);
+			app.update(deltaTime, keyboard, mouse);
 		}
         app.closeApp();
 
