@@ -21,7 +21,7 @@ void App::setup(void)
     Ogre::SceneManager* scnMgr = root->createSceneManager();
     Ogre::OverlaySystem* overlaySys = OgreBites::ApplicationContext::getOverlaySystem();
     scnMgr->addRenderQueueListener(overlaySys);
-    scnMgr->setShadowTextureSettings(2048, 12);
+    scnMgr->setShadowTextureSettings(512, 6);
     scnMgr->setShadowTechnique(ShadowTechnique::SHADOWTYPE_TEXTURE_ADDITIVE);
     scnMgr->setShadowTextureSelfShadow(true);
 

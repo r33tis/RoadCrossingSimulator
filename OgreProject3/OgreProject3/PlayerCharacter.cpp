@@ -9,12 +9,12 @@ void PlayerCharacter::create(SceneManager* sceneMgr, float x, float y, float z) 
     mMainNode = mSceneMgr->getRootSceneNode()->createChildSceneNode(mName);
     mMainNode->translate(Vector3(x, y, z));
 
-    this->loadModel("Student", "studentColors.PNG");
+    this->loadModel("Student", "studentColors.png");
+    mEntity->setCastShadows(false);
     auto mAnimationState = mEntity->getAnimationState("Walk");
     mAnimationState->setWeight(1);
     mAnimationState->setLoop(true);
     mAnimationState->setEnabled(true);
-
 
     this->speed = 20.0;
     this->indirectSpeed = 10.0;
@@ -27,8 +27,14 @@ void PlayerCharacter::create(SceneManager* sceneMgr, float x, float y, float z) 
 }
 
 void PlayerCharacter::initFlashlight() {
+    Light* ambientLight = this->mSceneMgr->createLight("ambientLight");
+    ambientLight->setDiffuseColour(0.4, 0.35, 0.35);
+    ambientLight->setSpecularColour(0.4, 0.35, 0.35);
+    ambientLight->setType(Light::LT_POINT);
+    ambientLight->setCastShadows(true);
+    ambientLight->setRenderingDistance(12.0);
+
     Light* spotLight = this->mSceneMgr->createLight("SpotLight");
-    spotLight->setType(Light::LightTypes::LT_SPOTLIGHT);
     spotLight->setDiffuseColour(0.7, 0.6, 0.6);
     spotLight->setSpecularColour(0.7, 0.6, 0.6);
     spotLight->setType(Light::LT_SPOTLIGHT);
@@ -36,6 +42,7 @@ void PlayerCharacter::initFlashlight() {
     
     SceneNode* flashlight = mMainNode->createChildSceneNode();
     flashlight->attachObject(spotLight);
+    flashlight->attachObject(ambientLight);
     flashlight->setDirection(0, -1, 2); // -1 y
     flashlight->getParentSceneNode()->removeChild(flashlight);
     flashlightNode = mMainNode->createChildSceneNode();

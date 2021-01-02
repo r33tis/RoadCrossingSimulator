@@ -17,7 +17,7 @@ material asphaltTexture {
             normalise_normals off
             polygon_mode solid
             scene_blend_op add
-            shading gouraud
+            shading phong
             transparent_sorting on
 
             texture_unit {
