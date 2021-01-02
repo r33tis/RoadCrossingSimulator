@@ -33,8 +33,8 @@ inline Ogre::SceneNode* TileHandler::createTile(float x, float z, Ogre::ColourVa
 	groundEntity->setMaterial(this->tileMaterial);
 	groundEntity->setCastShadows(true);
 	Ogre::SceneNode* square = sceneMgr->getRootSceneNode()->createChildSceneNode();
-	square->attachObject(groundEntity);
-	square->setPosition(x, 0, z);
+	//square->attachObject(groundEntity);
+	//square->setPosition(x, 0, z);
 	
 	return square;
 }

@@ -27,7 +27,7 @@ void Character::loadModel(const char* meshName, const char* textureName) {
     auto textureManager = TextureManager::getSingletonPtr();
     MaterialManager& lMaterialManager = MaterialManager::getSingleton();
     
-    if (!lMaterialManager.resourceExists(meshName)) {
+    /*if (!lMaterialManager.resourceExists(meshName)) {
 
         Image imageOgre;
         imageOgre.load(textureName, ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME);
@@ -44,13 +44,13 @@ void Character::loadModel(const char* meshName, const char* textureName) {
         MaterialPtr lMaterial = lMaterialManager.create(meshName, ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME);
         lMaterial->getTechnique(0)->getPass(0)->createTextureUnitState(textureName);
         lMaterial->setReceiveShadows(false);
-    }
+    }*/
     std::string buf(meshName);
     buf.append(".mesh");
+    //MaterialManager::getSingleton().getByName(meshName)->recei;
 
     mEntity = mSceneMgr->createEntity(mName, buf);
     mEntity->setMaterialName(meshName);
-    mEntity->setCastShadows(true);
     
     mMainNode->attachObject(mEntity);
 }

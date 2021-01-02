@@ -6,6 +6,11 @@
 #include "SpaceClamper.h"
 #include <math.h>
 #include <OgreFrameListener.h>
+#include <OgreOverlay.h>
+#include <OgreOverlayManager.h>
+#include <OgreOverlayContainer.h>
+#include <OgreTextAreaOverlayElement.h>
+#include <OgreFontManager.h>
 
 void App::setup(void)
 {
@@ -24,6 +29,17 @@ void App::setup(void)
 
     // add resource folder to resourcegroupmanager
     Ogre::ResourceGroupManager::getSingleton().addResourceLocation("resources", "FileSystem");
+    Ogre::ResourceGroupManager::getSingleton().addResourceLocation("resources/environment", "FileSystem");
+
+    // Initialise resources groups                      
+    
+    Ogre::ResourceGroupManager::getSingleton().initialiseAllResourceGroups();
+    Ogre::ResourceGroupManager::getSingleton().loadResourceGroup(ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME);
+
+    
+    // Initialise materials                                                                                                                                                                     
+    //MaterialManager& lMaterialManager = MaterialManager::getSingleton();
+    //lMaterialManager.initialise();
 
     // register our scene with the RTSS
     Ogre::RTShader::ShaderGenerator* shadergen = Ogre::RTShader::ShaderGenerator::getSingletonPtr();
@@ -63,6 +79,7 @@ void App::setup(void)
 
     this->gameController = GameController::getInstance();
     this->gameController->init(scnMgr, player, 120.0);
+
 }
 
 void App::update(Real elapsedTime, OIS::Keyboard* keyboard, OIS::Mouse* mouse) {

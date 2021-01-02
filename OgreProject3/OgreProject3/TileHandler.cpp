@@ -23,9 +23,7 @@ void TileHandler::init(SceneManager* sceneMgr, float tileSize) {
 
 	this->tileMaterial = Ogre::MaterialManager::getSingleton().create("tile material", Ogre::ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME, true);
 	this->tileMaterial->getTechnique(0)->getPass(0)->createTextureUnitState(textureName);
-	//this->tileMaterial->getTechnique(0)->getPass(0)->setAmbient(Ogre::ColourValue(0.8, 0.8, 0.8, 1.0));
 	this->tileMaterial->getTechnique(0)->getPass(0)->setDiffuse(Ogre::ColourValue(0.8, 0.8, 0.8, 1.0));
-	//this->tileMaterial->getTechnique(0)->getPass(0)->setSpecular(Ogre::ColourValue(0.8, 0.8, 0.8, 1.0));
 	this->tileMaterial->setColourWriteEnabled(true);
 	this->tileMaterial->setReceiveShadows(true);
 
@@ -41,8 +39,52 @@ void TileHandler::init(SceneManager* sceneMgr, float tileSize) {
 		Vector3::UNIT_Z);
 
 	tile->prepareForShadowVolume();
+	
 
-	std::cout << "tilehandler singleton init\n";
+
+
+	// LOAD TERRAIN MODEL
+	ResourceGroupManager& resMng = ResourceGroupManager::getSingleton();
+
+
+	/*MaterialManager& lMaterialManager = MaterialManager::getSingleton();
+
+	Image envImage;
+	envImage.load(textureName, ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME);
+	TexturePtr envTexture;
+	envTexture = textureManager->createManual(
+		textureName,
+		ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME,
+		TEX_TYPE_2D,
+		envImage.getWidth(), envImage.getHeight(),
+		0, PF_X8R8G8B8);
+	envTexture->loadImage(envImage);
+
+
+	MaterialPtr lMaterial = lMaterialManager.create(mewshName, ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME);
+	lMaterial->getTechnique(0)->getPass(0)->createTextureUnitState(textureName);
+	lMaterial->setReceiveShadows(false);*/
+	
+	const char* meshName = "Environment";
+	textureName = "environmentColors.png";
+
+	//Ogre::MaterialManager::getSingleton().load("environmentColors", ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME);
+	//auto material = Ogre::MaterialManager::getSingleton().getByName("environmentColors");
+	//material->getTechnique(0)->getPass(0)->getTextureUnitState(0)->setTextureName("environmentColors.png");
+	//material->load();
+
+	std::string buf(meshName);
+	buf.append(".mesh");
+
+	
+
+	auto envEntity = sceneMgr->createEntity("Environment", buf);
+	envEntity->setCastShadows(false);
+
+	Ogre::SceneNode* square = sceneMgr->getRootSceneNode()->createChildSceneNode();
+
+	square->attachObject(envEntity);
+	square->rotate(Vector3::UNIT_Y, Degree(180));
 }
 
 void TileHandler::update(Real elapsedTime) {
