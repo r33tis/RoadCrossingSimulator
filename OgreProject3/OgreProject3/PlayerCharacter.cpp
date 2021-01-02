@@ -94,7 +94,9 @@ void PlayerCharacter::update(Real elapsedTime, OIS::Keyboard* keyboard, OIS::Mou
         auto lookAtPosition = targetPosition;
         lookAtPosition.y = position.y;
 
+        Quaternion o = flashlightNode->_getDerivedOrientation();
         mMainNode->lookAt(lookAtPosition, Ogre::Node::TS_WORLD, Ogre::Vector3::UNIT_Z);
+        flashlightNode->_setDerivedOrientation(o);
 
         movementFulfilled += 0.15;
     }

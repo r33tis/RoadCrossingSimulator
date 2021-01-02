@@ -6,11 +6,7 @@
 #include "SpaceClamper.h"
 #include <math.h>
 #include <OgreFrameListener.h>
-#include <OgreOverlay.h>
-#include <OgreOverlayManager.h>
-#include <OgreOverlayContainer.h>
-#include <OgreTextAreaOverlayElement.h>
-#include <OgreFontManager.h>
+#include <OgreOverlaySystem.h>
 
 void App::setup(void)
 {
@@ -23,6 +19,8 @@ void App::setup(void)
     // get a pointer to the already created root
     Ogre::Root* root = getRoot();
     Ogre::SceneManager* scnMgr = root->createSceneManager();
+    Ogre::OverlaySystem* overlaySys = OgreBites::ApplicationContext::getOverlaySystem();
+    scnMgr->addRenderQueueListener(overlaySys);
     scnMgr->setShadowTextureSettings(2048, 12);
     scnMgr->setShadowTechnique(ShadowTechnique::SHADOWTYPE_TEXTURE_ADDITIVE);
     scnMgr->setShadowTextureSelfShadow(true);
@@ -61,7 +59,7 @@ void App::setup(void)
 
     this->tileHandler = TileHandler::getInstance();
     this->tileHandler->init(scnMgr, 10.0);
-    this->tileHandler->createTiles(-worldWidth / 2.0, worldWidth / 2.0, -worldLength, laneLength);
+    this->tileHandler->createTiles(-worldWidth / 2.0, worldWidth / 2.0, -worldLength, 6*laneLength);
 
     this->characterHandler = CharacterHandler::getInstance();
     this->characterHandler->init(scnMgr);
@@ -78,8 +76,7 @@ void App::setup(void)
     getRenderWindow()->addViewport(cam);
 
     this->gameController = GameController::getInstance();
-    this->gameController->init(scnMgr, player, 120.0);
-
+    this->gameController->init(scnMgr, player, 120.0, laneLength);
 }
 
 void App::update(Real elapsedTime, OIS::Keyboard* keyboard, OIS::Mouse* mouse) {
