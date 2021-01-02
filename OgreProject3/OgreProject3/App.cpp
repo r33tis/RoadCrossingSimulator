@@ -34,11 +34,6 @@ void App::setup(void)
     Ogre::ResourceGroupManager::getSingleton().initialiseAllResourceGroups();
     Ogre::ResourceGroupManager::getSingleton().loadResourceGroup(ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME);
 
-    
-    // Initialise materials                                                                                                                                                                     
-    //MaterialManager& lMaterialManager = MaterialManager::getSingleton();
-    //lMaterialManager.initialise();
-
     // register our scene with the RTSS
     Ogre::RTShader::ShaderGenerator* shadergen = Ogre::RTShader::ShaderGenerator::getSingletonPtr();
     shadergen->addSceneManager(scnMgr);
