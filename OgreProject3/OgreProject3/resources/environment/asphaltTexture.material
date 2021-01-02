@@ -29,7 +29,7 @@ material asphaltTexture {
 			rtshader_system
  			{	 	 						
  				lighting_stage normal_map asphaltNormal.png tangent_space 0 bilinear
-				tex_address_mode wrap
+				lighting_stage per_pixel
  			}
         }
     }
