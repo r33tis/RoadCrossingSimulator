@@ -10,7 +10,8 @@ class GameController
 private:
 	float time;
 	float endTime;
-	float bestDistance;
+	float laneLength;
+	int bestDistance;
 	Character* quarry;
 	SceneManager* sceneMgr;
 	Light* sky;
@@ -21,7 +22,8 @@ public:
 		static GameController instance;
 		return &instance;
 	}
-	void init(SceneManager* sceneMgr, Character* quarry, float endTime);
+	void init(SceneManager* sceneMgr, Character* quarry, float endTime, float laneLength);
 	void update(Real elapsedTIme, OIS::Keyboard* input);
 	void updateSky(Real elapsedTime);
+	void updateScore(int distance);
 };

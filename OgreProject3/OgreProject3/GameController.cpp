@@ -1,11 +1,13 @@
 #include "GameController.h"
 #include <iostream>
 #include <tgmath.h>
+#include <stack>
 
-void GameController::init(SceneManager* sceneMgr, Character* quarry, float endTime) {
+void GameController::init(SceneManager* sceneMgr, Character* quarry, float endTime, float laneLength) {
 	this->time = 0.0;
 	this->endTime = endTime;
-	this->bestDistance = 0.0;
+	this->laneLength = laneLength;
+	this->bestDistance = 0;
 	this->quarry = quarry;
 	this->sceneMgr = sceneMgr;
 	this->sky = this->sceneMgr->createLight("DirectionalLight");
@@ -24,9 +26,10 @@ void GameController::update(Real elapsedTime, OIS::Keyboard* input) {
 	//TODO: Replace score with UI and stop printing out time.
 	//std::cout << "Time: "<< time << "/" << endTime << "\t" << "Score: " << bestDistance << "\n";
 
-	float distance = -quarry->getZ();
+	int distance = (-quarry->getZ() / laneLength);
 	if (distance > bestDistance) {
 		bestDistance = distance;
+		updateScore(distance);
 	}
 
 	updateSky(elapsedTime);
@@ -50,4 +53,32 @@ void GameController::updateSky(Real elapsedTime) {
 
 	this->sky->setDiffuseColour(Ogre::ColourValue(r, g, b));
 	this->sky->setSpecularColour(Ogre::ColourValue(r, g, b));
+}
+
+void GameController::updateScore(int distance) {
+	int total = distance;
+	std::cout << "D:" << distance << "\n";
+
+	int order = 1;
+	while (order <= total) {
+		order *= 10;
+	}
+
+	std::stack <int> numbers;
+	int orderFloor = order / 10;
+	while (orderFloor >= 1) {
+		int counter = 0;
+		while (total >= orderFloor) {
+			total -= orderFloor;
+			counter++;
+		}
+		numbers.push(counter);
+		orderFloor /= 10;
+	}
+
+	while (!numbers.empty()) {
+		std::cout << numbers.top();
+		numbers.pop();
+	}
+	std::cout << "\n";
 }
