@@ -14,12 +14,13 @@ void GameController::init(SceneManager* sceneMgr, Character* quarry, float endTi
 	this->canvas = OverlayManager::getSingleton().create("canvas");
 	this->sky = this->sceneMgr->createLight("DirectionalLight");
 	this->sky->setType(Light::LT_DIRECTIONAL);
+	this->sky->setCastShadows(true);
 	this->sky->setDiffuseColour(Ogre::ColourValue(1.0, 1.0, 1.0));
 	this->sky->setSpecularColour(Ogre::ColourValue(1.0, 1.0, 1.0));
 	this->skyNode = this->sceneMgr->getRootSceneNode()->createChildSceneNode();
 	this->skyNode->attachObject(this->sky);
 	this->skyNode->setDirection(Vector3(0, -1, 0));
-	this->threeDis = std::uniform_int_distribution<>(0, 2);
+	this->sixDis = std::uniform_int_distribution<>(0, 5);
 	
 	initNumbers();
 	updateSky(0);
@@ -32,7 +33,7 @@ void GameController::init(SceneManager* sceneMgr, Character* quarry, float endTi
 void GameController::initNumbers() {
 	auto textureManager = TextureManager::getSingletonPtr();
 
-	for (int v = 0; v < 3; v++) {
+	for (int v = 0; v < 6; v++) {
 		for (int n = 0; n < 10; n++) {
 			auto name = "number" + std::to_string(v) + std::to_string(n);
 			auto textureName = name + ".png";
@@ -132,13 +133,14 @@ void GameController::updateScore(int distance) {
 	float scale = 2.0;
 	float width = (16 * scale) / overlayManager.getViewportWidth();
 	float height = (32 * scale) / overlayManager.getViewportHeight();
-	float padding = ((width + height) / 2) * (0.5);
+	float paddingX = ((width + height) / 2) * (0.5) + (sixDis(gen) * scale) / overlayManager.getViewportWidth();
+	float paddingY = ((width + height) / 2) * (0.5) + (sixDis(gen) * scale) / overlayManager.getViewportWidth();
 
 	int i = 0;
 	canvas->clear();
 	while (!numbers.empty()) {
 		int number = numbers.top();
-		int version = threeDis(gen);
+		int version = sixDis(gen);
 
 		std::string name = "Panel" + std::to_string(i) + "_" + std::to_string(number) + "_" + std::to_string(version);
 		
@@ -151,7 +153,7 @@ void GameController::updateScore(int distance) {
 		}
 		
 		
-		panel->setPosition(1.0 - width * (i + 1) - padding, 0.0 + padding);
+		panel->setPosition(1.0 - width * (i + 1) - paddingX, 0.0 + paddingY);
 		panel->setDimensions(width, height);
 		panel->setMaterial(numberMaterials[version][number]);
 		canvas->add2D(panel);

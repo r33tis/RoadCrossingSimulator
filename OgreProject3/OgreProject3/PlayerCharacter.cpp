@@ -10,7 +10,7 @@ void PlayerCharacter::create(SceneManager* sceneMgr, float x, float y, float z) 
     mMainNode->translate(Vector3(x, y, z));
 
     this->loadModel("Student", "studentColors.png");
-    mEntity->setCastShadows(false);
+    mEntity->setCastShadows(true);
     auto mAnimationState = mEntity->getAnimationState("Walk");
     mAnimationState->setWeight(1);
     mAnimationState->setLoop(true);
@@ -28,15 +28,16 @@ void PlayerCharacter::create(SceneManager* sceneMgr, float x, float y, float z) 
 
 void PlayerCharacter::initFlashlight() {
     Light* ambientLight = this->mSceneMgr->createLight("ambientLight");
-    ambientLight->setDiffuseColour(0.4, 0.35, 0.35);
-    ambientLight->setSpecularColour(0.4, 0.35, 0.35);
+    ambientLight->setDiffuseColour(0.09, 0.085, 0.08);
+    ambientLight->setSpecularColour(0.09, 0.085, 0.08);
     ambientLight->setType(Light::LT_POINT);
-    ambientLight->setCastShadows(true);
-    ambientLight->setRenderingDistance(12.0);
+    ambientLight->setCastShadows(false);
+    ambientLight->setRenderingDistance(5.0);
+    ambientLight->setAttenuation(15.0, 0, 1.0, 1.1);
 
     Light* spotLight = this->mSceneMgr->createLight("SpotLight");
-    spotLight->setDiffuseColour(0.7, 0.6, 0.6);
-    spotLight->setSpecularColour(0.7, 0.6, 0.6);
+    spotLight->setDiffuseColour(0.9, 0.85, 0.8);
+    spotLight->setSpecularColour(0.9, 0.85, 0.8);
     spotLight->setType(Light::LT_SPOTLIGHT);
     spotLight->setCastShadows(true);
     
@@ -47,7 +48,7 @@ void PlayerCharacter::initFlashlight() {
     flashlight->getParentSceneNode()->removeChild(flashlight);
     flashlightNode = mMainNode->createChildSceneNode();
     flashlightNode->addChild(flashlight);
-    flashlightNode->setPosition(Vector3(0, 6, -0.1));
+    flashlightNode->setPosition(Vector3(0, 10, 0));
 
     spotLight->setSpotlightRange(Degree(45), Degree(60));
 }
@@ -73,7 +74,6 @@ void PlayerCharacter::update(Real elapsedTime, OIS::Keyboard* keyboard, OIS::Mou
         targetPosition = startPos;
         mMainNode->setPosition(Vector3(0, 0, 0));
     }
-
     // Cheat ahead
     if (movementFulfilled >= 0.7) {
         mMainNode->setPosition(targetPosition);

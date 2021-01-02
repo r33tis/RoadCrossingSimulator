@@ -19,7 +19,7 @@ private:
 	float ticker;
 	float laneLength;
 	int bestDistance;
-	Ogre::MaterialPtr numberMaterials[3][10];
+	Ogre::MaterialPtr numberMaterials[6][10];
 	std::stack <int> numbers;
 	Character* quarry;
 	SceneManager* sceneMgr;
@@ -29,7 +29,7 @@ private:
 	GameController() {};
 	std::random_device rd;
 	std::mt19937 gen;
-	std::uniform_int_distribution<> threeDis;
+	std::uniform_int_distribution<> sixDis;
 public:
 	static GameController* getInstance() {
 		static GameController instance;
