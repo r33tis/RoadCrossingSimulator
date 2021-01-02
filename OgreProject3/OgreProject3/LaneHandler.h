@@ -27,7 +27,7 @@ public:
 		static LaneHandler instance;
 		return &instance;
 	}
-	void init(SceneManager* sceneMgr, float laneLength, float leftBound, float rightBound, float speedMin, float speedMax, float spawnMin, float spawnMax, float pauseMin, float pauseMax);
+	void init(SceneManager* sceneMgr, float laneLength, float leftBound, float rightBound, float speedMin, float speedMax, float spawnMin, float spawnMax, int pauseMin, int pauseMax);
 	void update(Real elaspedTime, OIS::Keyboard* keyboard, OIS::Mouse* mouse);
 public:
 	void createLanes(int n);

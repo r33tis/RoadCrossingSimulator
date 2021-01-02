@@ -21,7 +21,7 @@ void App::setup(void)
     Ogre::SceneManager* scnMgr = root->createSceneManager();
     Ogre::OverlaySystem* overlaySys = OgreBites::ApplicationContext::getOverlaySystem();
     scnMgr->addRenderQueueListener(overlaySys);
-    scnMgr->setShadowTextureSettings(512, 6);
+    scnMgr->setShadowTextureSettings(2048, 6);
     scnMgr->setShadowTechnique(ShadowTechnique::SHADOWTYPE_TEXTURE_ADDITIVE);
     scnMgr->setShadowTextureSelfShadow(true);
 
@@ -46,6 +46,7 @@ void App::setup(void)
 
     scnMgr->showBoundingBoxes(false);
 
+    float dayTime = 12.0;
     float worldWidth = 120.0;
     float worldLength = 1800.0;
     float laneLength = 10.0;
@@ -62,7 +63,7 @@ void App::setup(void)
     player->getMainNode()->yaw(Radian(Degree(180)));
 
     this->laneHandler = LaneHandler::getInstance();
-    this->laneHandler->init(scnMgr, laneLength, -worldWidth/2.0, worldWidth/2.0, 0.5, 1.5, 5.0, 10.0, 3.0, 5.0);
+    this->laneHandler->init(scnMgr, laneLength, -worldWidth/2.0, worldWidth/2.0, 0.5, 1.5, 5.0, 10.0, 3, 4);
     this->laneHandler->createLanes(worldLength / laneLength);
 
     this->cameraHandler = CameraHandler::getInstance();
@@ -71,7 +72,7 @@ void App::setup(void)
     getRenderWindow()->addViewport(cam);
 
     this->gameController = GameController::getInstance();
-    this->gameController->init(scnMgr, player, 120.0, laneLength);
+    this->gameController->init(scnMgr, player, dayTime, laneLength);
 }
 
 void App::update(Real elapsedTime, OIS::Keyboard* keyboard, OIS::Mouse* mouse) {

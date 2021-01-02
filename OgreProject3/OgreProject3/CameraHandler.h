@@ -8,10 +8,13 @@ class CameraHandler
 {
 private:
 	SceneNode* camNode;
+	SceneNode* lightNode;
+	Light* spotLight;
 	Character* quarry;
 	SceneManager* sceneMgr;
 	Vector3 lastPoint;
 	Vector3 offSet;
+	Vector3 offSet2;
 	float t;
 	float speed;
 	CameraHandler() {};
