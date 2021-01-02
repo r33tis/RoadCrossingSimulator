@@ -40,51 +40,27 @@ void TileHandler::init(SceneManager* sceneMgr, float tileSize) {
 
 	tile->prepareForShadowVolume();
 	
-
-
-
 	// LOAD TERRAIN MODEL
 	ResourceGroupManager& resMng = ResourceGroupManager::getSingleton();
 
-
-	/*MaterialManager& lMaterialManager = MaterialManager::getSingleton();
-
-	Image envImage;
-	envImage.load(textureName, ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME);
-	TexturePtr envTexture;
-	envTexture = textureManager->createManual(
-		textureName,
-		ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME,
-		TEX_TYPE_2D,
-		envImage.getWidth(), envImage.getHeight(),
-		0, PF_X8R8G8B8);
-	envTexture->loadImage(envImage);
-
-
-	MaterialPtr lMaterial = lMaterialManager.create(mewshName, ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME);
-	lMaterial->getTechnique(0)->getPass(0)->createTextureUnitState(textureName);
-	lMaterial->setReceiveShadows(false);*/
 	
-	const char* meshName = "Environment";
+	// EXAMPLE ON HOW TO SPAWN UNIVErSITY
+	const char* meshName = "University";
 	textureName = "environmentColors.png";
-
-	//Ogre::MaterialManager::getSingleton().load("environmentColors", ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME);
-	//auto material = Ogre::MaterialManager::getSingleton().getByName("environmentColors");
-	//material->getTechnique(0)->getPass(0)->getTextureUnitState(0)->setTextureName("environmentColors.png");
-	//material->load();
 
 	std::string buf(meshName);
 	buf.append(".mesh");
 
 	
-
-	auto envEntity = sceneMgr->createEntity("Environment", buf);
+	auto envEntity = sceneMgr->createEntity("University", buf);
 	envEntity->setCastShadows(false);
 
 	Ogre::SceneNode* square = sceneMgr->getRootSceneNode()->createChildSceneNode();
 
-	square->attachObject(envEntity);
 	square->rotate(Vector3::UNIT_Y, Degree(180));
+	square->attachObject(envEntity);
+	square->setPosition(Vector3(0, 5, 0));
+
 }
 
 void TileHandler::update(Real elapsedTime) {
