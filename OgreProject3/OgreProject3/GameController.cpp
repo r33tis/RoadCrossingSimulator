@@ -123,8 +123,9 @@ void GameController::updateSky(Real elapsedTime) {
 	float r = 0.5 * pow(sin(v * 3.14 - 1.0), 1.0) + 0.5;
 	float g = 0.5 * pow(sin(v * 3.14 - 1.9), 1.0) + 0.5;
 	float b = 0.5 * pow(sin(v * 3.14 - 2.7), 1.0) + 0.5;
+	float w = 0.4 * pow(sin(v * 1.57 - 1.57), 1.0) + 0.4;
 
-	this->sceneMgr->setAmbientLight(Ogre::ColourValue(v*0.65, v*0.5, v*0.5));
+	this->sceneMgr->setAmbientLight(Ogre::ColourValue(w, w, w));
 	this->sky->setDiffuseColour(Ogre::ColourValue(r, g, b));
 	this->sky->setSpecularColour(Ogre::ColourValue(r, g, b));
 }
