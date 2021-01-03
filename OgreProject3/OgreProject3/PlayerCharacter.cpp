@@ -86,14 +86,7 @@ float easeInOutQuad(float t) {
 
 
 void PlayerCharacter::update(Real elapsedTime, OIS::Keyboard* keyboard, OIS::Mouse* mouse) {
-    if (this->placeMeeting<Car>(0, 0)) {
-        //std::cout << "collision!\n";
-        //auto startPos = Vector3(0, 0, 0);
-        //lastPosition = startPos;
-        //targetPosition = startPos;
-        //mMainNode->setPosition(Vector3(0, 0, 0));
-    }
-    // Cheat ahead
+    
     if (movementFulfilled >= 0.7) {
         mMainNode->setPosition(targetPosition);
         lastPosition = this->getWorldPosition();
@@ -124,11 +117,16 @@ void PlayerCharacter::update(Real elapsedTime, OIS::Keyboard* keyboard, OIS::Mou
         mMainNode->lookAt(lookAtPosition, Ogre::Node::TS_WORLD, -Ogre::Vector3::UNIT_Z);
         flashlightNode->_setDerivedOrientation(o);
 
-        movementFulfilled += elapsedTime * 3;
+        movementFulfilled += elapsedTime * 3.5;
     }
     
     int shiftX = mouse->getMouseState().X.rel;
     flashlightNode->yaw(Radian(-shiftX * elapsedTime * 0.1));
+
+    if (this->placeMeeting<Car>(0, 0)) {
+        std::cout << "PLAYER DIED!\n";
+        playerState = PlayerState::Lost;
+    }
 }
 
 PlayerState PlayerCharacter::getPlayerState()
