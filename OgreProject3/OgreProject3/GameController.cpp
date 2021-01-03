@@ -71,8 +71,14 @@ void GameController::initNumbers() {
 	}	
 }
 
-void GameController::update(Real elapsedTime, OIS::Keyboard* input) {
-	time += elapsedTime;
+void GameController::update(Real elapsedTime, OIS::Keyboard* keyboard) {
+	Ogre::Real mod = 1.0;
+	
+	if (keyboard->isKeyDown(OIS::KC_0)) {
+		mod = 20.0;
+	}
+	
+	time += elapsedTime * mod;
 	ticker -= elapsedTime;
 
 	//TODO: Replace score with UI and stop printing out time.
@@ -84,7 +90,7 @@ void GameController::update(Real elapsedTime, OIS::Keyboard* input) {
 		updateScore(bestDistance);
 	}
 
-	updateSky(elapsedTime);
+	updateSky(elapsedTime * mod);
 
 	if (ticker <= 0.3) {
 		updateScore(bestDistance);
