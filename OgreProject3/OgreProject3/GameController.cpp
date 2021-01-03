@@ -30,7 +30,7 @@ void GameController::init(SceneManager* sceneMgr, Character* quarry, float endTi
 	this->canvas = overlayManager.create("OverlayName");
 }
 
-void GameController::resetSky() {
+void GameController::reset() {
 	std::cout << "reseting sky!\n";
 	
 	updateSky(-time);
@@ -38,6 +38,8 @@ void GameController::resetSky() {
 	this->skyNode->setDirection(Vector3(0, -1, 0));
 
 	this->time = 0.0;
+	this->bestDistance = 0.0;
+	updateScore(0);
 }
 
 void GameController::initNumbers() {

@@ -155,11 +155,13 @@
     <ClCompile Include="CollidableCharacter.cpp" />
     <ClCompile Include="DummyCharacter.cpp" />
     <ClCompile Include="GameController.cpp" />
+    <ClCompile Include="GameOverScreen.cpp" />
     <ClCompile Include="Lane.cpp" />
     <ClCompile Include="LaneHandler.cpp" />
     <ClCompile Include="OgreProject3.cpp" />
     <ClCompile Include="PlayerCharacter.cpp" />
     <ClCompile Include="PlayerCharacter.h" />
+    <ClCompile Include="Screen.cpp" />
     <ClCompile Include="SpaceClamper.cpp" />
     <ClCompile Include="TileHandler.cpp" />
   </ItemGroup>
@@ -172,6 +174,8 @@
     <ClInclude Include="CharacterHandler.h" />
     <ClInclude Include="CollidableCharacter.h" />
     <ClInclude Include="DummyCharacter.h" />
+    <ClInclude Include="GameOverScreen.h" />
+    <ClInclude Include="Screen.h" />
     <ClInclude Include="SpaceClamper.h" />
     <ClInclude Include="Lane.h" />
     <ClInclude Include="LaneHandler.h" />
