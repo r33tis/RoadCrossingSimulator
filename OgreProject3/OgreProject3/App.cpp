@@ -49,7 +49,7 @@ void App::setup(void)
 
     scnMgr->showBoundingBoxes(false);
 
-    float dayTime = 120.0;
+    float dayTime = 160.0;
     float worldWidth = 240.0;
     float worldLength = 1200.0;
     float laneLength = 10.0;
@@ -64,7 +64,7 @@ void App::setup(void)
     this->characterHandler->init(scnMgr);
 
     this->player = (PlayerCharacter*) this->characterHandler->createCharacter<PlayerCharacter>(0, 0, 0);
-    this->player->getMainNode()->yaw(Radian(Degree(180)));
+    //this->player->getMainNode()->yaw(Radian(Degree(180)));
     this->player->setMovementBounds(-worldWidth / 2.0, worldWidth / 2.0, laneLength, -worldLength);
 
     this->laneHandler = LaneHandler::getInstance();
@@ -99,7 +99,7 @@ void App::update(Real elapsedTime, OIS::Keyboard* keyboard, OIS::Mouse* mouse) {
         this->cameraHandler->update(elapsedTime, keyboard);
         this->gameController->update(elapsedTime, keyboard);
     }
-    else {
+    else if (gameState == GameState::Lost) {
         if (keyboard->isKeyDown(OIS::KC_SPACE)) {
             player->setPlayerState(PlayerState::Playing);
             gameController->reset();

@@ -32,7 +32,11 @@ void GameController::init(SceneManager* sceneMgr, Character* quarry, float endTi
 
 void GameController::reset() {
 	std::cout << "reseting sky!\n";
+	
 	updateSky(-time);
+	this->skyNode->resetOrientation();
+	this->skyNode->setDirection(Vector3(0, -1, 0));
+
 	this->time = 0.0;
 	this->bestDistance = 0.0;
 	updateScore(0);
@@ -112,9 +116,13 @@ void GameController::updateSky(Real elapsedTime) {
 	}
 
 	//TODO: Different bands of light die down at different rates, so we get a cool sunset.
-	float r = 1.0 * pow(sin(v * 1.57),0.4); // Slowest going
-	float g = 1.0 * pow(sin(v * 1.0), 1); // Fastest going
-	float b = 0.9 * (pow(v - 0.1, 5) + pow(v - 0.8, 8));
+	//float r = 1.0 * pow(sin(v * 1.57), 0.2);
+	//float g = 1.0 * pow(sin(v * 1.57), 2.0);
+	//float b = 0.5 * pow(sin(v * 3.14 - 2.7), 1.0) + 0.5;
+	v *= 1.1;
+	float r = 0.5 * pow(sin(v * 3.14 - 1.0), 1.0) + 0.5;
+	float g = 0.5 * pow(sin(v * 3.14 - 1.9), 1.0) + 0.5;
+	float b = 0.5 * pow(sin(v * 3.14 - 2.7), 1.0) + 0.5;
 
 	this->sky->setDiffuseColour(Ogre::ColourValue(r, g, b));
 	this->sky->setSpecularColour(Ogre::ColourValue(r, g, b));
