@@ -29,7 +29,7 @@ void PlayerCharacter::create(SceneManager* sceneMgr, float x, float y, float z) 
     movementFulfilled = 0.0;
 }
 
-void PlayerCharacter::init(float leftBound, float rightBound, float botBound, float topBound) {
+void PlayerCharacter::setMovementBounds(float leftBound, float rightBound, float botBound, float topBound) {
     this->leftBound = leftBound;
     this->rightBound = rightBound;
     this->botBound = botBound;
@@ -140,7 +140,7 @@ PlayerState PlayerCharacter::getPlayerState()
 void PlayerCharacter::setPlayerState(PlayerState playerState)
 {
     if (playerState == PlayerState::Playing) {
-        auto newPos = Vector3(0, 0, SpaceClamper::getInstance()->clampZ(0.0));
+        auto newPos = Vector3(0, 0, 0);
         this->setWorldPosition(newPos);
         this->targetPosition = newPos;
         this->lastPosition = newPos;
