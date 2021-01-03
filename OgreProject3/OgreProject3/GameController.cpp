@@ -119,11 +119,15 @@ void GameController::updateSky(Real elapsedTime) {
 	//float r = 1.0 * pow(sin(v * 1.57), 0.2);
 	//float g = 1.0 * pow(sin(v * 1.57), 2.0);
 	//float b = 0.5 * pow(sin(v * 3.14 - 2.7), 1.0) + 0.5;
-	v *= 1.1;
+	v *= 1.5;
 	float r = 0.5 * pow(sin(v * 3.14 - 1.0), 1.0) + 0.5;
+	if (v > 0.8187) { r = 1.0; }
 	float g = 0.5 * pow(sin(v * 3.14 - 1.9), 1.0) + 0.5;
+	if (v > 1.1053) { g = 1.0; }
 	float b = 0.5 * pow(sin(v * 3.14 - 2.7), 1.0) + 0.5;
-	float w = 0.4 * pow(sin(v * 1.57 - 1.57), 1.0) + 0.4;
+	if (v > 1.3601) { b = 1.0; }
+	float w = 0.3 * pow(sin(v * 1.57 - 1.57), 1.0) + 0.3;
+	if (v > 2.0005) { w = 0.6; }
 
 	this->sceneMgr->setAmbientLight(Ogre::ColourValue(w, w, w));
 	this->sky->setDiffuseColour(Ogre::ColourValue(r, g, b));
