@@ -2,6 +2,7 @@
 #include <vector>
 #include <Ogre.h>
 #include <iostream>
+#include <random>
 
 using namespace Ogre;
 
@@ -13,6 +14,9 @@ private:
 	std::vector<Ogre::SceneNode*> tiles;
 	SceneManager* sceneMgr;
 	Ogre::MaterialPtr tileMaterial;
+	std::random_device rd;
+	std::mt19937 gen;
+	std::uniform_int_distribution<> threeDis;
 	TileHandler() {};
 public:
 	static TileHandler* getInstance() {
@@ -23,6 +27,8 @@ public:
 	void update(Real elapsedTime);
 public:
 	void createTiles(float x0, float x1, float z0, float z1);
+	void createPauseLane(float leftBound, float rightBound, float z);
+	void createRoadLanes(float x0, float x1, float z0, float z1);
 	Ogre::SceneNode* createTile(float x, float z, Ogre::ColourValue c);
 	std::vector<SceneNode*> listTiles();
 };

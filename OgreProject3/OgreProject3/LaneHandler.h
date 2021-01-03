@@ -6,6 +6,7 @@
 #include "Lane.h"
 #include "Car.h"
 #include "SpaceClamper.h"
+#include "TileHandler.h"
 
 class LaneHandler
 {
@@ -97,15 +98,22 @@ inline void LaneHandler::createLanes(int n)
 {
 	int lanesUntilPause = 0;
 	for (int i = 0; i < n; i++) {
+		float z0 = SpaceClamper::getInstance()->clampZ(-float(i) * laneLength);
+		float z1 = SpaceClamper::getInstance()->clampZ(-float(i + 1) * laneLength);
 		if (lanesUntilPause <= 0) {
 			// Would a pause lane still be a lane, just of a different kind?
-			createPause(SpaceClamper::getInstance()->clampZ(-float(i) * laneLength));
+			TileHandler::getInstance()->createPauseLane(leftBound, rightBound, z0);
+			
 			lanesUntilPause = pauseDis(gen);
 		}
 		else {
-			Lane* lane = createLane(SpaceClamper::getInstance()->clampZ(-float(i) * laneLength));
-			lanes.push_back(lane);
-			lanesUntilPause--;
+			TileHandler::getInstance()->createRoadLanes(leftBound, rightBound, z0, z1);
+			Lane* lane1 = createLane(SpaceClamper::getInstance()->clampZ(z0));
+			Lane* lane2 = createLane(SpaceClamper::getInstance()->clampZ(z1));
+			lanes.push_back(lane1);
+			lanes.push_back(lane2);
+			lanesUntilPause -= 2;
+			i++;
 		}
 	}
 }

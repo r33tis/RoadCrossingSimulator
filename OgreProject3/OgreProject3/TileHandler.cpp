@@ -5,6 +5,8 @@
 void TileHandler::init(SceneManager* sceneMgr, float tileSize) {
 	this->sceneMgr = sceneMgr;
 	this->tiles = std::vector<Ogre::SceneNode*>();
+	this->gen = std::mt19937(rd());
+	this->threeDis = std::uniform_int_distribution<>(0, 2);
 
 	auto textureManager = TextureManager::getSingletonPtr();
 
@@ -39,28 +41,6 @@ void TileHandler::init(SceneManager* sceneMgr, float tileSize) {
 		Vector3::UNIT_Z);
 
 	tile->prepareForShadowVolume();
-	
-	// LOAD TERRAIN MODEL
-	ResourceGroupManager& resMng = ResourceGroupManager::getSingleton();
-
-	
-	// EXAMPLE ON HOW TO SPAWN UNIVErSITY
-	const char* meshName = "University";
-	textureName = "environmentColors.png";
-
-	std::string buf(meshName);
-	buf.append(".mesh");
-
-	
-	auto envEntity = sceneMgr->createEntity("University", buf);
-	envEntity->setCastShadows(false);
-
-	Ogre::SceneNode* square = sceneMgr->getRootSceneNode()->createChildSceneNode();
-
-	square->rotate(Vector3::UNIT_Y, Degree(180));
-	square->attachObject(envEntity);
-	square->setPosition(Vector3(0, 5, 0));
-
 }
 
 void TileHandler::update(Real elapsedTime) {
@@ -94,5 +74,108 @@ void TileHandler::createTiles(float x0, float x1, float z0, float z1) {
 			x += tileSize;
 		}
 		z += tileSize;
+	}
+
+	// LOAD TERRAIN MODEL
+	ResourceGroupManager& resMng = ResourceGroupManager::getSingleton();
+
+
+	// EXAMPLE ON HOW TO SPAWN UNIVErSITY
+	const char* meshName = "University";
+	auto textureName = "environmentColors.png";
+
+	std::string buf(meshName);
+	buf.append(".mesh");
+
+
+	Entity* envEntity = sceneMgr->createEntity("University", buf);
+	envEntity->setCastShadows(false);
+
+	Ogre::SceneNode* university = sceneMgr->getRootSceneNode()->createChildSceneNode();
+
+	university->rotate(Vector3::UNIT_Y, Degree(180));
+	university->attachObject(envEntity);
+	university->setPosition(
+		SpaceClamper::getInstance()->clampX((x0 + x1) / 2),
+		0.0,
+		z0 - envEntity->getBoundingBox().getHalfSize().z
+	);
+}
+
+void TileHandler::createPauseLane(float x0, float x1, float z) {
+	// LOAD TERRAIN MODEL
+	ResourceGroupManager& resMng = ResourceGroupManager::getSingleton();
+
+	const char* meshName;
+	int v = threeDis(gen);
+	switch (v) {
+	case 0: meshName = "Grass_Lane"; break;
+	case 1: meshName = "2_Tree_Lane"; break;
+	case 2: meshName = "3_Tree_Lane"; break;
+	default: meshName = "Grass_Lane"; break;
+	}
+	auto textureName = "environmentColors.png";
+	std::string buf(meshName);
+	buf.append(".mesh");
+
+	float x = x0;
+	bool first = true;
+	while (x < x1) {
+		Entity* envEntity = sceneMgr->createEntity("PauseLane_" + std::to_string(z) + "_" + std::to_string(x), buf);
+		envEntity->setCastShadows(false);
+		Ogre::Real ratio = tileSize / envEntity->getBoundingBox().getSize().z;
+
+		Ogre::SceneNode* lane = sceneMgr->getRootSceneNode()->createChildSceneNode();
+
+		lane->rotate(Vector3::UNIT_Y, Degree(180));
+		lane->attachObject(envEntity);
+		if (first) {
+			x -= envEntity->getBoundingBox().getHalfSize().x * ratio;
+			first = false;
+		}
+		lane->setPosition(
+			SpaceClamper::getInstance()->clampX(x),
+			0.0,
+			SpaceClamper::getInstance()->clampZ(z)
+		);
+		x += envEntity->getBoundingBox().getSize().x * ratio;
+		lane->setScale(ratio, ratio, ratio);
+	}
+}
+
+void TileHandler::createRoadLanes(float x0, float x1, float z0, float z1) {
+	ResourceGroupManager& resMng = ResourceGroupManager::getSingleton();
+
+	const char* meshName;
+	meshName = "Road_Lane";
+	auto textureName = "environmentColors.png";
+	std::string buf(meshName);
+	buf.append(".mesh");
+
+
+	float x = x0;
+	float z = (SpaceClamper::getInstance()->clampZ(z0) + SpaceClamper::getInstance()->clampZ(z1)) / 2.0;
+	bool first = true;
+	while (x < x1) {
+		Entity* envEntity = sceneMgr->createEntity("RoadLane_" + std::to_string(z) + "_" + std::to_string(x), buf);
+		envEntity->setCastShadows(false);
+		Ogre::Real ratio = (2 * tileSize) / envEntity->getBoundingBox().getSize().z;
+
+		Ogre::SceneNode* lane = sceneMgr->getRootSceneNode()->createChildSceneNode();
+
+		lane->rotate(Vector3::UNIT_Y, Degree(180));
+		lane->attachObject(envEntity);
+		if (first) {
+			x -= envEntity->getBoundingBox().getHalfSize().x * ratio;
+			first = false;
+		}
+		lane->setPosition(
+			SpaceClamper::getInstance()->clampX(x),
+			0.0,
+			z
+		);
+		x += envEntity->getBoundingBox().getSize().x * ratio;
+		
+		lane->setScale(ratio, ratio, ratio);
 	}
 }

@@ -49,6 +49,11 @@ int main(int argc, char* argv[])
 			app.getRoot()->renderOneFrame();
 			keyboard->capture();
 			mouse->capture();
+
+			if (keyboard->isKeyDown(OIS::KC_ESCAPE)) {
+				// TODO: exit safely
+			}
+
 			app.update(deltaTime, keyboard, mouse);
 		}
         app.closeApp();

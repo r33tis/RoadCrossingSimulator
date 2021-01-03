@@ -46,9 +46,9 @@ void App::setup(void)
 
     scnMgr->showBoundingBoxes(false);
 
-    float dayTime = 12.0;
-    float worldWidth = 120.0;
-    float worldLength = 1800.0;
+    float dayTime = 120.0;
+    float worldWidth = 240.0;
+    float worldLength = 1200.0;
     float laneLength = 10.0;
 
     SpaceClamper::getInstance()->init(laneLength, laneLength, laneLength, SpaceClamper::clampMode::centre);
@@ -63,7 +63,7 @@ void App::setup(void)
     player->getMainNode()->yaw(Radian(Degree(180)));
 
     this->laneHandler = LaneHandler::getInstance();
-    this->laneHandler->init(scnMgr, laneLength, -worldWidth/2.0, worldWidth/2.0, 0.5, 1.5, 5.0, 10.0, 3, 4);
+    this->laneHandler->init(scnMgr, laneLength, -worldWidth/2.0, worldWidth/2.0, 0.5, 1.5, 4.0, 8.0, 1, 10);
     this->laneHandler->createLanes(worldLength / laneLength);
 
     this->cameraHandler = CameraHandler::getInstance();
