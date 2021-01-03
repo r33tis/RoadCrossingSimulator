@@ -11,10 +11,10 @@ void PlayerCharacter::create(SceneManager* sceneMgr, float x, float y, float z) 
 
     this->loadModel("Cube", "studentColors.png");
     mEntity->setCastShadows(true);
-    auto mAnimationState = mEntity->getAnimationState("Walk");
-    mAnimationState->setWeight(1);
-    mAnimationState->setLoop(true);
-    mAnimationState->setEnabled(true);
+    animationState = mEntity->getAnimationState("Walk");
+    animationState->setWeight(1);
+    animationState->setLoop(true);
+    animationState->setEnabled(true);
 
     this->speed = 20.0;
     this->indirectSpeed = 10.0;
@@ -86,28 +86,49 @@ float easeInOutQuad(float t) {
 
 
 void PlayerCharacter::update(Real elapsedTime, OIS::Keyboard* keyboard, OIS::Mouse* mouse) {
-    
+    auto animation = animationState->getAnimationName();
+
+    if (movementFulfilled >= 1.0) {
+        animation = "Walk";
+    }
+
     if (movementFulfilled >= 0.7) {
         mMainNode->setPosition(targetPosition);
         lastPosition = this->getWorldPosition();
         if (keyboard->isKeyDown(OIS::KC_W)) {
             setMoveTarget(0, 0, -1);
+            animation = "Walk";
         }
         if (keyboard->isKeyDown(OIS::KC_S)) {
             setMoveTarget(0, 0, 1);
+            animation = "Walk";
         }
         if (keyboard->isKeyDown(OIS::KC_A)) {
             setMoveTarget(-1, 0, 0);
+            animation = "Jump";
         }
         if (keyboard->isKeyDown(OIS::KC_D)) {
             setMoveTarget(1, 0, 0);
+            animation = "Jump";
         }
     }
+    if (animationState->getAnimationName() != animation) {
+        animationState->setWeight(0);
+        animationState = mEntity->getAnimationState(animation);
+        animationState->setWeight(1);
+        animationState->setLoop(true);
+        animationState->setEnabled(true);
+        animationState->setTimePosition(0);
+    }
     if (movementFulfilled <= 1.0) {
-        auto state = mEntity->getAnimationState("Walk");
-        state->addTime(0.08);
         auto position = lastPosition + (targetPosition - lastPosition) * easeInOutQuad(movementFulfilled);
-        position.y = (0.5 - std::abs(0.5 - easeInOutQuad(movementFulfilled))) * 4.0;
+        if (animation == "Jump") {
+            position.y = (0.5 - std::abs(0.5 - easeInOutQuad(movementFulfilled))) * 4.0;
+        }
+        else {
+            position.y = (0.5 - std::abs(0.5 - easeInOutQuad(movementFulfilled)));
+        }
+        
         
         mMainNode->setPosition(position);
         auto lookAtPosition = targetPosition;
@@ -117,7 +138,8 @@ void PlayerCharacter::update(Real elapsedTime, OIS::Keyboard* keyboard, OIS::Mou
         mMainNode->lookAt(lookAtPosition, Ogre::Node::TS_WORLD, Ogre::Vector3::UNIT_Z);
         flashlightNode->_setDerivedOrientation(o);
 
-        movementFulfilled += elapsedTime * 2.5;
+        movementFulfilled += elapsedTime * 2;
+        animationState->addTime(elapsedTime * 2);
     }
     
     int shiftX = mouse->getMouseState().X.rel;

@@ -21,6 +21,7 @@ protected:
     Vector3 lastPosition;
     float movementFulfilled;
     PlayerState playerState;
+    AnimationState* animationState;
 public:
     void create(SceneManager* mSceneMgr, float x, float y, float z);
     void setMovementBounds(float leftBound, float rightBound, float botBound, float topBound);
