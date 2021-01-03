@@ -69,6 +69,8 @@ void PlayerCharacter::setMoveTarget(int offx, int offy, int offz) {
     targetPosition.y = round(getY() / tileSize) * tileSize + offy * tileSize;
     targetPosition.z = round(getZ() / tileSize) * tileSize + offz * tileSize;
 
+    std::cout << targetPosition.x << " " << targetPosition.y << " " << targetPosition.z << "\n";
+
     if (targetPosition.x < leftBound ||
         targetPosition.x > rightBound ||
         targetPosition.z < topBound ||
