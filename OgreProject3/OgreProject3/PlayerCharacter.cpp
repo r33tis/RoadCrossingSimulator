@@ -9,7 +9,7 @@ void PlayerCharacter::create(SceneManager* sceneMgr, float x, float y, float z) 
     mMainNode = mSceneMgr->getRootSceneNode()->createChildSceneNode(mName);
     mMainNode->translate(Vector3(x, y, z));
 
-    this->loadModel("Student", "studentColors.png");
+    this->loadModel("Cube", "studentColors.png");
     mEntity->setCastShadows(true);
     auto mAnimationState = mEntity->getAnimationState("Walk");
     mAnimationState->setWeight(1);
@@ -103,9 +103,9 @@ void PlayerCharacter::update(Real elapsedTime, OIS::Keyboard* keyboard, OIS::Mou
             setMoveTarget(1, 0, 0);
         }
     }
-    else {
+    if (movementFulfilled <= 1.0) {
         auto state = mEntity->getAnimationState("Walk");
-        state->addTime(0.1);
+        state->addTime(0.08);
         auto position = lastPosition + (targetPosition - lastPosition) * easeInOutQuad(movementFulfilled);
         position.y = (0.5 - std::abs(0.5 - easeInOutQuad(movementFulfilled))) * 4.0;
         
@@ -114,10 +114,10 @@ void PlayerCharacter::update(Real elapsedTime, OIS::Keyboard* keyboard, OIS::Mou
         lookAtPosition.y = position.y;
 
         Quaternion o = flashlightNode->_getDerivedOrientation();
-        mMainNode->lookAt(lookAtPosition, Ogre::Node::TS_WORLD, -Ogre::Vector3::UNIT_Z);
+        mMainNode->lookAt(lookAtPosition, Ogre::Node::TS_WORLD, Ogre::Vector3::UNIT_Z);
         flashlightNode->_setDerivedOrientation(o);
 
-        movementFulfilled += elapsedTime * 3.5;
+        movementFulfilled += elapsedTime * 2.5;
     }
     
     int shiftX = mouse->getMouseState().X.rel;
