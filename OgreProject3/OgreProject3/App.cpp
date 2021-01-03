@@ -7,10 +7,12 @@
 #include <math.h>
 #include <OgreFrameListener.h>
 #include <OgreOverlaySystem.h>
+#include "GameOverScreen.h"
 
 void App::setup(void)
 {
     gameState = GameState::Playing;
+    activeScreen = NULL;
 
     // do not forget to call the base first
     OgreBites::ApplicationContext::setup();
@@ -30,6 +32,7 @@ void App::setup(void)
     // add resource folder to resourcegroupmanager
     Ogre::ResourceGroupManager::getSingleton().addResourceLocation("resources", "FileSystem");
     Ogre::ResourceGroupManager::getSingleton().addResourceLocation("resources/environment", "FileSystem");
+    Ogre::ResourceGroupManager::getSingleton().addResourceLocation("resources/screens", "FileSystem");
 
     // Initialise resources groups                      
     
@@ -81,14 +84,17 @@ void App::setup(void)
 }
 
 void App::update(Real elapsedTime, OIS::Keyboard* keyboard, OIS::Mouse* mouse) {
-    if (player->getPlayerState() == PlayerState::Lost) {
-        gameState = GameState::Lost;
-    }
-    else if(player->getPlayerState() == PlayerState::Won){
-        gameState = GameState::Won;
-    }
+    
+    
 
     if (gameState == GameState::Playing) {
+        if (player->getPlayerState() == PlayerState::Lost) {
+            gameState = GameState::Lost;
+            activeScreen = new GameOverScreen();
+        }
+        else if (player->getPlayerState() == PlayerState::Won) {
+            gameState = GameState::Won;
+        }
         this->characterHandler->update(elapsedTime, keyboard, mouse);
         this->tileHandler->update(elapsedTime);
         this->laneHandler->update(elapsedTime, keyboard, mouse);
@@ -98,9 +104,16 @@ void App::update(Real elapsedTime, OIS::Keyboard* keyboard, OIS::Mouse* mouse) {
     else {
         if (keyboard->isKeyDown(OIS::KC_SPACE)) {
             player->setPlayerState(PlayerState::Playing);
-            gameController->resetSky();
-            //gameController->updateScore(0);
+            gameController->reset();
+            if (activeScreen) {
+                std::cout << "deleting active screen!\n";
+                delete activeScreen;
+            }
+            activeScreen = NULL;
             gameState = GameState::Playing;
         }
+    }
+    if (activeScreen) {
+        activeScreen->update();
     }
 }

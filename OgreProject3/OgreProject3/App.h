@@ -9,6 +9,7 @@
 #include "LaneHandler.h"
 #include "CameraHandler.h"
 #include "GameController.h"
+#include "Screen.h"
 
 enum class GameState {
 	Playing,
@@ -29,6 +30,7 @@ protected:
 	OIS::Keyboard* Keyboard;
 	OIS::Mouse* Mouse;
 	GameState gameState;
+	Screen* activeScreen;
 public:
 	void setup(void);
 	void update(Real elapsedTime, OIS::Keyboard* keyboard, OIS::Mouse* mouse);
