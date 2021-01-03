@@ -32,9 +32,7 @@ void App::setup(void)
     // add resource folder to resourcegroupmanager
     Ogre::ResourceGroupManager::getSingleton().addResourceLocation("resources", "FileSystem");
     Ogre::ResourceGroupManager::getSingleton().addResourceLocation("resources/environment", "FileSystem");
-    Ogre::ResourceGroupManager::getSingleton().addResourceLocation("resources/screens", "FileSystem");
-
-    // Initialise resources groups                      
+    Ogre::ResourceGroupManager::getSingleton().addResourceLocation("resources/screens", "FileSystem");         
     
     Ogre::ResourceGroupManager::getSingleton().initialiseAllResourceGroups();
     Ogre::ResourceGroupManager::getSingleton().loadResourceGroup(ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME);

@@ -1,20 +1,20 @@
-18:30:09: Creating resource group General
-18:30:09: Creating resource group OgreInternal
-18:30:09: Creating resource group OgreAutodetect
-18:30:09: Registering ResourceManager for type Mesh
-18:30:09: Registering ResourceManager for type Material
-18:30:09: Registering ResourceManager for type Skeleton
-18:30:09: XMLSkeletonSerializer: reading XML data from C:\Users\eston\Documents\GitHub\RoadCrossingSimulator2\Media\Models\Student\Student.skeleton.xml...
-18:30:09: XMLSkeletonSerializer: Reading Bones name...
-18:30:09: XMLSkeletonSerializer: Reading Hierarchy data...
-18:30:09: XMLSkeletonSerializer: Reading Bones data...
-18:30:09: XMLSkeletonSerializer: Reading Animations data...
-18:30:09: XMLSkeletonSerializer: Finished. Running SkeletonSerializer...
-18:30:09: Exporting bones..
-18:30:09: Bones exported.
-18:30:09: Exporting animations, count=1
-18:30:09: Exporting animation: Walk
-18:30:09: Animation exported.
-18:30:09: Unregistering ResourceManager for type Skeleton
-18:30:09: Unregistering ResourceManager for type Material
-18:30:09: Unregistering ResourceManager for type Mesh
+20:19:12: Creating resource group General
+20:19:12: Creating resource group OgreInternal
+20:19:12: Creating resource group OgreAutodetect
+20:19:12: Registering ResourceManager for type Mesh
+20:19:12: Registering ResourceManager for type Material
+20:19:12: Registering ResourceManager for type Skeleton
+20:19:12: XMLSkeletonSerializer: reading XML data from C:\Users\eston\Documents\GitHub\RoadCrossingSimulator2\Media\Models\Student\Student.skeleton.xml...
+20:19:12: XMLSkeletonSerializer: Reading Bones name...
+20:19:12: XMLSkeletonSerializer: Reading Hierarchy data...
+20:19:12: XMLSkeletonSerializer: Reading Bones data...
+20:19:12: XMLSkeletonSerializer: Reading Animations data...
+20:19:12: XMLSkeletonSerializer: Finished. Running SkeletonSerializer...
+20:19:12: Exporting bones..
+20:19:12: Bones exported.
+20:19:12: Exporting animations, count=1
+20:19:12: Exporting animation: Walk
+20:19:12: Animation exported.
+20:19:12: Unregistering ResourceManager for type Skeleton
+20:19:12: Unregistering ResourceManager for type Material
+20:19:12: Unregistering ResourceManager for type Mesh

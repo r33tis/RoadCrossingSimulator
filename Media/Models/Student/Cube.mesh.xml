@@ -4685,7 +4685,7 @@
         </vertexbuffer>
     </sharedgeometry>
     <submeshes>
-        <submesh material="Material" operationtype="triangle_list" use32bitindexes="False" usesharedvertices="true">
+        <submesh material="Student" operationtype="triangle_list" use32bitindexes="False" usesharedvertices="true">
             <faces count="260">
                 <face v1="0" v2="1" v3="2"/>
                 <face v1="3" v2="4" v3="5"/>
@@ -4951,169 +4951,65 @@
         </submesh>
     </submeshes>
     <submeshnames>
-        <submesh index="0" name="Material"/>
+        <submesh index="0" name="Student"/>
     </submeshnames>
     <skeletonlink name="Cube.skeleton"/>
     <boneassignments>
-        <vertexboneassignment boneindex="2" vertexindex="0" weight="0.013576"/>
-        <vertexboneassignment boneindex="5" vertexindex="0" weight="0.490769"/>
-        <vertexboneassignment boneindex="6" vertexindex="0" weight="0.432928"/>
         <vertexboneassignment boneindex="0" vertexindex="1" weight="0.629632"/>
-        <vertexboneassignment boneindex="1" vertexindex="1" weight="0.138313"/>
-        <vertexboneassignment boneindex="5" vertexindex="1" weight="0.061576"/>
-        <vertexboneassignment boneindex="9" vertexindex="1" weight="0.020489"/>
-        <vertexboneassignment boneindex="18" vertexindex="1" weight="0.113678"/>
-        <vertexboneassignment boneindex="2" vertexindex="2" weight="0.074782"/>
         <vertexboneassignment boneindex="5" vertexindex="2" weight="0.805811"/>
-        <vertexboneassignment boneindex="6" vertexindex="2" weight="0.073579"/>
-        <vertexboneassignment boneindex="7" vertexindex="3" weight="0.134789"/>
         <vertexboneassignment boneindex="8" vertexindex="3" weight="0.861146"/>
         <vertexboneassignment boneindex="7" vertexindex="4" weight="0.910058"/>
-        <vertexboneassignment boneindex="8" vertexindex="4" weight="0.062277"/>
         <vertexboneassignment boneindex="7" vertexindex="5" weight="0.919663"/>
-        <vertexboneassignment boneindex="8" vertexindex="5" weight="0.050895"/>
         <vertexboneassignment boneindex="6" vertexindex="6" weight="0.868240"/>
-        <vertexboneassignment boneindex="7" vertexindex="6" weight="0.116826"/>
-        <vertexboneassignment boneindex="5" vertexindex="7" weight="0.058849"/>
         <vertexboneassignment boneindex="6" vertexindex="7" weight="0.889204"/>
-        <vertexboneassignment boneindex="7" vertexindex="7" weight="0.041642"/>
-        <vertexboneassignment boneindex="6" vertexindex="8" weight="0.144145"/>
         <vertexboneassignment boneindex="7" vertexindex="8" weight="0.847684"/>
-        <vertexboneassignment boneindex="5" vertexindex="9" weight="0.072660"/>
         <vertexboneassignment boneindex="6" vertexindex="9" weight="0.896390"/>
         <vertexboneassignment boneindex="5" vertexindex="10" weight="0.881132"/>
-        <vertexboneassignment boneindex="6" vertexindex="10" weight="0.101907"/>
-        <vertexboneassignment boneindex="2" vertexindex="11" weight="0.013576"/>
-        <vertexboneassignment boneindex="5" vertexindex="11" weight="0.490769"/>
-        <vertexboneassignment boneindex="6" vertexindex="11" weight="0.432928"/>
-        <vertexboneassignment boneindex="0" vertexindex="12" weight="0.118525"/>
-        <vertexboneassignment boneindex="9" vertexindex="12" weight="0.047961"/>
-        <vertexboneassignment boneindex="18" vertexindex="12" weight="0.046566"/>
         <vertexboneassignment boneindex="9" vertexindex="13" weight="0.925402"/>
-        <vertexboneassignment boneindex="10" vertexindex="13" weight="0.062917"/>
-        <vertexboneassignment boneindex="18" vertexindex="13" weight="0.118350"/>
-        <vertexboneassignment boneindex="0" vertexindex="14" weight="0.113878"/>
-        <vertexboneassignment boneindex="18" vertexindex="14" weight="0.042643"/>
         <vertexboneassignment boneindex="9" vertexindex="15" weight="0.929856"/>
-        <vertexboneassignment boneindex="10" vertexindex="15" weight="0.062439"/>
-        <vertexboneassignment boneindex="0" vertexindex="16" weight="0.113878"/>
-        <vertexboneassignment boneindex="18" vertexindex="16" weight="0.042643"/>
         <vertexboneassignment boneindex="9" vertexindex="17" weight="0.925402"/>
-        <vertexboneassignment boneindex="10" vertexindex="17" weight="0.062917"/>
-        <vertexboneassignment boneindex="18" vertexindex="17" weight="0.118350"/>
         <vertexboneassignment boneindex="9" vertexindex="18" weight="0.933543"/>
-        <vertexboneassignment boneindex="10" vertexindex="18" weight="0.055943"/>
-        <vertexboneassignment boneindex="0" vertexindex="19" weight="0.067441"/>
-        <vertexboneassignment boneindex="9" vertexindex="19" weight="0.010006"/>
-        <vertexboneassignment boneindex="18" vertexindex="19" weight="0.045490"/>
         <vertexboneassignment boneindex="9" vertexindex="20" weight="0.929856"/>
-        <vertexboneassignment boneindex="10" vertexindex="20" weight="0.062439"/>
-        <vertexboneassignment boneindex="6" vertexindex="21" weight="0.144145"/>
         <vertexboneassignment boneindex="7" vertexindex="21" weight="0.847684"/>
         <vertexboneassignment boneindex="7" vertexindex="22" weight="0.919663"/>
-        <vertexboneassignment boneindex="8" vertexindex="22" weight="0.050895"/>
         <vertexboneassignment boneindex="6" vertexindex="23" weight="0.868240"/>
-        <vertexboneassignment boneindex="7" vertexindex="23" weight="0.116826"/>
         <vertexboneassignment boneindex="7" vertexindex="24" weight="0.919663"/>
-        <vertexboneassignment boneindex="8" vertexindex="24" weight="0.050895"/>
         <vertexboneassignment boneindex="6" vertexindex="25" weight="0.895332"/>
-        <vertexboneassignment boneindex="7" vertexindex="25" weight="0.091144"/>
         <vertexboneassignment boneindex="6" vertexindex="26" weight="0.868240"/>
-        <vertexboneassignment boneindex="7" vertexindex="26" weight="0.116826"/>
-        <vertexboneassignment boneindex="5" vertexindex="27" weight="0.058849"/>
         <vertexboneassignment boneindex="6" vertexindex="27" weight="0.889204"/>
-        <vertexboneassignment boneindex="7" vertexindex="27" weight="0.041642"/>
-        <vertexboneassignment boneindex="2" vertexindex="28" weight="0.013576"/>
-        <vertexboneassignment boneindex="5" vertexindex="28" weight="0.490769"/>
-        <vertexboneassignment boneindex="6" vertexindex="28" weight="0.432928"/>
-        <vertexboneassignment boneindex="2" vertexindex="29" weight="0.074782"/>
         <vertexboneassignment boneindex="5" vertexindex="29" weight="0.805811"/>
-        <vertexboneassignment boneindex="6" vertexindex="29" weight="0.073579"/>
-        <vertexboneassignment boneindex="9" vertexindex="30" weight="0.058977"/>
         <vertexboneassignment boneindex="10" vertexindex="30" weight="0.928867"/>
         <vertexboneassignment boneindex="9" vertexindex="31" weight="0.929856"/>
-        <vertexboneassignment boneindex="10" vertexindex="31" weight="0.062439"/>
-        <vertexboneassignment boneindex="9" vertexindex="32" weight="0.053561"/>
         <vertexboneassignment boneindex="10" vertexindex="32" weight="0.936524"/>
-        <vertexboneassignment boneindex="6" vertexindex="33" weight="0.030764"/>
         <vertexboneassignment boneindex="7" vertexindex="33" weight="0.704902"/>
-        <vertexboneassignment boneindex="8" vertexindex="33" weight="0.254379"/>
-        <vertexboneassignment boneindex="7" vertexindex="34" weight="0.138809"/>
         <vertexboneassignment boneindex="8" vertexindex="34" weight="0.856347"/>
-        <vertexboneassignment boneindex="6" vertexindex="35" weight="0.030611"/>
         <vertexboneassignment boneindex="7" vertexindex="35" weight="0.704585"/>
-        <vertexboneassignment boneindex="8" vertexindex="35" weight="0.254773"/>
         <vertexboneassignment boneindex="6" vertexindex="36" weight="0.504011"/>
-        <vertexboneassignment boneindex="7" vertexindex="36" weight="0.487534"/>
         <vertexboneassignment boneindex="7" vertexindex="37" weight="0.910058"/>
-        <vertexboneassignment boneindex="8" vertexindex="37" weight="0.062277"/>
-        <vertexboneassignment boneindex="6" vertexindex="38" weight="0.030764"/>
         <vertexboneassignment boneindex="7" vertexindex="38" weight="0.704902"/>
-        <vertexboneassignment boneindex="8" vertexindex="38" weight="0.254379"/>
-        <vertexboneassignment boneindex="7" vertexindex="39" weight="0.154864"/>
         <vertexboneassignment boneindex="8" vertexindex="39" weight="0.836965"/>
-        <vertexboneassignment boneindex="7" vertexindex="40" weight="0.134789"/>
         <vertexboneassignment boneindex="8" vertexindex="40" weight="0.861146"/>
-        <vertexboneassignment boneindex="7" vertexindex="41" weight="0.143059"/>
         <vertexboneassignment boneindex="8" vertexindex="41" weight="0.853927"/>
-        <vertexboneassignment boneindex="5" vertexindex="42" weight="0.062235"/>
         <vertexboneassignment boneindex="6" vertexindex="42" weight="0.889714"/>
-        <vertexboneassignment boneindex="7" vertexindex="42" weight="0.044911"/>
         <vertexboneassignment boneindex="5" vertexindex="43" weight="0.934853"/>
-        <vertexboneassignment boneindex="6" vertexindex="43" weight="0.058800"/>
         <vertexboneassignment boneindex="5" vertexindex="44" weight="0.948155"/>
-        <vertexboneassignment boneindex="6" vertexindex="44" weight="0.059301"/>
-        <vertexboneassignment boneindex="2" vertexindex="45" weight="0.074782"/>
         <vertexboneassignment boneindex="5" vertexindex="45" weight="0.805811"/>
-        <vertexboneassignment boneindex="6" vertexindex="45" weight="0.073579"/>
-        <vertexboneassignment boneindex="0" vertexindex="46" weight="0.048434"/>
         <vertexboneassignment boneindex="1" vertexindex="46" weight="0.841141"/>
-        <vertexboneassignment boneindex="14" vertexindex="47" weight="0.054082"/>
         <vertexboneassignment boneindex="2" vertexindex="47" weight="0.859132"/>
-        <vertexboneassignment boneindex="5" vertexindex="47" weight="0.054082"/>
-        <vertexboneassignment boneindex="2" vertexindex="48" weight="0.057076"/>
-        <vertexboneassignment boneindex="3" vertexindex="48" weight="0.286550"/>
-        <vertexboneassignment boneindex="4" vertexindex="48" weight="0.489213"/>
-        <vertexboneassignment boneindex="5" vertexindex="48" weight="0.159573"/>
-        <vertexboneassignment boneindex="2" vertexindex="49" weight="0.061749"/>
-        <vertexboneassignment boneindex="3" vertexindex="49" weight="0.126443"/>
         <vertexboneassignment boneindex="4" vertexindex="49" weight="0.773333"/>
-        <vertexboneassignment boneindex="2" vertexindex="50" weight="0.144636"/>
-        <vertexboneassignment boneindex="3" vertexindex="50" weight="0.295472"/>
         <vertexboneassignment boneindex="4" vertexindex="50" weight="0.509924"/>
-        <vertexboneassignment boneindex="7" vertexindex="51" weight="0.134789"/>
         <vertexboneassignment boneindex="8" vertexindex="51" weight="0.861146"/>
         <vertexboneassignment boneindex="7" vertexindex="52" weight="0.913644"/>
-        <vertexboneassignment boneindex="8" vertexindex="52" weight="0.075086"/>
-        <vertexboneassignment boneindex="7" vertexindex="53" weight="0.143059"/>
         <vertexboneassignment boneindex="8" vertexindex="53" weight="0.853927"/>
         <vertexboneassignment boneindex="9" vertexindex="54" weight="0.925402"/>
-        <vertexboneassignment boneindex="10" vertexindex="54" weight="0.062917"/>
-        <vertexboneassignment boneindex="18" vertexindex="54" weight="0.118350"/>
-        <vertexboneassignment boneindex="9" vertexindex="55" weight="0.085324"/>
         <vertexboneassignment boneindex="10" vertexindex="55" weight="0.861791"/>
-        <vertexboneassignment boneindex="11" vertexindex="55" weight="0.051307"/>
-        <vertexboneassignment boneindex="18" vertexindex="55" weight="0.037103"/>
-        <vertexboneassignment boneindex="9" vertexindex="56" weight="0.062631"/>
         <vertexboneassignment boneindex="10" vertexindex="56" weight="0.882995"/>
-        <vertexboneassignment boneindex="11" vertexindex="56" weight="0.053745"/>
-        <vertexboneassignment boneindex="5" vertexindex="57" weight="0.062235"/>
         <vertexboneassignment boneindex="6" vertexindex="57" weight="0.889714"/>
-        <vertexboneassignment boneindex="7" vertexindex="57" weight="0.044911"/>
         <vertexboneassignment boneindex="6" vertexindex="58" weight="0.895332"/>
-        <vertexboneassignment boneindex="7" vertexindex="58" weight="0.091144"/>
         <vertexboneassignment boneindex="6" vertexindex="59" weight="0.504011"/>
-        <vertexboneassignment boneindex="7" vertexindex="59" weight="0.487534"/>
-        <vertexboneassignment boneindex="1" vertexindex="60" weight="0.029381"/>
         <vertexboneassignment boneindex="2" vertexindex="60" weight="0.848349"/>
-        <vertexboneassignment boneindex="5" vertexindex="60" weight="0.034064"/>
-        <vertexboneassignment boneindex="14" vertexindex="60" weight="0.034064"/>
         <vertexboneassignment boneindex="5" vertexindex="61" weight="0.881132"/>
-        <vertexboneassignment boneindex="6" vertexindex="61" weight="0.101907"/>
         <vertexboneassignment boneindex="2" vertexindex="62" weight="0.836845"/>
-        <vertexboneassignment boneindex="4" vertexindex="62" weight="0.035847"/>
-        <vertexboneassignment boneindex="5" vertexindex="62" weight="0.068122"/>
-        <vertexboneassignment boneindex="14" vertexindex="62" weight="0.068122"/>
         <vertexboneassignment boneindex="4" vertexindex="63" weight="0.987103"/>
         <vertexboneassignment boneindex="4" vertexindex="64" weight="0.989776"/>
         <vertexboneassignment boneindex="4" vertexindex="65" weight="0.985085"/>
@@ -5124,656 +5020,217 @@
         <vertexboneassignment boneindex="4" vertexindex="70" weight="0.973913"/>
         <vertexboneassignment boneindex="4" vertexindex="71" weight="0.985085"/>
         <vertexboneassignment boneindex="4" vertexindex="72" weight="0.950329"/>
-        <vertexboneassignment boneindex="2" vertexindex="73" weight="0.016266"/>
         <vertexboneassignment boneindex="4" vertexindex="73" weight="0.860975"/>
-        <vertexboneassignment boneindex="5" vertexindex="73" weight="0.058972"/>
-        <vertexboneassignment boneindex="14" vertexindex="73" weight="0.032458"/>
-        <vertexboneassignment boneindex="2" vertexindex="74" weight="0.047274"/>
         <vertexboneassignment boneindex="4" vertexindex="74" weight="0.831823"/>
-        <vertexboneassignment boneindex="5" vertexindex="74" weight="0.046850"/>
-        <vertexboneassignment boneindex="14" vertexindex="74" weight="0.046850"/>
         <vertexboneassignment boneindex="4" vertexindex="75" weight="0.947041"/>
-        <vertexboneassignment boneindex="3" vertexindex="76" weight="0.093439"/>
         <vertexboneassignment boneindex="4" vertexindex="76" weight="0.825727"/>
-        <vertexboneassignment boneindex="5" vertexindex="76" weight="0.045689"/>
-        <vertexboneassignment boneindex="3" vertexindex="77" weight="0.023743"/>
         <vertexboneassignment boneindex="4" vertexindex="77" weight="0.788578"/>
-        <vertexboneassignment boneindex="5" vertexindex="77" weight="0.128307"/>
-        <vertexboneassignment boneindex="14" vertexindex="77" weight="0.038612"/>
-        <vertexboneassignment boneindex="3" vertexindex="78" weight="0.093439"/>
         <vertexboneassignment boneindex="4" vertexindex="78" weight="0.825727"/>
-        <vertexboneassignment boneindex="5" vertexindex="78" weight="0.045689"/>
-        <vertexboneassignment boneindex="3" vertexindex="79" weight="0.020246"/>
         <vertexboneassignment boneindex="4" vertexindex="79" weight="0.925493"/>
-        <vertexboneassignment boneindex="2" vertexindex="80" weight="0.061749"/>
-        <vertexboneassignment boneindex="3" vertexindex="80" weight="0.126443"/>
         <vertexboneassignment boneindex="4" vertexindex="80" weight="0.773333"/>
         <vertexboneassignment boneindex="4" vertexindex="81" weight="0.973913"/>
-        <vertexboneassignment boneindex="3" vertexindex="82" weight="0.020246"/>
         <vertexboneassignment boneindex="4" vertexindex="82" weight="0.925493"/>
         <vertexboneassignment boneindex="4" vertexindex="83" weight="0.947041"/>
-        <vertexboneassignment boneindex="0" vertexindex="84" weight="0.113878"/>
-        <vertexboneassignment boneindex="18" vertexindex="84" weight="0.042643"/>
         <vertexboneassignment boneindex="0" vertexindex="85" weight="0.867352"/>
-        <vertexboneassignment boneindex="1" vertexindex="85" weight="0.012512"/>
-        <vertexboneassignment boneindex="0" vertexindex="86" weight="0.118525"/>
-        <vertexboneassignment boneindex="9" vertexindex="86" weight="0.047961"/>
-        <vertexboneassignment boneindex="18" vertexindex="86" weight="0.046566"/>
         <vertexboneassignment boneindex="9" vertexindex="87" weight="0.903324"/>
-        <vertexboneassignment boneindex="10" vertexindex="87" weight="0.049583"/>
-        <vertexboneassignment boneindex="18" vertexindex="87" weight="0.059998"/>
-        <vertexboneassignment boneindex="9" vertexindex="88" weight="0.058977"/>
         <vertexboneassignment boneindex="10" vertexindex="88" weight="0.928867"/>
-        <vertexboneassignment boneindex="9" vertexindex="89" weight="0.085324"/>
         <vertexboneassignment boneindex="10" vertexindex="89" weight="0.861791"/>
-        <vertexboneassignment boneindex="11" vertexindex="89" weight="0.051307"/>
-        <vertexboneassignment boneindex="18" vertexindex="89" weight="0.037103"/>
-        <vertexboneassignment boneindex="1" vertexindex="90" weight="0.019402"/>
         <vertexboneassignment boneindex="9" vertexindex="91" weight="0.903324"/>
-        <vertexboneassignment boneindex="10" vertexindex="91" weight="0.049583"/>
-        <vertexboneassignment boneindex="18" vertexindex="91" weight="0.059998"/>
-        <vertexboneassignment boneindex="0" vertexindex="92" weight="0.118525"/>
-        <vertexboneassignment boneindex="9" vertexindex="92" weight="0.047961"/>
-        <vertexboneassignment boneindex="18" vertexindex="92" weight="0.046566"/>
-        <vertexboneassignment boneindex="2" vertexindex="93" weight="0.045410"/>
-        <vertexboneassignment boneindex="4" vertexindex="93" weight="0.032314"/>
         <vertexboneassignment boneindex="5" vertexindex="93" weight="0.879825"/>
-        <vertexboneassignment boneindex="14" vertexindex="93" weight="0.089797"/>
-        <vertexboneassignment boneindex="2" vertexindex="94" weight="0.057076"/>
-        <vertexboneassignment boneindex="3" vertexindex="94" weight="0.286550"/>
-        <vertexboneassignment boneindex="4" vertexindex="94" weight="0.489213"/>
-        <vertexboneassignment boneindex="5" vertexindex="94" weight="0.159573"/>
-        <vertexboneassignment boneindex="2" vertexindex="95" weight="0.138481"/>
-        <vertexboneassignment boneindex="4" vertexindex="95" weight="0.049059"/>
         <vertexboneassignment boneindex="5" vertexindex="95" weight="0.773777"/>
-        <vertexboneassignment boneindex="14" vertexindex="95" weight="0.048462"/>
         <vertexboneassignment boneindex="2" vertexindex="96" weight="0.836845"/>
-        <vertexboneassignment boneindex="4" vertexindex="96" weight="0.035847"/>
-        <vertexboneassignment boneindex="5" vertexindex="96" weight="0.068122"/>
-        <vertexboneassignment boneindex="14" vertexindex="96" weight="0.068122"/>
-        <vertexboneassignment boneindex="2" vertexindex="97" weight="0.057076"/>
-        <vertexboneassignment boneindex="3" vertexindex="97" weight="0.286550"/>
-        <vertexboneassignment boneindex="4" vertexindex="97" weight="0.489213"/>
-        <vertexboneassignment boneindex="5" vertexindex="97" weight="0.159573"/>
-        <vertexboneassignment boneindex="2" vertexindex="98" weight="0.144636"/>
-        <vertexboneassignment boneindex="3" vertexindex="98" weight="0.295472"/>
         <vertexboneassignment boneindex="4" vertexindex="98" weight="0.509924"/>
         <vertexboneassignment boneindex="4" vertexindex="99" weight="0.987103"/>
         <vertexboneassignment boneindex="4" vertexindex="100" weight="0.950329"/>
         <vertexboneassignment boneindex="4" vertexindex="101" weight="0.981640"/>
         <vertexboneassignment boneindex="6" vertexindex="102" weight="0.868240"/>
-        <vertexboneassignment boneindex="7" vertexindex="102" weight="0.116826"/>
-        <vertexboneassignment boneindex="5" vertexindex="103" weight="0.085533"/>
         <vertexboneassignment boneindex="6" vertexindex="103" weight="0.899825"/>
-        <vertexboneassignment boneindex="5" vertexindex="104" weight="0.072660"/>
         <vertexboneassignment boneindex="6" vertexindex="104" weight="0.896390"/>
-        <vertexboneassignment boneindex="6" vertexindex="105" weight="0.030764"/>
         <vertexboneassignment boneindex="7" vertexindex="105" weight="0.704902"/>
-        <vertexboneassignment boneindex="8" vertexindex="105" weight="0.254379"/>
-        <vertexboneassignment boneindex="7" vertexindex="106" weight="0.143059"/>
         <vertexboneassignment boneindex="8" vertexindex="106" weight="0.853927"/>
         <vertexboneassignment boneindex="7" vertexindex="107" weight="0.913644"/>
-        <vertexboneassignment boneindex="8" vertexindex="107" weight="0.075086"/>
-        <vertexboneassignment boneindex="9" vertexindex="108" weight="0.053561"/>
         <vertexboneassignment boneindex="10" vertexindex="108" weight="0.936524"/>
         <vertexboneassignment boneindex="9" vertexindex="109" weight="0.925402"/>
-        <vertexboneassignment boneindex="10" vertexindex="109" weight="0.062917"/>
-        <vertexboneassignment boneindex="18" vertexindex="109" weight="0.118350"/>
-        <vertexboneassignment boneindex="9" vertexindex="110" weight="0.062631"/>
         <vertexboneassignment boneindex="10" vertexindex="110" weight="0.882995"/>
-        <vertexboneassignment boneindex="11" vertexindex="110" weight="0.053745"/>
         <vertexboneassignment boneindex="5" vertexindex="111" weight="0.934853"/>
-        <vertexboneassignment boneindex="6" vertexindex="111" weight="0.058800"/>
-        <vertexboneassignment boneindex="5" vertexindex="112" weight="0.058849"/>
         <vertexboneassignment boneindex="6" vertexindex="112" weight="0.889204"/>
-        <vertexboneassignment boneindex="7" vertexindex="112" weight="0.041642"/>
-        <vertexboneassignment boneindex="2" vertexindex="113" weight="0.074782"/>
         <vertexboneassignment boneindex="5" vertexindex="113" weight="0.805811"/>
-        <vertexboneassignment boneindex="6" vertexindex="113" weight="0.073579"/>
-        <vertexboneassignment boneindex="18" vertexindex="114" weight="0.072362"/>
         <vertexboneassignment boneindex="0" vertexindex="114" weight="0.720452"/>
-        <vertexboneassignment boneindex="1" vertexindex="114" weight="0.029459"/>
-        <vertexboneassignment boneindex="5" vertexindex="114" weight="0.025303"/>
-        <vertexboneassignment boneindex="0" vertexindex="115" weight="0.012654"/>
-        <vertexboneassignment boneindex="1" vertexindex="115" weight="0.434305"/>
-        <vertexboneassignment boneindex="2" vertexindex="115" weight="0.468758"/>
         <vertexboneassignment boneindex="0" vertexindex="116" weight="0.867352"/>
-        <vertexboneassignment boneindex="1" vertexindex="116" weight="0.012512"/>
-        <vertexboneassignment boneindex="1" vertexindex="117" weight="0.029381"/>
         <vertexboneassignment boneindex="2" vertexindex="117" weight="0.848349"/>
-        <vertexboneassignment boneindex="5" vertexindex="117" weight="0.034064"/>
-        <vertexboneassignment boneindex="14" vertexindex="117" weight="0.034064"/>
-        <vertexboneassignment boneindex="2" vertexindex="118" weight="0.013576"/>
-        <vertexboneassignment boneindex="5" vertexindex="118" weight="0.490769"/>
-        <vertexboneassignment boneindex="6" vertexindex="118" weight="0.432928"/>
         <vertexboneassignment boneindex="5" vertexindex="119" weight="0.881132"/>
-        <vertexboneassignment boneindex="6" vertexindex="119" weight="0.101907"/>
-        <vertexboneassignment boneindex="0" vertexindex="120" weight="0.113878"/>
-        <vertexboneassignment boneindex="18" vertexindex="120" weight="0.042643"/>
         <vertexboneassignment boneindex="0" vertexindex="121" weight="0.629632"/>
-        <vertexboneassignment boneindex="1" vertexindex="121" weight="0.138313"/>
-        <vertexboneassignment boneindex="5" vertexindex="121" weight="0.061576"/>
-        <vertexboneassignment boneindex="9" vertexindex="121" weight="0.020489"/>
-        <vertexboneassignment boneindex="18" vertexindex="121" weight="0.113678"/>
-        <vertexboneassignment boneindex="18" vertexindex="122" weight="0.072362"/>
         <vertexboneassignment boneindex="0" vertexindex="122" weight="0.720452"/>
-        <vertexboneassignment boneindex="1" vertexindex="122" weight="0.029459"/>
-        <vertexboneassignment boneindex="5" vertexindex="122" weight="0.025303"/>
-        <vertexboneassignment boneindex="6" vertexindex="123" weight="0.030764"/>
         <vertexboneassignment boneindex="7" vertexindex="123" weight="0.704902"/>
-        <vertexboneassignment boneindex="8" vertexindex="123" weight="0.254379"/>
-        <vertexboneassignment boneindex="6" vertexindex="124" weight="0.144145"/>
         <vertexboneassignment boneindex="7" vertexindex="124" weight="0.847684"/>
         <vertexboneassignment boneindex="6" vertexindex="125" weight="0.504011"/>
-        <vertexboneassignment boneindex="7" vertexindex="125" weight="0.487534"/>
-        <vertexboneassignment boneindex="5" vertexindex="126" weight="0.062235"/>
         <vertexboneassignment boneindex="6" vertexindex="126" weight="0.889714"/>
-        <vertexboneassignment boneindex="7" vertexindex="126" weight="0.044911"/>
-        <vertexboneassignment boneindex="6" vertexindex="127" weight="0.144145"/>
         <vertexboneassignment boneindex="7" vertexindex="127" weight="0.847684"/>
-        <vertexboneassignment boneindex="5" vertexindex="128" weight="0.058849"/>
         <vertexboneassignment boneindex="6" vertexindex="128" weight="0.889204"/>
-        <vertexboneassignment boneindex="7" vertexindex="128" weight="0.041642"/>
         <vertexboneassignment boneindex="10" vertexindex="129" weight="0.836754"/>
-        <vertexboneassignment boneindex="11" vertexindex="129" weight="0.159634"/>
-        <vertexboneassignment boneindex="10" vertexindex="130" weight="0.079874"/>
         <vertexboneassignment boneindex="11" vertexindex="130" weight="0.919165"/>
-        <vertexboneassignment boneindex="10" vertexindex="131" weight="0.106431"/>
         <vertexboneassignment boneindex="11" vertexindex="131" weight="0.889478"/>
-        <vertexboneassignment boneindex="9" vertexindex="132" weight="0.062631"/>
         <vertexboneassignment boneindex="10" vertexindex="132" weight="0.882995"/>
-        <vertexboneassignment boneindex="11" vertexindex="132" weight="0.053745"/>
-        <vertexboneassignment boneindex="10" vertexindex="133" weight="0.106431"/>
         <vertexboneassignment boneindex="11" vertexindex="133" weight="0.889478"/>
-        <vertexboneassignment boneindex="10" vertexindex="134" weight="0.097190"/>
         <vertexboneassignment boneindex="11" vertexindex="134" weight="0.900225"/>
-        <vertexboneassignment boneindex="9" vertexindex="135" weight="0.062631"/>
         <vertexboneassignment boneindex="10" vertexindex="135" weight="0.882995"/>
-        <vertexboneassignment boneindex="11" vertexindex="135" weight="0.053745"/>
         <vertexboneassignment boneindex="10" vertexindex="136" weight="0.870531"/>
-        <vertexboneassignment boneindex="11" vertexindex="136" weight="0.127084"/>
-        <vertexboneassignment boneindex="9" vertexindex="137" weight="0.053561"/>
         <vertexboneassignment boneindex="10" vertexindex="137" weight="0.936524"/>
-        <vertexboneassignment boneindex="9" vertexindex="138" weight="0.058977"/>
         <vertexboneassignment boneindex="10" vertexindex="138" weight="0.928867"/>
         <vertexboneassignment boneindex="10" vertexindex="139" weight="0.870531"/>
-        <vertexboneassignment boneindex="11" vertexindex="139" weight="0.127084"/>
         <vertexboneassignment boneindex="10" vertexindex="140" weight="0.836754"/>
-        <vertexboneassignment boneindex="11" vertexindex="140" weight="0.159634"/>
         <vertexboneassignment boneindex="10" vertexindex="141" weight="0.836754"/>
-        <vertexboneassignment boneindex="11" vertexindex="141" weight="0.159634"/>
         <vertexboneassignment boneindex="10" vertexindex="142" weight="0.531608"/>
-        <vertexboneassignment boneindex="11" vertexindex="142" weight="0.467870"/>
         <vertexboneassignment boneindex="10" vertexindex="143" weight="0.533975"/>
-        <vertexboneassignment boneindex="11" vertexindex="143" weight="0.465220"/>
-        <vertexboneassignment boneindex="9" vertexindex="144" weight="0.058977"/>
         <vertexboneassignment boneindex="10" vertexindex="144" weight="0.928867"/>
-        <vertexboneassignment boneindex="10" vertexindex="145" weight="0.106431"/>
         <vertexboneassignment boneindex="11" vertexindex="145" weight="0.889478"/>
-        <vertexboneassignment boneindex="9" vertexindex="146" weight="0.085324"/>
         <vertexboneassignment boneindex="10" vertexindex="146" weight="0.861791"/>
-        <vertexboneassignment boneindex="11" vertexindex="146" weight="0.051307"/>
-        <vertexboneassignment boneindex="18" vertexindex="146" weight="0.037103"/>
-        <vertexboneassignment boneindex="10" vertexindex="147" weight="0.097190"/>
         <vertexboneassignment boneindex="11" vertexindex="147" weight="0.900225"/>
         <vertexboneassignment boneindex="10" vertexindex="148" weight="0.531608"/>
-        <vertexboneassignment boneindex="11" vertexindex="148" weight="0.467870"/>
         <vertexboneassignment boneindex="10" vertexindex="149" weight="0.870531"/>
-        <vertexboneassignment boneindex="11" vertexindex="149" weight="0.127084"/>
-        <vertexboneassignment boneindex="10" vertexindex="150" weight="0.062086"/>
         <vertexboneassignment boneindex="11" vertexindex="150" weight="0.937424"/>
         <vertexboneassignment boneindex="11" vertexindex="151" weight="0.977836"/>
         <vertexboneassignment boneindex="11" vertexindex="152" weight="0.982927"/>
-        <vertexboneassignment boneindex="18" vertexindex="152" weight="0.011336"/>
         <vertexboneassignment boneindex="10" vertexindex="153" weight="0.531608"/>
-        <vertexboneassignment boneindex="11" vertexindex="153" weight="0.467870"/>
-        <vertexboneassignment boneindex="10" vertexindex="154" weight="0.079874"/>
         <vertexboneassignment boneindex="11" vertexindex="154" weight="0.919165"/>
         <vertexboneassignment boneindex="10" vertexindex="155" weight="0.533975"/>
-        <vertexboneassignment boneindex="11" vertexindex="155" weight="0.465220"/>
         <vertexboneassignment boneindex="11" vertexindex="156" weight="0.972549"/>
         <vertexboneassignment boneindex="11" vertexindex="157" weight="0.982927"/>
-        <vertexboneassignment boneindex="18" vertexindex="157" weight="0.011336"/>
         <vertexboneassignment boneindex="11" vertexindex="158" weight="0.977836"/>
-        <vertexboneassignment boneindex="10" vertexindex="159" weight="0.079874"/>
         <vertexboneassignment boneindex="11" vertexindex="159" weight="0.919165"/>
         <vertexboneassignment boneindex="11" vertexindex="160" weight="0.982927"/>
-        <vertexboneassignment boneindex="18" vertexindex="160" weight="0.011336"/>
         <vertexboneassignment boneindex="11" vertexindex="161" weight="0.979047"/>
-        <vertexboneassignment boneindex="10" vertexindex="162" weight="0.106431"/>
         <vertexboneassignment boneindex="11" vertexindex="162" weight="0.889478"/>
         <vertexboneassignment boneindex="11" vertexindex="163" weight="0.979047"/>
         <vertexboneassignment boneindex="11" vertexindex="164" weight="0.972549"/>
-        <vertexboneassignment boneindex="10" vertexindex="165" weight="0.106431"/>
         <vertexboneassignment boneindex="11" vertexindex="165" weight="0.889478"/>
         <vertexboneassignment boneindex="11" vertexindex="166" weight="0.977836"/>
-        <vertexboneassignment boneindex="10" vertexindex="167" weight="0.097190"/>
         <vertexboneassignment boneindex="11" vertexindex="167" weight="0.900225"/>
-        <vertexboneassignment boneindex="1" vertexindex="168" weight="0.034794"/>
-        <vertexboneassignment boneindex="2" vertexindex="168" weight="0.055085"/>
-        <vertexboneassignment boneindex="14" vertexindex="168" weight="0.490769"/>
-        <vertexboneassignment boneindex="15" vertexindex="168" weight="0.432928"/>
-        <vertexboneassignment boneindex="0" vertexindex="169" weight="0.138771"/>
-        <vertexboneassignment boneindex="1" vertexindex="169" weight="0.288450"/>
-        <vertexboneassignment boneindex="2" vertexindex="169" weight="0.017865"/>
-        <vertexboneassignment boneindex="14" vertexindex="169" weight="0.061576"/>
-        <vertexboneassignment boneindex="18" vertexindex="169" weight="0.020489"/>
-        <vertexboneassignment boneindex="9" vertexindex="169" weight="0.113678"/>
-        <vertexboneassignment boneindex="9" vertexindex="170" weight="0.072362"/>
-        <vertexboneassignment boneindex="0" vertexindex="170" weight="0.328847"/>
-        <vertexboneassignment boneindex="1" vertexindex="170" weight="0.123478"/>
-        <vertexboneassignment boneindex="14" vertexindex="170" weight="0.025303"/>
-        <vertexboneassignment boneindex="17" vertexindex="171" weight="0.062277"/>
-        <vertexboneassignment boneindex="16" vertexindex="171" weight="0.910058"/>
-        <vertexboneassignment boneindex="16" vertexindex="172" weight="0.134789"/>
-        <vertexboneassignment boneindex="17" vertexindex="172" weight="0.861146"/>
-        <vertexboneassignment boneindex="17" vertexindex="173" weight="0.050895"/>
-        <vertexboneassignment boneindex="16" vertexindex="173" weight="0.919663"/>
-        <vertexboneassignment boneindex="0" vertexindex="174" weight="0.011919"/>
-        <vertexboneassignment boneindex="16" vertexindex="174" weight="0.116826"/>
-        <vertexboneassignment boneindex="15" vertexindex="174" weight="0.868240"/>
-        <vertexboneassignment boneindex="2" vertexindex="175" weight="0.044070"/>
-        <vertexboneassignment boneindex="14" vertexindex="175" weight="0.058849"/>
-        <vertexboneassignment boneindex="15" vertexindex="175" weight="0.889204"/>
-        <vertexboneassignment boneindex="16" vertexindex="175" weight="0.041642"/>
-        <vertexboneassignment boneindex="0" vertexindex="176" weight="0.055448"/>
-        <vertexboneassignment boneindex="2" vertexindex="176" weight="0.020405"/>
-        <vertexboneassignment boneindex="14" vertexindex="176" weight="0.072660"/>
-        <vertexboneassignment boneindex="15" vertexindex="176" weight="0.896390"/>
-        <vertexboneassignment boneindex="14" vertexindex="177" weight="0.881132"/>
-        <vertexboneassignment boneindex="15" vertexindex="177" weight="0.101907"/>
-        <vertexboneassignment boneindex="0" vertexindex="178" weight="0.055448"/>
-        <vertexboneassignment boneindex="2" vertexindex="178" weight="0.020405"/>
-        <vertexboneassignment boneindex="14" vertexindex="178" weight="0.072660"/>
-        <vertexboneassignment boneindex="15" vertexindex="178" weight="0.896390"/>
-        <vertexboneassignment boneindex="1" vertexindex="179" weight="0.034794"/>
-        <vertexboneassignment boneindex="2" vertexindex="179" weight="0.055085"/>
-        <vertexboneassignment boneindex="14" vertexindex="179" weight="0.490769"/>
-        <vertexboneassignment boneindex="15" vertexindex="179" weight="0.432928"/>
-        <vertexboneassignment boneindex="0" vertexindex="180" weight="0.052063"/>
-        <vertexboneassignment boneindex="1" vertexindex="180" weight="0.055313"/>
-        <vertexboneassignment boneindex="9" vertexindex="180" weight="0.118350"/>
-        <vertexboneassignment boneindex="18" vertexindex="180" weight="0.925402"/>
-        <vertexboneassignment boneindex="19" vertexindex="180" weight="0.062917"/>
-        <vertexboneassignment boneindex="0" vertexindex="181" weight="0.256555"/>
-        <vertexboneassignment boneindex="9" vertexindex="181" weight="0.046566"/>
-        <vertexboneassignment boneindex="18" vertexindex="181" weight="0.047961"/>
-        <vertexboneassignment boneindex="0" vertexindex="182" weight="0.230934"/>
-        <vertexboneassignment boneindex="1" vertexindex="182" weight="0.093565"/>
-        <vertexboneassignment boneindex="9" vertexindex="182" weight="0.042643"/>
-        <vertexboneassignment boneindex="0" vertexindex="183" weight="0.230934"/>
-        <vertexboneassignment boneindex="1" vertexindex="183" weight="0.093565"/>
-        <vertexboneassignment boneindex="9" vertexindex="183" weight="0.042643"/>
-        <vertexboneassignment boneindex="1" vertexindex="184" weight="0.062356"/>
-        <vertexboneassignment boneindex="18" vertexindex="184" weight="0.929856"/>
-        <vertexboneassignment boneindex="19" vertexindex="184" weight="0.062439"/>
-        <vertexboneassignment boneindex="0" vertexindex="185" weight="0.052063"/>
-        <vertexboneassignment boneindex="1" vertexindex="185" weight="0.055313"/>
-        <vertexboneassignment boneindex="9" vertexindex="185" weight="0.118350"/>
-        <vertexboneassignment boneindex="18" vertexindex="185" weight="0.925402"/>
-        <vertexboneassignment boneindex="19" vertexindex="185" weight="0.062917"/>
-        <vertexboneassignment boneindex="16" vertexindex="186" weight="0.847684"/>
-        <vertexboneassignment boneindex="15" vertexindex="186" weight="0.144145"/>
-        <vertexboneassignment boneindex="17" vertexindex="187" weight="0.050895"/>
-        <vertexboneassignment boneindex="16" vertexindex="187" weight="0.919663"/>
-        <vertexboneassignment boneindex="16" vertexindex="188" weight="0.913644"/>
-        <vertexboneassignment boneindex="17" vertexindex="188" weight="0.075086"/>
-        <vertexboneassignment boneindex="17" vertexindex="189" weight="0.050895"/>
-        <vertexboneassignment boneindex="16" vertexindex="189" weight="0.919663"/>
-        <vertexboneassignment boneindex="16" vertexindex="190" weight="0.091144"/>
-        <vertexboneassignment boneindex="15" vertexindex="190" weight="0.895332"/>
-        <vertexboneassignment boneindex="17" vertexindex="191" weight="0.062277"/>
-        <vertexboneassignment boneindex="16" vertexindex="191" weight="0.910058"/>
-        <vertexboneassignment boneindex="1" vertexindex="192" weight="0.034794"/>
-        <vertexboneassignment boneindex="2" vertexindex="192" weight="0.055085"/>
-        <vertexboneassignment boneindex="14" vertexindex="192" weight="0.490769"/>
-        <vertexboneassignment boneindex="15" vertexindex="192" weight="0.432928"/>
-        <vertexboneassignment boneindex="2" vertexindex="193" weight="0.044070"/>
-        <vertexboneassignment boneindex="14" vertexindex="193" weight="0.058849"/>
-        <vertexboneassignment boneindex="15" vertexindex="193" weight="0.889204"/>
-        <vertexboneassignment boneindex="16" vertexindex="193" weight="0.041642"/>
-        <vertexboneassignment boneindex="1" vertexindex="194" weight="0.017475"/>
-        <vertexboneassignment boneindex="2" vertexindex="194" weight="0.150087"/>
-        <vertexboneassignment boneindex="14" vertexindex="194" weight="0.805811"/>
-        <vertexboneassignment boneindex="15" vertexindex="194" weight="0.073579"/>
-        <vertexboneassignment boneindex="1" vertexindex="195" weight="0.062356"/>
-        <vertexboneassignment boneindex="18" vertexindex="195" weight="0.929856"/>
-        <vertexboneassignment boneindex="19" vertexindex="195" weight="0.062439"/>
-        <vertexboneassignment boneindex="1" vertexindex="196" weight="0.028723"/>
-        <vertexboneassignment boneindex="18" vertexindex="196" weight="0.058977"/>
-        <vertexboneassignment boneindex="19" vertexindex="196" weight="0.928867"/>
-        <vertexboneassignment boneindex="1" vertexindex="197" weight="0.029885"/>
-        <vertexboneassignment boneindex="18" vertexindex="197" weight="0.053561"/>
-        <vertexboneassignment boneindex="19" vertexindex="197" weight="0.936524"/>
-        <vertexboneassignment boneindex="17" vertexindex="198" weight="0.254379"/>
-        <vertexboneassignment boneindex="15" vertexindex="198" weight="0.030764"/>
-        <vertexboneassignment boneindex="16" vertexindex="198" weight="0.704902"/>
-        <vertexboneassignment boneindex="17" vertexindex="199" weight="0.254773"/>
-        <vertexboneassignment boneindex="15" vertexindex="199" weight="0.030611"/>
-        <vertexboneassignment boneindex="16" vertexindex="199" weight="0.704585"/>
-        <vertexboneassignment boneindex="16" vertexindex="200" weight="0.138809"/>
-        <vertexboneassignment boneindex="17" vertexindex="200" weight="0.856347"/>
-        <vertexboneassignment boneindex="16" vertexindex="201" weight="0.487534"/>
-        <vertexboneassignment boneindex="15" vertexindex="201" weight="0.504011"/>
-        <vertexboneassignment boneindex="17" vertexindex="202" weight="0.062277"/>
-        <vertexboneassignment boneindex="16" vertexindex="202" weight="0.910058"/>
-        <vertexboneassignment boneindex="16" vertexindex="203" weight="0.091144"/>
-        <vertexboneassignment boneindex="15" vertexindex="203" weight="0.895332"/>
-        <vertexboneassignment boneindex="16" vertexindex="204" weight="0.134789"/>
-        <vertexboneassignment boneindex="17" vertexindex="204" weight="0.861146"/>
-        <vertexboneassignment boneindex="16" vertexindex="205" weight="0.154864"/>
-        <vertexboneassignment boneindex="17" vertexindex="205" weight="0.836965"/>
-        <vertexboneassignment boneindex="16" vertexindex="206" weight="0.143059"/>
-        <vertexboneassignment boneindex="17" vertexindex="206" weight="0.853927"/>
-        <vertexboneassignment boneindex="4" vertexindex="207" weight="0.026182"/>
-        <vertexboneassignment boneindex="14" vertexindex="207" weight="0.948155"/>
-        <vertexboneassignment boneindex="15" vertexindex="207" weight="0.059301"/>
-        <vertexboneassignment boneindex="4" vertexindex="208" weight="0.015350"/>
-        <vertexboneassignment boneindex="14" vertexindex="208" weight="0.934853"/>
-        <vertexboneassignment boneindex="15" vertexindex="208" weight="0.058800"/>
-        <vertexboneassignment boneindex="14" vertexindex="209" weight="0.062235"/>
-        <vertexboneassignment boneindex="15" vertexindex="209" weight="0.889714"/>
-        <vertexboneassignment boneindex="16" vertexindex="209" weight="0.044911"/>
-        <vertexboneassignment boneindex="1" vertexindex="210" weight="0.017475"/>
-        <vertexboneassignment boneindex="2" vertexindex="210" weight="0.150087"/>
-        <vertexboneassignment boneindex="14" vertexindex="210" weight="0.805811"/>
-        <vertexboneassignment boneindex="15" vertexindex="210" weight="0.073579"/>
+        <vertexboneassignment boneindex="14" vertexindex="171" weight="0.910058"/>
+        <vertexboneassignment boneindex="15" vertexindex="172" weight="0.861146"/>
+        <vertexboneassignment boneindex="14" vertexindex="173" weight="0.919663"/>
+        <vertexboneassignment boneindex="13" vertexindex="174" weight="0.868240"/>
+        <vertexboneassignment boneindex="13" vertexindex="175" weight="0.889204"/>
+        <vertexboneassignment boneindex="13" vertexindex="176" weight="0.896390"/>
+        <vertexboneassignment boneindex="12" vertexindex="177" weight="0.881132"/>
+        <vertexboneassignment boneindex="13" vertexindex="178" weight="0.896390"/>
+        <vertexboneassignment boneindex="16" vertexindex="180" weight="0.925402"/>
+        <vertexboneassignment boneindex="16" vertexindex="184" weight="0.929856"/>
+        <vertexboneassignment boneindex="16" vertexindex="185" weight="0.925402"/>
+        <vertexboneassignment boneindex="14" vertexindex="186" weight="0.847684"/>
+        <vertexboneassignment boneindex="14" vertexindex="187" weight="0.919663"/>
+        <vertexboneassignment boneindex="14" vertexindex="188" weight="0.913644"/>
+        <vertexboneassignment boneindex="14" vertexindex="189" weight="0.919663"/>
+        <vertexboneassignment boneindex="13" vertexindex="190" weight="0.895332"/>
+        <vertexboneassignment boneindex="14" vertexindex="191" weight="0.910058"/>
+        <vertexboneassignment boneindex="13" vertexindex="193" weight="0.889204"/>
+        <vertexboneassignment boneindex="12" vertexindex="194" weight="0.805811"/>
+        <vertexboneassignment boneindex="16" vertexindex="195" weight="0.929856"/>
+        <vertexboneassignment boneindex="17" vertexindex="196" weight="0.928867"/>
+        <vertexboneassignment boneindex="17" vertexindex="197" weight="0.936524"/>
+        <vertexboneassignment boneindex="14" vertexindex="198" weight="0.704902"/>
+        <vertexboneassignment boneindex="14" vertexindex="199" weight="0.704585"/>
+        <vertexboneassignment boneindex="15" vertexindex="200" weight="0.856347"/>
+        <vertexboneassignment boneindex="13" vertexindex="201" weight="0.504011"/>
+        <vertexboneassignment boneindex="14" vertexindex="202" weight="0.910058"/>
+        <vertexboneassignment boneindex="13" vertexindex="203" weight="0.895332"/>
+        <vertexboneassignment boneindex="15" vertexindex="204" weight="0.861146"/>
+        <vertexboneassignment boneindex="15" vertexindex="205" weight="0.836965"/>
+        <vertexboneassignment boneindex="15" vertexindex="206" weight="0.853927"/>
+        <vertexboneassignment boneindex="12" vertexindex="207" weight="0.948155"/>
+        <vertexboneassignment boneindex="12" vertexindex="208" weight="0.934853"/>
+        <vertexboneassignment boneindex="13" vertexindex="209" weight="0.889714"/>
+        <vertexboneassignment boneindex="12" vertexindex="210" weight="0.805811"/>
         <vertexboneassignment boneindex="2" vertexindex="211" weight="0.727884"/>
-        <vertexboneassignment boneindex="5" vertexindex="211" weight="0.129646"/>
-        <vertexboneassignment boneindex="14" vertexindex="211" weight="0.129646"/>
-        <vertexboneassignment boneindex="14" vertexindex="212" weight="0.054082"/>
         <vertexboneassignment boneindex="2" vertexindex="212" weight="0.859132"/>
-        <vertexboneassignment boneindex="5" vertexindex="212" weight="0.054082"/>
-        <vertexboneassignment boneindex="16" vertexindex="213" weight="0.134789"/>
-        <vertexboneassignment boneindex="17" vertexindex="213" weight="0.861146"/>
-        <vertexboneassignment boneindex="16" vertexindex="214" weight="0.913644"/>
-        <vertexboneassignment boneindex="17" vertexindex="214" weight="0.075086"/>
-        <vertexboneassignment boneindex="17" vertexindex="215" weight="0.050895"/>
-        <vertexboneassignment boneindex="16" vertexindex="215" weight="0.919663"/>
-        <vertexboneassignment boneindex="0" vertexindex="216" weight="0.052063"/>
-        <vertexboneassignment boneindex="1" vertexindex="216" weight="0.055313"/>
-        <vertexboneassignment boneindex="9" vertexindex="216" weight="0.118350"/>
-        <vertexboneassignment boneindex="18" vertexindex="216" weight="0.925402"/>
-        <vertexboneassignment boneindex="19" vertexindex="216" weight="0.062917"/>
-        <vertexboneassignment boneindex="1" vertexindex="217" weight="0.026162"/>
-        <vertexboneassignment boneindex="9" vertexindex="217" weight="0.037103"/>
-        <vertexboneassignment boneindex="18" vertexindex="217" weight="0.085324"/>
-        <vertexboneassignment boneindex="19" vertexindex="217" weight="0.861791"/>
-        <vertexboneassignment boneindex="20" vertexindex="217" weight="0.051307"/>
-        <vertexboneassignment boneindex="1" vertexindex="218" weight="0.027384"/>
-        <vertexboneassignment boneindex="9" vertexindex="218" weight="0.059998"/>
-        <vertexboneassignment boneindex="18" vertexindex="218" weight="0.903324"/>
-        <vertexboneassignment boneindex="19" vertexindex="218" weight="0.049583"/>
-        <vertexboneassignment boneindex="0" vertexindex="219" weight="0.048434"/>
+        <vertexboneassignment boneindex="15" vertexindex="213" weight="0.861146"/>
+        <vertexboneassignment boneindex="14" vertexindex="214" weight="0.913644"/>
+        <vertexboneassignment boneindex="14" vertexindex="215" weight="0.919663"/>
+        <vertexboneassignment boneindex="16" vertexindex="216" weight="0.925402"/>
+        <vertexboneassignment boneindex="17" vertexindex="217" weight="0.861791"/>
+        <vertexboneassignment boneindex="16" vertexindex="218" weight="0.903324"/>
         <vertexboneassignment boneindex="1" vertexindex="219" weight="0.841141"/>
-        <vertexboneassignment boneindex="0" vertexindex="220" weight="0.067441"/>
-        <vertexboneassignment boneindex="9" vertexindex="220" weight="0.010006"/>
-        <vertexboneassignment boneindex="18" vertexindex="220" weight="0.045490"/>
-        <vertexboneassignment boneindex="1" vertexindex="221" weight="0.019402"/>
-        <vertexboneassignment boneindex="16" vertexindex="222" weight="0.091144"/>
-        <vertexboneassignment boneindex="15" vertexindex="222" weight="0.895332"/>
-        <vertexboneassignment boneindex="14" vertexindex="223" weight="0.062235"/>
-        <vertexboneassignment boneindex="15" vertexindex="223" weight="0.889714"/>
-        <vertexboneassignment boneindex="16" vertexindex="223" weight="0.044911"/>
-        <vertexboneassignment boneindex="16" vertexindex="224" weight="0.487534"/>
-        <vertexboneassignment boneindex="15" vertexindex="224" weight="0.504011"/>
+        <vertexboneassignment boneindex="13" vertexindex="222" weight="0.895332"/>
+        <vertexboneassignment boneindex="13" vertexindex="223" weight="0.889714"/>
+        <vertexboneassignment boneindex="13" vertexindex="224" weight="0.504011"/>
         <vertexboneassignment boneindex="4" vertexindex="225" weight="0.946155"/>
         <vertexboneassignment boneindex="4" vertexindex="226" weight="0.876114"/>
-        <vertexboneassignment boneindex="2" vertexindex="227" weight="0.020278"/>
-        <vertexboneassignment boneindex="3" vertexindex="227" weight="0.050422"/>
         <vertexboneassignment boneindex="4" vertexindex="227" weight="0.852789"/>
         <vertexboneassignment boneindex="4" vertexindex="228" weight="0.876114"/>
-        <vertexboneassignment boneindex="2" vertexindex="229" weight="0.056522"/>
         <vertexboneassignment boneindex="4" vertexindex="229" weight="0.760040"/>
-        <vertexboneassignment boneindex="5" vertexindex="229" weight="0.032458"/>
-        <vertexboneassignment boneindex="14" vertexindex="229" weight="0.058972"/>
-        <vertexboneassignment boneindex="2" vertexindex="230" weight="0.099458"/>
-        <vertexboneassignment boneindex="3" vertexindex="230" weight="0.054196"/>
-        <vertexboneassignment boneindex="4" vertexindex="230" weight="0.487010"/>
-        <vertexboneassignment boneindex="5" vertexindex="230" weight="0.038612"/>
-        <vertexboneassignment boneindex="14" vertexindex="230" weight="0.128307"/>
-        <vertexboneassignment boneindex="1" vertexindex="231" weight="0.028723"/>
-        <vertexboneassignment boneindex="18" vertexindex="231" weight="0.058977"/>
-        <vertexboneassignment boneindex="19" vertexindex="231" weight="0.928867"/>
-        <vertexboneassignment boneindex="1" vertexindex="232" weight="0.027384"/>
-        <vertexboneassignment boneindex="9" vertexindex="232" weight="0.059998"/>
-        <vertexboneassignment boneindex="18" vertexindex="232" weight="0.903324"/>
-        <vertexboneassignment boneindex="19" vertexindex="232" weight="0.049583"/>
-        <vertexboneassignment boneindex="1" vertexindex="233" weight="0.026162"/>
-        <vertexboneassignment boneindex="9" vertexindex="233" weight="0.037103"/>
-        <vertexboneassignment boneindex="18" vertexindex="233" weight="0.085324"/>
-        <vertexboneassignment boneindex="19" vertexindex="233" weight="0.861791"/>
-        <vertexboneassignment boneindex="20" vertexindex="233" weight="0.051307"/>
-        <vertexboneassignment boneindex="2" vertexindex="234" weight="0.134504"/>
-        <vertexboneassignment boneindex="3" vertexindex="234" weight="0.197175"/>
-        <vertexboneassignment boneindex="4" vertexindex="234" weight="0.442466"/>
-        <vertexboneassignment boneindex="14" vertexindex="234" weight="0.159573"/>
-        <vertexboneassignment boneindex="2" vertexindex="235" weight="0.191277"/>
-        <vertexboneassignment boneindex="4" vertexindex="235" weight="0.394120"/>
-        <vertexboneassignment boneindex="5" vertexindex="235" weight="0.089797"/>
-        <vertexboneassignment boneindex="14" vertexindex="235" weight="0.879825"/>
-        <vertexboneassignment boneindex="2" vertexindex="236" weight="0.307098"/>
-        <vertexboneassignment boneindex="3" vertexindex="236" weight="0.023377"/>
-        <vertexboneassignment boneindex="4" vertexindex="236" weight="0.188890"/>
-        <vertexboneassignment boneindex="5" vertexindex="236" weight="0.048462"/>
-        <vertexboneassignment boneindex="14" vertexindex="236" weight="0.773777"/>
-        <vertexboneassignment boneindex="0" vertexindex="237" weight="0.011919"/>
-        <vertexboneassignment boneindex="16" vertexindex="237" weight="0.116826"/>
-        <vertexboneassignment boneindex="15" vertexindex="237" weight="0.868240"/>
-        <vertexboneassignment boneindex="14" vertexindex="238" weight="0.085533"/>
-        <vertexboneassignment boneindex="15" vertexindex="238" weight="0.899825"/>
-        <vertexboneassignment boneindex="16" vertexindex="239" weight="0.091144"/>
-        <vertexboneassignment boneindex="15" vertexindex="239" weight="0.895332"/>
-        <vertexboneassignment boneindex="16" vertexindex="240" weight="0.143059"/>
-        <vertexboneassignment boneindex="17" vertexindex="240" weight="0.853927"/>
-        <vertexboneassignment boneindex="17" vertexindex="241" weight="0.254379"/>
-        <vertexboneassignment boneindex="15" vertexindex="241" weight="0.030764"/>
-        <vertexboneassignment boneindex="16" vertexindex="241" weight="0.704902"/>
-        <vertexboneassignment boneindex="16" vertexindex="242" weight="0.913644"/>
-        <vertexboneassignment boneindex="17" vertexindex="242" weight="0.075086"/>
-        <vertexboneassignment boneindex="0" vertexindex="243" weight="0.052063"/>
-        <vertexboneassignment boneindex="1" vertexindex="243" weight="0.055313"/>
-        <vertexboneassignment boneindex="9" vertexindex="243" weight="0.118350"/>
-        <vertexboneassignment boneindex="18" vertexindex="243" weight="0.925402"/>
-        <vertexboneassignment boneindex="19" vertexindex="243" weight="0.062917"/>
-        <vertexboneassignment boneindex="1" vertexindex="244" weight="0.029885"/>
-        <vertexboneassignment boneindex="18" vertexindex="244" weight="0.053561"/>
-        <vertexboneassignment boneindex="19" vertexindex="244" weight="0.936524"/>
-        <vertexboneassignment boneindex="1" vertexindex="245" weight="0.026790"/>
-        <vertexboneassignment boneindex="18" vertexindex="245" weight="0.062631"/>
-        <vertexboneassignment boneindex="19" vertexindex="245" weight="0.882995"/>
-        <vertexboneassignment boneindex="20" vertexindex="245" weight="0.053745"/>
-        <vertexboneassignment boneindex="4" vertexindex="246" weight="0.015350"/>
-        <vertexboneassignment boneindex="14" vertexindex="246" weight="0.934853"/>
-        <vertexboneassignment boneindex="15" vertexindex="246" weight="0.058800"/>
-        <vertexboneassignment boneindex="2" vertexindex="247" weight="0.044070"/>
-        <vertexboneassignment boneindex="14" vertexindex="247" weight="0.058849"/>
-        <vertexboneassignment boneindex="15" vertexindex="247" weight="0.889204"/>
-        <vertexboneassignment boneindex="16" vertexindex="247" weight="0.041642"/>
-        <vertexboneassignment boneindex="14" vertexindex="248" weight="0.062235"/>
-        <vertexboneassignment boneindex="15" vertexindex="248" weight="0.889714"/>
-        <vertexboneassignment boneindex="16" vertexindex="248" weight="0.044911"/>
-        <vertexboneassignment boneindex="0" vertexindex="249" weight="0.138771"/>
-        <vertexboneassignment boneindex="1" vertexindex="249" weight="0.288450"/>
-        <vertexboneassignment boneindex="2" vertexindex="249" weight="0.017865"/>
-        <vertexboneassignment boneindex="14" vertexindex="249" weight="0.061576"/>
-        <vertexboneassignment boneindex="18" vertexindex="249" weight="0.020489"/>
-        <vertexboneassignment boneindex="9" vertexindex="249" weight="0.113678"/>
-        <vertexboneassignment boneindex="0" vertexindex="250" weight="0.230934"/>
-        <vertexboneassignment boneindex="1" vertexindex="250" weight="0.093565"/>
-        <vertexboneassignment boneindex="9" vertexindex="250" weight="0.042643"/>
-        <vertexboneassignment boneindex="9" vertexindex="251" weight="0.072362"/>
-        <vertexboneassignment boneindex="0" vertexindex="251" weight="0.328847"/>
-        <vertexboneassignment boneindex="1" vertexindex="251" weight="0.123478"/>
-        <vertexboneassignment boneindex="14" vertexindex="251" weight="0.025303"/>
-        <vertexboneassignment boneindex="17" vertexindex="252" weight="0.254379"/>
-        <vertexboneassignment boneindex="15" vertexindex="252" weight="0.030764"/>
-        <vertexboneassignment boneindex="16" vertexindex="252" weight="0.704902"/>
-        <vertexboneassignment boneindex="16" vertexindex="253" weight="0.847684"/>
-        <vertexboneassignment boneindex="15" vertexindex="253" weight="0.144145"/>
-        <vertexboneassignment boneindex="16" vertexindex="254" weight="0.913644"/>
-        <vertexboneassignment boneindex="17" vertexindex="254" weight="0.075086"/>
-        <vertexboneassignment boneindex="14" vertexindex="255" weight="0.062235"/>
-        <vertexboneassignment boneindex="15" vertexindex="255" weight="0.889714"/>
-        <vertexboneassignment boneindex="16" vertexindex="255" weight="0.044911"/>
-        <vertexboneassignment boneindex="16" vertexindex="256" weight="0.847684"/>
-        <vertexboneassignment boneindex="15" vertexindex="256" weight="0.144145"/>
-        <vertexboneassignment boneindex="16" vertexindex="257" weight="0.487534"/>
-        <vertexboneassignment boneindex="15" vertexindex="257" weight="0.504011"/>
-        <vertexboneassignment boneindex="1" vertexindex="258" weight="0.011591"/>
-        <vertexboneassignment boneindex="19" vertexindex="258" weight="0.079874"/>
-        <vertexboneassignment boneindex="20" vertexindex="258" weight="0.919165"/>
-        <vertexboneassignment boneindex="1" vertexindex="259" weight="0.015073"/>
-        <vertexboneassignment boneindex="19" vertexindex="259" weight="0.836754"/>
-        <vertexboneassignment boneindex="20" vertexindex="259" weight="0.159634"/>
-        <vertexboneassignment boneindex="1" vertexindex="260" weight="0.013281"/>
-        <vertexboneassignment boneindex="19" vertexindex="260" weight="0.106431"/>
-        <vertexboneassignment boneindex="20" vertexindex="260" weight="0.889478"/>
-        <vertexboneassignment boneindex="1" vertexindex="261" weight="0.026790"/>
-        <vertexboneassignment boneindex="18" vertexindex="261" weight="0.062631"/>
-        <vertexboneassignment boneindex="19" vertexindex="261" weight="0.882995"/>
-        <vertexboneassignment boneindex="20" vertexindex="261" weight="0.053745"/>
-        <vertexboneassignment boneindex="1" vertexindex="262" weight="0.013281"/>
-        <vertexboneassignment boneindex="19" vertexindex="262" weight="0.106431"/>
-        <vertexboneassignment boneindex="20" vertexindex="262" weight="0.889478"/>
-        <vertexboneassignment boneindex="1" vertexindex="263" weight="0.026162"/>
-        <vertexboneassignment boneindex="9" vertexindex="263" weight="0.037103"/>
-        <vertexboneassignment boneindex="18" vertexindex="263" weight="0.085324"/>
-        <vertexboneassignment boneindex="19" vertexindex="263" weight="0.861791"/>
-        <vertexboneassignment boneindex="20" vertexindex="263" weight="0.051307"/>
-        <vertexboneassignment boneindex="1" vertexindex="264" weight="0.011828"/>
-        <vertexboneassignment boneindex="19" vertexindex="264" weight="0.870531"/>
-        <vertexboneassignment boneindex="20" vertexindex="264" weight="0.127084"/>
-        <vertexboneassignment boneindex="1" vertexindex="265" weight="0.026790"/>
-        <vertexboneassignment boneindex="18" vertexindex="265" weight="0.062631"/>
-        <vertexboneassignment boneindex="19" vertexindex="265" weight="0.882995"/>
-        <vertexboneassignment boneindex="20" vertexindex="265" weight="0.053745"/>
-        <vertexboneassignment boneindex="1" vertexindex="266" weight="0.029885"/>
-        <vertexboneassignment boneindex="18" vertexindex="266" weight="0.053561"/>
-        <vertexboneassignment boneindex="19" vertexindex="266" weight="0.936524"/>
-        <vertexboneassignment boneindex="1" vertexindex="267" weight="0.028723"/>
-        <vertexboneassignment boneindex="18" vertexindex="267" weight="0.058977"/>
-        <vertexboneassignment boneindex="19" vertexindex="267" weight="0.928867"/>
-        <vertexboneassignment boneindex="1" vertexindex="268" weight="0.011828"/>
-        <vertexboneassignment boneindex="19" vertexindex="268" weight="0.870531"/>
-        <vertexboneassignment boneindex="20" vertexindex="268" weight="0.127084"/>
-        <vertexboneassignment boneindex="1" vertexindex="269" weight="0.029885"/>
-        <vertexboneassignment boneindex="18" vertexindex="269" weight="0.053561"/>
-        <vertexboneassignment boneindex="19" vertexindex="269" weight="0.936524"/>
-        <vertexboneassignment boneindex="1" vertexindex="270" weight="0.015073"/>
-        <vertexboneassignment boneindex="19" vertexindex="270" weight="0.836754"/>
-        <vertexboneassignment boneindex="20" vertexindex="270" weight="0.159634"/>
-        <vertexboneassignment boneindex="19" vertexindex="271" weight="0.531608"/>
-        <vertexboneassignment boneindex="20" vertexindex="271" weight="0.467870"/>
-        <vertexboneassignment boneindex="1" vertexindex="272" weight="0.011828"/>
-        <vertexboneassignment boneindex="19" vertexindex="272" weight="0.870531"/>
-        <vertexboneassignment boneindex="20" vertexindex="272" weight="0.127084"/>
-        <vertexboneassignment boneindex="1" vertexindex="273" weight="0.028723"/>
-        <vertexboneassignment boneindex="18" vertexindex="273" weight="0.058977"/>
-        <vertexboneassignment boneindex="19" vertexindex="273" weight="0.928867"/>
-        <vertexboneassignment boneindex="1" vertexindex="274" weight="0.013281"/>
-        <vertexboneassignment boneindex="19" vertexindex="274" weight="0.106431"/>
-        <vertexboneassignment boneindex="20" vertexindex="274" weight="0.889478"/>
-        <vertexboneassignment boneindex="1" vertexindex="275" weight="0.015073"/>
-        <vertexboneassignment boneindex="19" vertexindex="275" weight="0.836754"/>
-        <vertexboneassignment boneindex="20" vertexindex="275" weight="0.159634"/>
-        <vertexboneassignment boneindex="19" vertexindex="276" weight="0.531608"/>
-        <vertexboneassignment boneindex="20" vertexindex="276" weight="0.467870"/>
-        <vertexboneassignment boneindex="19" vertexindex="277" weight="0.097190"/>
-        <vertexboneassignment boneindex="20" vertexindex="277" weight="0.900225"/>
-        <vertexboneassignment boneindex="1" vertexindex="278" weight="0.011828"/>
-        <vertexboneassignment boneindex="19" vertexindex="278" weight="0.870531"/>
-        <vertexboneassignment boneindex="20" vertexindex="278" weight="0.127084"/>
-        <vertexboneassignment boneindex="19" vertexindex="279" weight="0.062086"/>
-        <vertexboneassignment boneindex="20" vertexindex="279" weight="0.937424"/>
-        <vertexboneassignment boneindex="20" vertexindex="280" weight="0.977836"/>
-        <vertexboneassignment boneindex="19" vertexindex="281" weight="0.097190"/>
-        <vertexboneassignment boneindex="20" vertexindex="281" weight="0.900225"/>
-        <vertexboneassignment boneindex="1" vertexindex="282" weight="0.011591"/>
-        <vertexboneassignment boneindex="19" vertexindex="282" weight="0.079874"/>
-        <vertexboneassignment boneindex="20" vertexindex="282" weight="0.919165"/>
-        <vertexboneassignment boneindex="19" vertexindex="283" weight="0.531608"/>
-        <vertexboneassignment boneindex="20" vertexindex="283" weight="0.467870"/>
-        <vertexboneassignment boneindex="1" vertexindex="284" weight="0.013240"/>
-        <vertexboneassignment boneindex="19" vertexindex="284" weight="0.533975"/>
-        <vertexboneassignment boneindex="20" vertexindex="284" weight="0.465220"/>
-        <vertexboneassignment boneindex="9" vertexindex="285" weight="0.011336"/>
-        <vertexboneassignment boneindex="20" vertexindex="285" weight="0.982927"/>
-        <vertexboneassignment boneindex="1" vertexindex="286" weight="0.010490"/>
-        <vertexboneassignment boneindex="20" vertexindex="286" weight="0.972549"/>
-        <vertexboneassignment boneindex="20" vertexindex="287" weight="0.977836"/>
-        <vertexboneassignment boneindex="1" vertexindex="288" weight="0.011591"/>
-        <vertexboneassignment boneindex="19" vertexindex="288" weight="0.079874"/>
-        <vertexboneassignment boneindex="20" vertexindex="288" weight="0.919165"/>
-        <vertexboneassignment boneindex="9" vertexindex="289" weight="0.011336"/>
-        <vertexboneassignment boneindex="20" vertexindex="289" weight="0.982927"/>
-        <vertexboneassignment boneindex="19" vertexindex="290" weight="0.062086"/>
-        <vertexboneassignment boneindex="20" vertexindex="290" weight="0.937424"/>
-        <vertexboneassignment boneindex="1" vertexindex="291" weight="0.013281"/>
-        <vertexboneassignment boneindex="19" vertexindex="291" weight="0.106431"/>
-        <vertexboneassignment boneindex="20" vertexindex="291" weight="0.889478"/>
-        <vertexboneassignment boneindex="1" vertexindex="292" weight="0.010045"/>
-        <vertexboneassignment boneindex="20" vertexindex="292" weight="0.979047"/>
-        <vertexboneassignment boneindex="1" vertexindex="293" weight="0.011591"/>
-        <vertexboneassignment boneindex="19" vertexindex="293" weight="0.079874"/>
-        <vertexboneassignment boneindex="20" vertexindex="293" weight="0.919165"/>
-        <vertexboneassignment boneindex="20" vertexindex="294" weight="0.977836"/>
-        <vertexboneassignment boneindex="1" vertexindex="295" weight="0.013281"/>
-        <vertexboneassignment boneindex="19" vertexindex="295" weight="0.106431"/>
-        <vertexboneassignment boneindex="20" vertexindex="295" weight="0.889478"/>
-        <vertexboneassignment boneindex="19" vertexindex="296" weight="0.097190"/>
-        <vertexboneassignment boneindex="20" vertexindex="296" weight="0.900225"/>
-        <vertexboneassignment boneindex="1" vertexindex="297" weight="0.017475"/>
-        <vertexboneassignment boneindex="2" vertexindex="297" weight="0.150087"/>
-        <vertexboneassignment boneindex="14" vertexindex="297" weight="0.805811"/>
-        <vertexboneassignment boneindex="15" vertexindex="297" weight="0.073579"/>
-        <vertexboneassignment boneindex="0" vertexindex="298" weight="0.048434"/>
+        <vertexboneassignment boneindex="17" vertexindex="231" weight="0.928867"/>
+        <vertexboneassignment boneindex="16" vertexindex="232" weight="0.903324"/>
+        <vertexboneassignment boneindex="17" vertexindex="233" weight="0.861791"/>
+        <vertexboneassignment boneindex="12" vertexindex="235" weight="0.879825"/>
+        <vertexboneassignment boneindex="12" vertexindex="236" weight="0.773777"/>
+        <vertexboneassignment boneindex="13" vertexindex="237" weight="0.868240"/>
+        <vertexboneassignment boneindex="13" vertexindex="238" weight="0.899825"/>
+        <vertexboneassignment boneindex="13" vertexindex="239" weight="0.895332"/>
+        <vertexboneassignment boneindex="15" vertexindex="240" weight="0.853927"/>
+        <vertexboneassignment boneindex="14" vertexindex="241" weight="0.704902"/>
+        <vertexboneassignment boneindex="14" vertexindex="242" weight="0.913644"/>
+        <vertexboneassignment boneindex="16" vertexindex="243" weight="0.925402"/>
+        <vertexboneassignment boneindex="17" vertexindex="244" weight="0.936524"/>
+        <vertexboneassignment boneindex="17" vertexindex="245" weight="0.882995"/>
+        <vertexboneassignment boneindex="12" vertexindex="246" weight="0.934853"/>
+        <vertexboneassignment boneindex="13" vertexindex="247" weight="0.889204"/>
+        <vertexboneassignment boneindex="13" vertexindex="248" weight="0.889714"/>
+        <vertexboneassignment boneindex="14" vertexindex="252" weight="0.704902"/>
+        <vertexboneassignment boneindex="14" vertexindex="253" weight="0.847684"/>
+        <vertexboneassignment boneindex="14" vertexindex="254" weight="0.913644"/>
+        <vertexboneassignment boneindex="13" vertexindex="255" weight="0.889714"/>
+        <vertexboneassignment boneindex="14" vertexindex="256" weight="0.847684"/>
+        <vertexboneassignment boneindex="13" vertexindex="257" weight="0.504011"/>
+        <vertexboneassignment boneindex="18" vertexindex="258" weight="0.919165"/>
+        <vertexboneassignment boneindex="17" vertexindex="259" weight="0.836754"/>
+        <vertexboneassignment boneindex="18" vertexindex="260" weight="0.889478"/>
+        <vertexboneassignment boneindex="17" vertexindex="261" weight="0.882995"/>
+        <vertexboneassignment boneindex="18" vertexindex="262" weight="0.889478"/>
+        <vertexboneassignment boneindex="17" vertexindex="263" weight="0.861791"/>
+        <vertexboneassignment boneindex="17" vertexindex="264" weight="0.870531"/>
+        <vertexboneassignment boneindex="17" vertexindex="265" weight="0.882995"/>
+        <vertexboneassignment boneindex="17" vertexindex="266" weight="0.936524"/>
+        <vertexboneassignment boneindex="17" vertexindex="267" weight="0.928867"/>
+        <vertexboneassignment boneindex="17" vertexindex="268" weight="0.870531"/>
+        <vertexboneassignment boneindex="17" vertexindex="269" weight="0.936524"/>
+        <vertexboneassignment boneindex="17" vertexindex="270" weight="0.836754"/>
+        <vertexboneassignment boneindex="17" vertexindex="271" weight="0.531608"/>
+        <vertexboneassignment boneindex="17" vertexindex="272" weight="0.870531"/>
+        <vertexboneassignment boneindex="17" vertexindex="273" weight="0.928867"/>
+        <vertexboneassignment boneindex="18" vertexindex="274" weight="0.889478"/>
+        <vertexboneassignment boneindex="17" vertexindex="275" weight="0.836754"/>
+        <vertexboneassignment boneindex="17" vertexindex="276" weight="0.531608"/>
+        <vertexboneassignment boneindex="18" vertexindex="277" weight="0.900225"/>
+        <vertexboneassignment boneindex="17" vertexindex="278" weight="0.870531"/>
+        <vertexboneassignment boneindex="18" vertexindex="279" weight="0.937424"/>
+        <vertexboneassignment boneindex="18" vertexindex="280" weight="0.977836"/>
+        <vertexboneassignment boneindex="18" vertexindex="281" weight="0.900225"/>
+        <vertexboneassignment boneindex="18" vertexindex="282" weight="0.919165"/>
+        <vertexboneassignment boneindex="17" vertexindex="283" weight="0.531608"/>
+        <vertexboneassignment boneindex="17" vertexindex="284" weight="0.533975"/>
+        <vertexboneassignment boneindex="18" vertexindex="285" weight="0.982927"/>
+        <vertexboneassignment boneindex="18" vertexindex="286" weight="0.972549"/>
+        <vertexboneassignment boneindex="18" vertexindex="287" weight="0.977836"/>
+        <vertexboneassignment boneindex="18" vertexindex="288" weight="0.919165"/>
+        <vertexboneassignment boneindex="18" vertexindex="289" weight="0.982927"/>
+        <vertexboneassignment boneindex="18" vertexindex="290" weight="0.937424"/>
+        <vertexboneassignment boneindex="18" vertexindex="291" weight="0.889478"/>
+        <vertexboneassignment boneindex="18" vertexindex="292" weight="0.979047"/>
+        <vertexboneassignment boneindex="18" vertexindex="293" weight="0.919165"/>
+        <vertexboneassignment boneindex="18" vertexindex="294" weight="0.977836"/>
+        <vertexboneassignment boneindex="18" vertexindex="295" weight="0.889478"/>
+        <vertexboneassignment boneindex="18" vertexindex="296" weight="0.900225"/>
+        <vertexboneassignment boneindex="12" vertexindex="297" weight="0.805811"/>
         <vertexboneassignment boneindex="1" vertexindex="298" weight="0.841141"/>
-        <vertexboneassignment boneindex="0" vertexindex="299" weight="0.138771"/>
-        <vertexboneassignment boneindex="1" vertexindex="299" weight="0.288450"/>
-        <vertexboneassignment boneindex="2" vertexindex="299" weight="0.017865"/>
-        <vertexboneassignment boneindex="14" vertexindex="299" weight="0.061576"/>
-        <vertexboneassignment boneindex="18" vertexindex="299" weight="0.020489"/>
-        <vertexboneassignment boneindex="9" vertexindex="299" weight="0.113678"/>
-        <vertexboneassignment boneindex="2" vertexindex="300" weight="0.074782"/>
         <vertexboneassignment boneindex="5" vertexindex="300" weight="0.805811"/>
-        <vertexboneassignment boneindex="6" vertexindex="300" weight="0.073579"/>
         <vertexboneassignment boneindex="2" vertexindex="301" weight="0.727884"/>
-        <vertexboneassignment boneindex="5" vertexindex="301" weight="0.129646"/>
-        <vertexboneassignment boneindex="14" vertexindex="301" weight="0.129646"/>
         <vertexboneassignment boneindex="5" vertexindex="302" weight="0.934853"/>
-        <vertexboneassignment boneindex="6" vertexindex="302" weight="0.058800"/>
-        <vertexboneassignment boneindex="0" vertexindex="303" weight="0.048434"/>
         <vertexboneassignment boneindex="1" vertexindex="303" weight="0.841141"/>
-        <vertexboneassignment boneindex="0" vertexindex="304" weight="0.059411"/>
-        <vertexboneassignment boneindex="1" vertexindex="304" weight="0.151725"/>
-        <vertexboneassignment boneindex="9" vertexindex="304" weight="0.045490"/>
-        <vertexboneassignment boneindex="18" vertexindex="304" weight="0.010006"/>
-        <vertexboneassignment boneindex="0" vertexindex="305" weight="0.138771"/>
-        <vertexboneassignment boneindex="1" vertexindex="305" weight="0.288450"/>
-        <vertexboneassignment boneindex="2" vertexindex="305" weight="0.017865"/>
-        <vertexboneassignment boneindex="14" vertexindex="305" weight="0.061576"/>
-        <vertexboneassignment boneindex="18" vertexindex="305" weight="0.020489"/>
-        <vertexboneassignment boneindex="9" vertexindex="305" weight="0.113678"/>
-        <vertexboneassignment boneindex="0" vertexindex="306" weight="0.059411"/>
-        <vertexboneassignment boneindex="1" vertexindex="306" weight="0.151725"/>
-        <vertexboneassignment boneindex="9" vertexindex="306" weight="0.045490"/>
-        <vertexboneassignment boneindex="18" vertexindex="306" weight="0.010006"/>
-        <vertexboneassignment boneindex="1" vertexindex="307" weight="0.040861"/>
-        <vertexboneassignment boneindex="18" vertexindex="307" weight="0.933543"/>
-        <vertexboneassignment boneindex="19" vertexindex="307" weight="0.055943"/>
-        <vertexboneassignment boneindex="1" vertexindex="308" weight="0.062356"/>
-        <vertexboneassignment boneindex="18" vertexindex="308" weight="0.929856"/>
-        <vertexboneassignment boneindex="19" vertexindex="308" weight="0.062439"/>
-        <vertexboneassignment boneindex="2" vertexindex="309" weight="0.056522"/>
+        <vertexboneassignment boneindex="16" vertexindex="307" weight="0.933543"/>
+        <vertexboneassignment boneindex="16" vertexindex="308" weight="0.929856"/>
         <vertexboneassignment boneindex="4" vertexindex="309" weight="0.760040"/>
-        <vertexboneassignment boneindex="5" vertexindex="309" weight="0.032458"/>
-        <vertexboneassignment boneindex="14" vertexindex="309" weight="0.058972"/>
         <vertexboneassignment boneindex="4" vertexindex="310" weight="0.950329"/>
-        <vertexboneassignment boneindex="2" vertexindex="311" weight="0.047274"/>
         <vertexboneassignment boneindex="4" vertexindex="311" weight="0.831823"/>
-        <vertexboneassignment boneindex="5" vertexindex="311" weight="0.046850"/>
-        <vertexboneassignment boneindex="14" vertexindex="311" weight="0.046850"/>
         <vertexboneassignment boneindex="4" vertexindex="312" weight="0.950329"/>
         <vertexboneassignment boneindex="4" vertexindex="313" weight="0.962092"/>
         <vertexboneassignment boneindex="4" vertexindex="314" weight="0.981640"/>
@@ -5784,391 +5241,108 @@
         <vertexboneassignment boneindex="4" vertexindex="319" weight="0.989776"/>
         <vertexboneassignment boneindex="4" vertexindex="320" weight="0.946155"/>
         <vertexboneassignment boneindex="4" vertexindex="321" weight="0.929873"/>
-        <vertexboneassignment boneindex="3" vertexindex="322" weight="0.020246"/>
         <vertexboneassignment boneindex="4" vertexindex="322" weight="0.925493"/>
         <vertexboneassignment boneindex="4" vertexindex="323" weight="0.978044"/>
-        <vertexboneassignment boneindex="3" vertexindex="324" weight="0.020246"/>
         <vertexboneassignment boneindex="4" vertexindex="324" weight="0.925493"/>
-        <vertexboneassignment boneindex="2" vertexindex="325" weight="0.074570"/>
-        <vertexboneassignment boneindex="3" vertexindex="325" weight="0.110706"/>
         <vertexboneassignment boneindex="4" vertexindex="325" weight="0.689670"/>
-        <vertexboneassignment boneindex="14" vertexindex="325" weight="0.045689"/>
-        <vertexboneassignment boneindex="2" vertexindex="326" weight="0.061749"/>
-        <vertexboneassignment boneindex="3" vertexindex="326" weight="0.126443"/>
         <vertexboneassignment boneindex="4" vertexindex="326" weight="0.773333"/>
-        <vertexboneassignment boneindex="2" vertexindex="327" weight="0.134504"/>
-        <vertexboneassignment boneindex="3" vertexindex="327" weight="0.197175"/>
-        <vertexboneassignment boneindex="4" vertexindex="327" weight="0.442466"/>
-        <vertexboneassignment boneindex="14" vertexindex="327" weight="0.159573"/>
         <vertexboneassignment boneindex="2" vertexindex="328" weight="0.836845"/>
-        <vertexboneassignment boneindex="4" vertexindex="328" weight="0.035847"/>
-        <vertexboneassignment boneindex="5" vertexindex="328" weight="0.068122"/>
-        <vertexboneassignment boneindex="14" vertexindex="328" weight="0.068122"/>
-        <vertexboneassignment boneindex="2" vertexindex="329" weight="0.144636"/>
-        <vertexboneassignment boneindex="3" vertexindex="329" weight="0.295472"/>
         <vertexboneassignment boneindex="4" vertexindex="329" weight="0.509924"/>
-        <vertexboneassignment boneindex="2" vertexindex="330" weight="0.061749"/>
-        <vertexboneassignment boneindex="3" vertexindex="330" weight="0.126443"/>
         <vertexboneassignment boneindex="4" vertexindex="330" weight="0.773333"/>
-        <vertexboneassignment boneindex="2" vertexindex="331" weight="0.134504"/>
-        <vertexboneassignment boneindex="3" vertexindex="331" weight="0.197175"/>
-        <vertexboneassignment boneindex="4" vertexindex="331" weight="0.442466"/>
-        <vertexboneassignment boneindex="14" vertexindex="331" weight="0.159573"/>
-        <vertexboneassignment boneindex="2" vertexindex="332" weight="0.144636"/>
-        <vertexboneassignment boneindex="3" vertexindex="332" weight="0.295472"/>
         <vertexboneassignment boneindex="4" vertexindex="332" weight="0.509924"/>
-        <vertexboneassignment boneindex="1" vertexindex="333" weight="0.027384"/>
-        <vertexboneassignment boneindex="9" vertexindex="333" weight="0.059998"/>
-        <vertexboneassignment boneindex="18" vertexindex="333" weight="0.903324"/>
-        <vertexboneassignment boneindex="19" vertexindex="333" weight="0.049583"/>
-        <vertexboneassignment boneindex="1" vertexindex="334" weight="0.019402"/>
-        <vertexboneassignment boneindex="0" vertexindex="335" weight="0.256555"/>
-        <vertexboneassignment boneindex="9" vertexindex="335" weight="0.046566"/>
-        <vertexboneassignment boneindex="18" vertexindex="335" weight="0.047961"/>
-        <vertexboneassignment boneindex="0" vertexindex="336" weight="0.118525"/>
-        <vertexboneassignment boneindex="9" vertexindex="336" weight="0.047961"/>
-        <vertexboneassignment boneindex="18" vertexindex="336" weight="0.046566"/>
-        <vertexboneassignment boneindex="0" vertexindex="337" weight="0.256555"/>
-        <vertexboneassignment boneindex="9" vertexindex="337" weight="0.046566"/>
-        <vertexboneassignment boneindex="18" vertexindex="337" weight="0.047961"/>
-        <vertexboneassignment boneindex="1" vertexindex="338" weight="0.019402"/>
+        <vertexboneassignment boneindex="16" vertexindex="333" weight="0.903324"/>
         <vertexboneassignment boneindex="0" vertexindex="339" weight="0.867352"/>
-        <vertexboneassignment boneindex="1" vertexindex="339" weight="0.012512"/>
-        <vertexboneassignment boneindex="0" vertexindex="340" weight="0.256555"/>
-        <vertexboneassignment boneindex="9" vertexindex="340" weight="0.046566"/>
-        <vertexboneassignment boneindex="18" vertexindex="340" weight="0.047961"/>
-        <vertexboneassignment boneindex="0" vertexindex="341" weight="0.118525"/>
-        <vertexboneassignment boneindex="9" vertexindex="341" weight="0.047961"/>
-        <vertexboneassignment boneindex="18" vertexindex="341" weight="0.046566"/>
-        <vertexboneassignment boneindex="0" vertexindex="342" weight="0.230934"/>
-        <vertexboneassignment boneindex="1" vertexindex="342" weight="0.093565"/>
-        <vertexboneassignment boneindex="9" vertexindex="342" weight="0.042643"/>
         <vertexboneassignment boneindex="0" vertexindex="343" weight="0.867352"/>
-        <vertexboneassignment boneindex="1" vertexindex="343" weight="0.012512"/>
-        <vertexboneassignment boneindex="9" vertexindex="344" weight="0.072362"/>
-        <vertexboneassignment boneindex="0" vertexindex="344" weight="0.328847"/>
-        <vertexboneassignment boneindex="1" vertexindex="344" weight="0.123478"/>
-        <vertexboneassignment boneindex="14" vertexindex="344" weight="0.025303"/>
-        <vertexboneassignment boneindex="0" vertexindex="345" weight="0.012654"/>
-        <vertexboneassignment boneindex="1" vertexindex="345" weight="0.434305"/>
-        <vertexboneassignment boneindex="2" vertexindex="345" weight="0.468758"/>
-        <vertexboneassignment boneindex="9" vertexindex="346" weight="0.072362"/>
-        <vertexboneassignment boneindex="0" vertexindex="346" weight="0.328847"/>
-        <vertexboneassignment boneindex="1" vertexindex="346" weight="0.123478"/>
-        <vertexboneassignment boneindex="14" vertexindex="346" weight="0.025303"/>
         <vertexboneassignment boneindex="0" vertexindex="347" weight="0.867352"/>
-        <vertexboneassignment boneindex="1" vertexindex="347" weight="0.012512"/>
-        <vertexboneassignment boneindex="1" vertexindex="348" weight="0.029381"/>
         <vertexboneassignment boneindex="2" vertexindex="348" weight="0.848349"/>
-        <vertexboneassignment boneindex="5" vertexindex="348" weight="0.034064"/>
-        <vertexboneassignment boneindex="14" vertexindex="348" weight="0.034064"/>
-        <vertexboneassignment boneindex="1" vertexindex="349" weight="0.034794"/>
-        <vertexboneassignment boneindex="2" vertexindex="349" weight="0.055085"/>
-        <vertexboneassignment boneindex="14" vertexindex="349" weight="0.490769"/>
-        <vertexboneassignment boneindex="15" vertexindex="349" weight="0.432928"/>
-        <vertexboneassignment boneindex="0" vertexindex="350" weight="0.012654"/>
-        <vertexboneassignment boneindex="1" vertexindex="350" weight="0.434305"/>
-        <vertexboneassignment boneindex="2" vertexindex="350" weight="0.468758"/>
         <vertexboneassignment boneindex="2" vertexindex="351" weight="0.836845"/>
-        <vertexboneassignment boneindex="4" vertexindex="351" weight="0.035847"/>
-        <vertexboneassignment boneindex="5" vertexindex="351" weight="0.068122"/>
-        <vertexboneassignment boneindex="14" vertexindex="351" weight="0.068122"/>
-        <vertexboneassignment boneindex="14" vertexindex="352" weight="0.881132"/>
-        <vertexboneassignment boneindex="15" vertexindex="352" weight="0.101907"/>
-        <vertexboneassignment boneindex="1" vertexindex="353" weight="0.029381"/>
+        <vertexboneassignment boneindex="12" vertexindex="352" weight="0.881132"/>
         <vertexboneassignment boneindex="2" vertexindex="353" weight="0.848349"/>
-        <vertexboneassignment boneindex="5" vertexindex="353" weight="0.034064"/>
-        <vertexboneassignment boneindex="14" vertexindex="353" weight="0.034064"/>
-        <vertexboneassignment boneindex="2" vertexindex="354" weight="0.047274"/>
         <vertexboneassignment boneindex="4" vertexindex="354" weight="0.831823"/>
-        <vertexboneassignment boneindex="5" vertexindex="354" weight="0.046850"/>
-        <vertexboneassignment boneindex="14" vertexindex="354" weight="0.046850"/>
-        <vertexboneassignment boneindex="2" vertexindex="355" weight="0.359165"/>
-        <vertexboneassignment boneindex="4" vertexindex="355" weight="0.047761"/>
-        <vertexboneassignment boneindex="5" vertexindex="355" weight="0.311680"/>
-        <vertexboneassignment boneindex="14" vertexindex="355" weight="0.311680"/>
-        <vertexboneassignment boneindex="2" vertexindex="356" weight="0.056522"/>
         <vertexboneassignment boneindex="4" vertexindex="356" weight="0.760040"/>
-        <vertexboneassignment boneindex="5" vertexindex="356" weight="0.032458"/>
-        <vertexboneassignment boneindex="14" vertexindex="356" weight="0.058972"/>
-        <vertexboneassignment boneindex="2" vertexindex="357" weight="0.359165"/>
-        <vertexboneassignment boneindex="4" vertexindex="357" weight="0.047761"/>
-        <vertexboneassignment boneindex="5" vertexindex="357" weight="0.311680"/>
-        <vertexboneassignment boneindex="14" vertexindex="357" weight="0.311680"/>
-        <vertexboneassignment boneindex="2" vertexindex="358" weight="0.099458"/>
-        <vertexboneassignment boneindex="3" vertexindex="358" weight="0.054196"/>
-        <vertexboneassignment boneindex="4" vertexindex="358" weight="0.487010"/>
-        <vertexboneassignment boneindex="5" vertexindex="358" weight="0.038612"/>
-        <vertexboneassignment boneindex="14" vertexindex="358" weight="0.128307"/>
-        <vertexboneassignment boneindex="2" vertexindex="359" weight="0.056522"/>
         <vertexboneassignment boneindex="4" vertexindex="359" weight="0.760040"/>
-        <vertexboneassignment boneindex="5" vertexindex="359" weight="0.032458"/>
-        <vertexboneassignment boneindex="14" vertexindex="359" weight="0.058972"/>
-        <vertexboneassignment boneindex="2" vertexindex="360" weight="0.047274"/>
         <vertexboneassignment boneindex="4" vertexindex="360" weight="0.831823"/>
-        <vertexboneassignment boneindex="5" vertexindex="360" weight="0.046850"/>
-        <vertexboneassignment boneindex="14" vertexindex="360" weight="0.046850"/>
-        <vertexboneassignment boneindex="2" vertexindex="361" weight="0.016266"/>
         <vertexboneassignment boneindex="4" vertexindex="361" weight="0.860975"/>
-        <vertexboneassignment boneindex="5" vertexindex="361" weight="0.058972"/>
-        <vertexboneassignment boneindex="14" vertexindex="361" weight="0.032458"/>
-        <vertexboneassignment boneindex="2" vertexindex="362" weight="0.359165"/>
-        <vertexboneassignment boneindex="4" vertexindex="362" weight="0.047761"/>
-        <vertexboneassignment boneindex="5" vertexindex="362" weight="0.311680"/>
-        <vertexboneassignment boneindex="14" vertexindex="362" weight="0.311680"/>
-        <vertexboneassignment boneindex="3" vertexindex="363" weight="0.023743"/>
         <vertexboneassignment boneindex="4" vertexindex="363" weight="0.788578"/>
-        <vertexboneassignment boneindex="5" vertexindex="363" weight="0.128307"/>
-        <vertexboneassignment boneindex="14" vertexindex="363" weight="0.038612"/>
-        <vertexboneassignment boneindex="2" vertexindex="364" weight="0.359165"/>
-        <vertexboneassignment boneindex="4" vertexindex="364" weight="0.047761"/>
-        <vertexboneassignment boneindex="5" vertexindex="364" weight="0.311680"/>
-        <vertexboneassignment boneindex="14" vertexindex="364" weight="0.311680"/>
-        <vertexboneassignment boneindex="2" vertexindex="365" weight="0.016266"/>
         <vertexboneassignment boneindex="4" vertexindex="365" weight="0.860975"/>
-        <vertexboneassignment boneindex="5" vertexindex="365" weight="0.058972"/>
-        <vertexboneassignment boneindex="14" vertexindex="365" weight="0.032458"/>
         <vertexboneassignment boneindex="5" vertexindex="366" weight="0.881132"/>
-        <vertexboneassignment boneindex="6" vertexindex="366" weight="0.101907"/>
-        <vertexboneassignment boneindex="2" vertexindex="367" weight="0.138481"/>
-        <vertexboneassignment boneindex="4" vertexindex="367" weight="0.049059"/>
         <vertexboneassignment boneindex="5" vertexindex="367" weight="0.773777"/>
-        <vertexboneassignment boneindex="14" vertexindex="367" weight="0.048462"/>
         <vertexboneassignment boneindex="2" vertexindex="368" weight="0.836845"/>
-        <vertexboneassignment boneindex="4" vertexindex="368" weight="0.035847"/>
-        <vertexboneassignment boneindex="5" vertexindex="368" weight="0.068122"/>
-        <vertexboneassignment boneindex="14" vertexindex="368" weight="0.068122"/>
         <vertexboneassignment boneindex="5" vertexindex="369" weight="0.934853"/>
-        <vertexboneassignment boneindex="6" vertexindex="369" weight="0.058800"/>
-        <vertexboneassignment boneindex="2" vertexindex="370" weight="0.138481"/>
-        <vertexboneassignment boneindex="4" vertexindex="370" weight="0.049059"/>
         <vertexboneassignment boneindex="5" vertexindex="370" weight="0.773777"/>
-        <vertexboneassignment boneindex="14" vertexindex="370" weight="0.048462"/>
         <vertexboneassignment boneindex="5" vertexindex="371" weight="0.948155"/>
-        <vertexboneassignment boneindex="6" vertexindex="371" weight="0.059301"/>
-        <vertexboneassignment boneindex="2" vertexindex="372" weight="0.359165"/>
-        <vertexboneassignment boneindex="4" vertexindex="372" weight="0.047761"/>
-        <vertexboneassignment boneindex="5" vertexindex="372" weight="0.311680"/>
-        <vertexboneassignment boneindex="14" vertexindex="372" weight="0.311680"/>
-        <vertexboneassignment boneindex="2" vertexindex="373" weight="0.045410"/>
-        <vertexboneassignment boneindex="4" vertexindex="373" weight="0.032314"/>
         <vertexboneassignment boneindex="5" vertexindex="373" weight="0.879825"/>
-        <vertexboneassignment boneindex="14" vertexindex="373" weight="0.089797"/>
         <vertexboneassignment boneindex="5" vertexindex="374" weight="0.934853"/>
-        <vertexboneassignment boneindex="6" vertexindex="374" weight="0.058800"/>
-        <vertexboneassignment boneindex="2" vertexindex="375" weight="0.359165"/>
-        <vertexboneassignment boneindex="4" vertexindex="375" weight="0.047761"/>
-        <vertexboneassignment boneindex="5" vertexindex="375" weight="0.311680"/>
-        <vertexboneassignment boneindex="14" vertexindex="375" weight="0.311680"/>
         <vertexboneassignment boneindex="5" vertexindex="376" weight="0.934853"/>
-        <vertexboneassignment boneindex="6" vertexindex="376" weight="0.058800"/>
         <vertexboneassignment boneindex="2" vertexindex="377" weight="0.727884"/>
-        <vertexboneassignment boneindex="5" vertexindex="377" weight="0.129646"/>
-        <vertexboneassignment boneindex="14" vertexindex="377" weight="0.129646"/>
-        <vertexboneassignment boneindex="4" vertexindex="378" weight="0.015350"/>
-        <vertexboneassignment boneindex="14" vertexindex="378" weight="0.934853"/>
-        <vertexboneassignment boneindex="15" vertexindex="378" weight="0.058800"/>
-        <vertexboneassignment boneindex="2" vertexindex="379" weight="0.359165"/>
-        <vertexboneassignment boneindex="4" vertexindex="379" weight="0.047761"/>
-        <vertexboneassignment boneindex="5" vertexindex="379" weight="0.311680"/>
-        <vertexboneassignment boneindex="14" vertexindex="379" weight="0.311680"/>
+        <vertexboneassignment boneindex="12" vertexindex="378" weight="0.934853"/>
         <vertexboneassignment boneindex="2" vertexindex="380" weight="0.727884"/>
-        <vertexboneassignment boneindex="5" vertexindex="380" weight="0.129646"/>
-        <vertexboneassignment boneindex="14" vertexindex="380" weight="0.129646"/>
-        <vertexboneassignment boneindex="4" vertexindex="381" weight="0.015350"/>
-        <vertexboneassignment boneindex="14" vertexindex="381" weight="0.934853"/>
-        <vertexboneassignment boneindex="15" vertexindex="381" weight="0.058800"/>
-        <vertexboneassignment boneindex="2" vertexindex="382" weight="0.191277"/>
-        <vertexboneassignment boneindex="4" vertexindex="382" weight="0.394120"/>
-        <vertexboneassignment boneindex="5" vertexindex="382" weight="0.089797"/>
-        <vertexboneassignment boneindex="14" vertexindex="382" weight="0.879825"/>
-        <vertexboneassignment boneindex="2" vertexindex="383" weight="0.359165"/>
-        <vertexboneassignment boneindex="4" vertexindex="383" weight="0.047761"/>
-        <vertexboneassignment boneindex="5" vertexindex="383" weight="0.311680"/>
-        <vertexboneassignment boneindex="14" vertexindex="383" weight="0.311680"/>
-        <vertexboneassignment boneindex="2" vertexindex="384" weight="0.307098"/>
-        <vertexboneassignment boneindex="3" vertexindex="384" weight="0.023377"/>
-        <vertexboneassignment boneindex="4" vertexindex="384" weight="0.188890"/>
-        <vertexboneassignment boneindex="5" vertexindex="384" weight="0.048462"/>
-        <vertexboneassignment boneindex="14" vertexindex="384" weight="0.773777"/>
-        <vertexboneassignment boneindex="4" vertexindex="385" weight="0.015350"/>
-        <vertexboneassignment boneindex="14" vertexindex="385" weight="0.934853"/>
-        <vertexboneassignment boneindex="15" vertexindex="385" weight="0.058800"/>
-        <vertexboneassignment boneindex="4" vertexindex="386" weight="0.026182"/>
-        <vertexboneassignment boneindex="14" vertexindex="386" weight="0.948155"/>
-        <vertexboneassignment boneindex="15" vertexindex="386" weight="0.059301"/>
-        <vertexboneassignment boneindex="2" vertexindex="387" weight="0.307098"/>
-        <vertexboneassignment boneindex="3" vertexindex="387" weight="0.023377"/>
-        <vertexboneassignment boneindex="4" vertexindex="387" weight="0.188890"/>
-        <vertexboneassignment boneindex="5" vertexindex="387" weight="0.048462"/>
-        <vertexboneassignment boneindex="14" vertexindex="387" weight="0.773777"/>
-        <vertexboneassignment boneindex="14" vertexindex="388" weight="0.881132"/>
-        <vertexboneassignment boneindex="15" vertexindex="388" weight="0.101907"/>
+        <vertexboneassignment boneindex="12" vertexindex="381" weight="0.934853"/>
+        <vertexboneassignment boneindex="12" vertexindex="382" weight="0.879825"/>
+        <vertexboneassignment boneindex="12" vertexindex="384" weight="0.773777"/>
+        <vertexboneassignment boneindex="12" vertexindex="385" weight="0.934853"/>
+        <vertexboneassignment boneindex="12" vertexindex="386" weight="0.948155"/>
+        <vertexboneassignment boneindex="12" vertexindex="387" weight="0.773777"/>
+        <vertexboneassignment boneindex="12" vertexindex="388" weight="0.881132"/>
         <vertexboneassignment boneindex="2" vertexindex="389" weight="0.836845"/>
-        <vertexboneassignment boneindex="4" vertexindex="389" weight="0.035847"/>
-        <vertexboneassignment boneindex="5" vertexindex="389" weight="0.068122"/>
-        <vertexboneassignment boneindex="14" vertexindex="389" weight="0.068122"/>
-        <vertexboneassignment boneindex="2" vertexindex="390" weight="0.013576"/>
-        <vertexboneassignment boneindex="5" vertexindex="390" weight="0.490769"/>
-        <vertexboneassignment boneindex="6" vertexindex="390" weight="0.432928"/>
-        <vertexboneassignment boneindex="18" vertexindex="391" weight="0.072362"/>
         <vertexboneassignment boneindex="0" vertexindex="391" weight="0.720452"/>
-        <vertexboneassignment boneindex="1" vertexindex="391" weight="0.029459"/>
-        <vertexboneassignment boneindex="5" vertexindex="391" weight="0.025303"/>
         <vertexboneassignment boneindex="0" vertexindex="392" weight="0.629632"/>
-        <vertexboneassignment boneindex="1" vertexindex="392" weight="0.138313"/>
-        <vertexboneassignment boneindex="5" vertexindex="392" weight="0.061576"/>
-        <vertexboneassignment boneindex="9" vertexindex="392" weight="0.020489"/>
-        <vertexboneassignment boneindex="18" vertexindex="392" weight="0.113678"/>
-        <vertexboneassignment boneindex="7" vertexindex="393" weight="0.134789"/>
         <vertexboneassignment boneindex="8" vertexindex="393" weight="0.861146"/>
-        <vertexboneassignment boneindex="7" vertexindex="394" weight="0.138809"/>
         <vertexboneassignment boneindex="8" vertexindex="394" weight="0.856347"/>
         <vertexboneassignment boneindex="7" vertexindex="395" weight="0.910058"/>
-        <vertexboneassignment boneindex="8" vertexindex="395" weight="0.062277"/>
         <vertexboneassignment boneindex="6" vertexindex="396" weight="0.868240"/>
-        <vertexboneassignment boneindex="7" vertexindex="396" weight="0.116826"/>
-        <vertexboneassignment boneindex="5" vertexindex="397" weight="0.072660"/>
         <vertexboneassignment boneindex="6" vertexindex="397" weight="0.896390"/>
-        <vertexboneassignment boneindex="5" vertexindex="398" weight="0.058849"/>
         <vertexboneassignment boneindex="6" vertexindex="398" weight="0.889204"/>
-        <vertexboneassignment boneindex="7" vertexindex="398" weight="0.041642"/>
-        <vertexboneassignment boneindex="5" vertexindex="399" weight="0.072660"/>
         <vertexboneassignment boneindex="6" vertexindex="399" weight="0.896390"/>
-        <vertexboneassignment boneindex="5" vertexindex="400" weight="0.085533"/>
         <vertexboneassignment boneindex="6" vertexindex="400" weight="0.899825"/>
         <vertexboneassignment boneindex="5" vertexindex="401" weight="0.881132"/>
-        <vertexboneassignment boneindex="6" vertexindex="401" weight="0.101907"/>
-        <vertexboneassignment boneindex="0" vertexindex="402" weight="0.118525"/>
-        <vertexboneassignment boneindex="9" vertexindex="402" weight="0.047961"/>
-        <vertexboneassignment boneindex="18" vertexindex="402" weight="0.046566"/>
         <vertexboneassignment boneindex="9" vertexindex="403" weight="0.903324"/>
-        <vertexboneassignment boneindex="10" vertexindex="403" weight="0.049583"/>
-        <vertexboneassignment boneindex="18" vertexindex="403" weight="0.059998"/>
         <vertexboneassignment boneindex="9" vertexindex="404" weight="0.925402"/>
-        <vertexboneassignment boneindex="10" vertexindex="404" weight="0.062917"/>
-        <vertexboneassignment boneindex="18" vertexindex="404" weight="0.118350"/>
         <vertexboneassignment boneindex="9" vertexindex="405" weight="0.929856"/>
-        <vertexboneassignment boneindex="10" vertexindex="405" weight="0.062439"/>
-        <vertexboneassignment boneindex="0" vertexindex="406" weight="0.067441"/>
-        <vertexboneassignment boneindex="9" vertexindex="406" weight="0.010006"/>
-        <vertexboneassignment boneindex="18" vertexindex="406" weight="0.045490"/>
-        <vertexboneassignment boneindex="0" vertexindex="407" weight="0.113878"/>
-        <vertexboneassignment boneindex="18" vertexindex="407" weight="0.042643"/>
         <vertexboneassignment boneindex="9" vertexindex="408" weight="0.933543"/>
-        <vertexboneassignment boneindex="10" vertexindex="408" weight="0.055943"/>
-        <vertexboneassignment boneindex="1" vertexindex="409" weight="0.019402"/>
-        <vertexboneassignment boneindex="0" vertexindex="410" weight="0.067441"/>
-        <vertexboneassignment boneindex="9" vertexindex="410" weight="0.010006"/>
-        <vertexboneassignment boneindex="18" vertexindex="410" weight="0.045490"/>
-        <vertexboneassignment boneindex="6" vertexindex="411" weight="0.144145"/>
         <vertexboneassignment boneindex="7" vertexindex="411" weight="0.847684"/>
         <vertexboneassignment boneindex="7" vertexindex="412" weight="0.913644"/>
-        <vertexboneassignment boneindex="8" vertexindex="412" weight="0.075086"/>
         <vertexboneassignment boneindex="7" vertexindex="413" weight="0.919663"/>
-        <vertexboneassignment boneindex="8" vertexindex="413" weight="0.050895"/>
         <vertexboneassignment boneindex="7" vertexindex="414" weight="0.919663"/>
-        <vertexboneassignment boneindex="8" vertexindex="414" weight="0.050895"/>
         <vertexboneassignment boneindex="7" vertexindex="415" weight="0.910058"/>
-        <vertexboneassignment boneindex="8" vertexindex="415" weight="0.062277"/>
         <vertexboneassignment boneindex="6" vertexindex="416" weight="0.895332"/>
-        <vertexboneassignment boneindex="7" vertexindex="416" weight="0.091144"/>
-        <vertexboneassignment boneindex="5" vertexindex="417" weight="0.058849"/>
         <vertexboneassignment boneindex="6" vertexindex="417" weight="0.889204"/>
-        <vertexboneassignment boneindex="7" vertexindex="417" weight="0.041642"/>
-        <vertexboneassignment boneindex="5" vertexindex="418" weight="0.072660"/>
         <vertexboneassignment boneindex="6" vertexindex="418" weight="0.896390"/>
-        <vertexboneassignment boneindex="2" vertexindex="419" weight="0.013576"/>
-        <vertexboneassignment boneindex="5" vertexindex="419" weight="0.490769"/>
-        <vertexboneassignment boneindex="6" vertexindex="419" weight="0.432928"/>
-        <vertexboneassignment boneindex="9" vertexindex="420" weight="0.058977"/>
         <vertexboneassignment boneindex="10" vertexindex="420" weight="0.928867"/>
         <vertexboneassignment boneindex="9" vertexindex="421" weight="0.933543"/>
-        <vertexboneassignment boneindex="10" vertexindex="421" weight="0.055943"/>
         <vertexboneassignment boneindex="9" vertexindex="422" weight="0.929856"/>
-        <vertexboneassignment boneindex="10" vertexindex="422" weight="0.062439"/>
-        <vertexboneassignment boneindex="6" vertexindex="423" weight="0.030764"/>
         <vertexboneassignment boneindex="7" vertexindex="423" weight="0.704902"/>
-        <vertexboneassignment boneindex="8" vertexindex="423" weight="0.254379"/>
         <vertexboneassignment boneindex="7" vertexindex="424" weight="0.910058"/>
-        <vertexboneassignment boneindex="8" vertexindex="424" weight="0.062277"/>
-        <vertexboneassignment boneindex="7" vertexindex="425" weight="0.138809"/>
         <vertexboneassignment boneindex="8" vertexindex="425" weight="0.856347"/>
-        <vertexboneassignment boneindex="7" vertexindex="426" weight="0.138809"/>
         <vertexboneassignment boneindex="8" vertexindex="426" weight="0.856347"/>
-        <vertexboneassignment boneindex="7" vertexindex="427" weight="0.154864"/>
         <vertexboneassignment boneindex="8" vertexindex="427" weight="0.836965"/>
-        <vertexboneassignment boneindex="6" vertexindex="428" weight="0.030611"/>
         <vertexboneassignment boneindex="7" vertexindex="428" weight="0.704585"/>
-        <vertexboneassignment boneindex="8" vertexindex="428" weight="0.254773"/>
         <vertexboneassignment boneindex="6" vertexindex="429" weight="0.504011"/>
-        <vertexboneassignment boneindex="7" vertexindex="429" weight="0.487534"/>
         <vertexboneassignment boneindex="6" vertexindex="430" weight="0.895332"/>
-        <vertexboneassignment boneindex="7" vertexindex="430" weight="0.091144"/>
         <vertexboneassignment boneindex="7" vertexindex="431" weight="0.910058"/>
-        <vertexboneassignment boneindex="8" vertexindex="431" weight="0.062277"/>
-        <vertexboneassignment boneindex="7" vertexindex="432" weight="0.154864"/>
         <vertexboneassignment boneindex="8" vertexindex="432" weight="0.836965"/>
-        <vertexboneassignment boneindex="7" vertexindex="433" weight="0.138809"/>
         <vertexboneassignment boneindex="8" vertexindex="433" weight="0.856347"/>
-        <vertexboneassignment boneindex="7" vertexindex="434" weight="0.134789"/>
         <vertexboneassignment boneindex="8" vertexindex="434" weight="0.861146"/>
         <vertexboneassignment boneindex="5" vertexindex="435" weight="0.881132"/>
-        <vertexboneassignment boneindex="6" vertexindex="435" weight="0.101907"/>
-        <vertexboneassignment boneindex="5" vertexindex="436" weight="0.085533"/>
         <vertexboneassignment boneindex="6" vertexindex="436" weight="0.899825"/>
         <vertexboneassignment boneindex="5" vertexindex="437" weight="0.948155"/>
-        <vertexboneassignment boneindex="6" vertexindex="437" weight="0.059301"/>
-        <vertexboneassignment boneindex="5" vertexindex="438" weight="0.085533"/>
         <vertexboneassignment boneindex="6" vertexindex="438" weight="0.899825"/>
-        <vertexboneassignment boneindex="5" vertexindex="439" weight="0.062235"/>
         <vertexboneassignment boneindex="6" vertexindex="439" weight="0.889714"/>
-        <vertexboneassignment boneindex="7" vertexindex="439" weight="0.044911"/>
         <vertexboneassignment boneindex="5" vertexindex="440" weight="0.948155"/>
-        <vertexboneassignment boneindex="6" vertexindex="440" weight="0.059301"/>
-        <vertexboneassignment boneindex="2" vertexindex="441" weight="0.074782"/>
         <vertexboneassignment boneindex="5" vertexindex="441" weight="0.805811"/>
-        <vertexboneassignment boneindex="6" vertexindex="441" weight="0.073579"/>
         <vertexboneassignment boneindex="0" vertexindex="442" weight="0.629632"/>
-        <vertexboneassignment boneindex="1" vertexindex="442" weight="0.138313"/>
-        <vertexboneassignment boneindex="5" vertexindex="442" weight="0.061576"/>
-        <vertexboneassignment boneindex="9" vertexindex="442" weight="0.020489"/>
-        <vertexboneassignment boneindex="18" vertexindex="442" weight="0.113678"/>
-        <vertexboneassignment boneindex="0" vertexindex="443" weight="0.048434"/>
         <vertexboneassignment boneindex="1" vertexindex="443" weight="0.841141"/>
-        <vertexboneassignment boneindex="2" vertexindex="444" weight="0.057076"/>
-        <vertexboneassignment boneindex="3" vertexindex="444" weight="0.286550"/>
-        <vertexboneassignment boneindex="4" vertexindex="444" weight="0.489213"/>
-        <vertexboneassignment boneindex="5" vertexindex="444" weight="0.159573"/>
-        <vertexboneassignment boneindex="3" vertexindex="445" weight="0.093439"/>
         <vertexboneassignment boneindex="4" vertexindex="445" weight="0.825727"/>
-        <vertexboneassignment boneindex="5" vertexindex="445" weight="0.045689"/>
-        <vertexboneassignment boneindex="2" vertexindex="446" weight="0.061749"/>
-        <vertexboneassignment boneindex="3" vertexindex="446" weight="0.126443"/>
         <vertexboneassignment boneindex="4" vertexindex="446" weight="0.773333"/>
-        <vertexboneassignment boneindex="7" vertexindex="447" weight="0.134789"/>
         <vertexboneassignment boneindex="8" vertexindex="447" weight="0.861146"/>
         <vertexboneassignment boneindex="7" vertexindex="448" weight="0.919663"/>
-        <vertexboneassignment boneindex="8" vertexindex="448" weight="0.050895"/>
         <vertexboneassignment boneindex="7" vertexindex="449" weight="0.913644"/>
-        <vertexboneassignment boneindex="8" vertexindex="449" weight="0.075086"/>
         <vertexboneassignment boneindex="9" vertexindex="450" weight="0.925402"/>
-        <vertexboneassignment boneindex="10" vertexindex="450" weight="0.062917"/>
-        <vertexboneassignment boneindex="18" vertexindex="450" weight="0.118350"/>
         <vertexboneassignment boneindex="9" vertexindex="451" weight="0.903324"/>
-        <vertexboneassignment boneindex="10" vertexindex="451" weight="0.049583"/>
-        <vertexboneassignment boneindex="18" vertexindex="451" weight="0.059998"/>
-        <vertexboneassignment boneindex="9" vertexindex="452" weight="0.085324"/>
         <vertexboneassignment boneindex="10" vertexindex="452" weight="0.861791"/>
-        <vertexboneassignment boneindex="11" vertexindex="452" weight="0.051307"/>
-        <vertexboneassignment boneindex="18" vertexindex="452" weight="0.037103"/>
-        <vertexboneassignment boneindex="5" vertexindex="453" weight="0.062235"/>
         <vertexboneassignment boneindex="6" vertexindex="453" weight="0.889714"/>
-        <vertexboneassignment boneindex="7" vertexindex="453" weight="0.044911"/>
-        <vertexboneassignment boneindex="5" vertexindex="454" weight="0.085533"/>
         <vertexboneassignment boneindex="6" vertexindex="454" weight="0.899825"/>
         <vertexboneassignment boneindex="6" vertexindex="455" weight="0.895332"/>
-        <vertexboneassignment boneindex="7" vertexindex="455" weight="0.091144"/>
         <vertexboneassignment boneindex="4" vertexindex="456" weight="0.987103"/>
         <vertexboneassignment boneindex="4" vertexindex="457" weight="0.981640"/>
         <vertexboneassignment boneindex="4" vertexindex="458" weight="0.989776"/>
@@ -6183,693 +5357,232 @@
         <vertexboneassignment boneindex="4" vertexindex="467" weight="0.973913"/>
         <vertexboneassignment boneindex="4" vertexindex="468" weight="0.950329"/>
         <vertexboneassignment boneindex="4" vertexindex="469" weight="0.961844"/>
-        <vertexboneassignment boneindex="2" vertexindex="470" weight="0.016266"/>
         <vertexboneassignment boneindex="4" vertexindex="470" weight="0.860975"/>
-        <vertexboneassignment boneindex="5" vertexindex="470" weight="0.058972"/>
-        <vertexboneassignment boneindex="14" vertexindex="470" weight="0.032458"/>
-        <vertexboneassignment boneindex="3" vertexindex="471" weight="0.093439"/>
         <vertexboneassignment boneindex="4" vertexindex="471" weight="0.825727"/>
-        <vertexboneassignment boneindex="5" vertexindex="471" weight="0.045689"/>
-        <vertexboneassignment boneindex="2" vertexindex="472" weight="0.057076"/>
-        <vertexboneassignment boneindex="3" vertexindex="472" weight="0.286550"/>
-        <vertexboneassignment boneindex="4" vertexindex="472" weight="0.489213"/>
-        <vertexboneassignment boneindex="5" vertexindex="472" weight="0.159573"/>
-        <vertexboneassignment boneindex="3" vertexindex="473" weight="0.023743"/>
         <vertexboneassignment boneindex="4" vertexindex="473" weight="0.788578"/>
-        <vertexboneassignment boneindex="5" vertexindex="473" weight="0.128307"/>
-        <vertexboneassignment boneindex="14" vertexindex="473" weight="0.038612"/>
-        <vertexboneassignment boneindex="3" vertexindex="474" weight="0.023743"/>
         <vertexboneassignment boneindex="4" vertexindex="474" weight="0.788578"/>
-        <vertexboneassignment boneindex="5" vertexindex="474" weight="0.128307"/>
-        <vertexboneassignment boneindex="14" vertexindex="474" weight="0.038612"/>
-        <vertexboneassignment boneindex="2" vertexindex="475" weight="0.016266"/>
         <vertexboneassignment boneindex="4" vertexindex="475" weight="0.860975"/>
-        <vertexboneassignment boneindex="5" vertexindex="475" weight="0.058972"/>
-        <vertexboneassignment boneindex="14" vertexindex="475" weight="0.032458"/>
         <vertexboneassignment boneindex="4" vertexindex="476" weight="0.961844"/>
         <vertexboneassignment boneindex="4" vertexindex="477" weight="0.961844"/>
         <vertexboneassignment boneindex="4" vertexindex="478" weight="0.947041"/>
-        <vertexboneassignment boneindex="3" vertexindex="479" weight="0.023743"/>
         <vertexboneassignment boneindex="4" vertexindex="479" weight="0.788578"/>
-        <vertexboneassignment boneindex="5" vertexindex="479" weight="0.128307"/>
-        <vertexboneassignment boneindex="14" vertexindex="479" weight="0.038612"/>
-        <vertexboneassignment boneindex="3" vertexindex="480" weight="0.093439"/>
         <vertexboneassignment boneindex="4" vertexindex="480" weight="0.825727"/>
-        <vertexboneassignment boneindex="5" vertexindex="480" weight="0.045689"/>
         <vertexboneassignment boneindex="4" vertexindex="481" weight="0.947041"/>
-        <vertexboneassignment boneindex="3" vertexindex="482" weight="0.020246"/>
         <vertexboneassignment boneindex="4" vertexindex="482" weight="0.925493"/>
         <vertexboneassignment boneindex="4" vertexindex="483" weight="0.973913"/>
         <vertexboneassignment boneindex="4" vertexindex="484" weight="0.978044"/>
-        <vertexboneassignment boneindex="3" vertexindex="485" weight="0.020246"/>
         <vertexboneassignment boneindex="4" vertexindex="485" weight="0.925493"/>
-        <vertexboneassignment boneindex="0" vertexindex="486" weight="0.113878"/>
-        <vertexboneassignment boneindex="18" vertexindex="486" weight="0.042643"/>
-        <vertexboneassignment boneindex="18" vertexindex="487" weight="0.072362"/>
         <vertexboneassignment boneindex="0" vertexindex="487" weight="0.720452"/>
-        <vertexboneassignment boneindex="1" vertexindex="487" weight="0.029459"/>
-        <vertexboneassignment boneindex="5" vertexindex="487" weight="0.025303"/>
         <vertexboneassignment boneindex="0" vertexindex="488" weight="0.867352"/>
-        <vertexboneassignment boneindex="1" vertexindex="488" weight="0.012512"/>
         <vertexboneassignment boneindex="9" vertexindex="489" weight="0.903324"/>
-        <vertexboneassignment boneindex="10" vertexindex="489" weight="0.049583"/>
-        <vertexboneassignment boneindex="18" vertexindex="489" weight="0.059998"/>
         <vertexboneassignment boneindex="9" vertexindex="490" weight="0.933543"/>
-        <vertexboneassignment boneindex="10" vertexindex="490" weight="0.055943"/>
-        <vertexboneassignment boneindex="9" vertexindex="491" weight="0.058977"/>
         <vertexboneassignment boneindex="10" vertexindex="491" weight="0.928867"/>
-        <vertexboneassignment boneindex="1" vertexindex="492" weight="0.019402"/>
         <vertexboneassignment boneindex="9" vertexindex="493" weight="0.933543"/>
-        <vertexboneassignment boneindex="10" vertexindex="493" weight="0.055943"/>
         <vertexboneassignment boneindex="9" vertexindex="494" weight="0.903324"/>
-        <vertexboneassignment boneindex="10" vertexindex="494" weight="0.049583"/>
-        <vertexboneassignment boneindex="18" vertexindex="494" weight="0.059998"/>
-        <vertexboneassignment boneindex="2" vertexindex="495" weight="0.045410"/>
-        <vertexboneassignment boneindex="4" vertexindex="495" weight="0.032314"/>
         <vertexboneassignment boneindex="5" vertexindex="495" weight="0.879825"/>
-        <vertexboneassignment boneindex="14" vertexindex="495" weight="0.089797"/>
-        <vertexboneassignment boneindex="3" vertexindex="496" weight="0.023743"/>
         <vertexboneassignment boneindex="4" vertexindex="496" weight="0.788578"/>
-        <vertexboneassignment boneindex="5" vertexindex="496" weight="0.128307"/>
-        <vertexboneassignment boneindex="14" vertexindex="496" weight="0.038612"/>
-        <vertexboneassignment boneindex="2" vertexindex="497" weight="0.057076"/>
-        <vertexboneassignment boneindex="3" vertexindex="497" weight="0.286550"/>
-        <vertexboneassignment boneindex="4" vertexindex="497" weight="0.489213"/>
-        <vertexboneassignment boneindex="5" vertexindex="497" weight="0.159573"/>
         <vertexboneassignment boneindex="2" vertexindex="498" weight="0.836845"/>
-        <vertexboneassignment boneindex="4" vertexindex="498" weight="0.035847"/>
-        <vertexboneassignment boneindex="5" vertexindex="498" weight="0.068122"/>
-        <vertexboneassignment boneindex="14" vertexindex="498" weight="0.068122"/>
-        <vertexboneassignment boneindex="2" vertexindex="499" weight="0.138481"/>
-        <vertexboneassignment boneindex="4" vertexindex="499" weight="0.049059"/>
         <vertexboneassignment boneindex="5" vertexindex="499" weight="0.773777"/>
-        <vertexboneassignment boneindex="14" vertexindex="499" weight="0.048462"/>
-        <vertexboneassignment boneindex="2" vertexindex="500" weight="0.057076"/>
-        <vertexboneassignment boneindex="3" vertexindex="500" weight="0.286550"/>
-        <vertexboneassignment boneindex="4" vertexindex="500" weight="0.489213"/>
-        <vertexboneassignment boneindex="5" vertexindex="500" weight="0.159573"/>
         <vertexboneassignment boneindex="4" vertexindex="501" weight="0.987103"/>
         <vertexboneassignment boneindex="4" vertexindex="502" weight="0.961844"/>
         <vertexboneassignment boneindex="4" vertexindex="503" weight="0.950329"/>
         <vertexboneassignment boneindex="6" vertexindex="504" weight="0.868240"/>
-        <vertexboneassignment boneindex="7" vertexindex="504" weight="0.116826"/>
         <vertexboneassignment boneindex="6" vertexindex="505" weight="0.895332"/>
-        <vertexboneassignment boneindex="7" vertexindex="505" weight="0.091144"/>
-        <vertexboneassignment boneindex="5" vertexindex="506" weight="0.085533"/>
         <vertexboneassignment boneindex="6" vertexindex="506" weight="0.899825"/>
-        <vertexboneassignment boneindex="6" vertexindex="507" weight="0.030764"/>
         <vertexboneassignment boneindex="7" vertexindex="507" weight="0.704902"/>
-        <vertexboneassignment boneindex="8" vertexindex="507" weight="0.254379"/>
-        <vertexboneassignment boneindex="7" vertexindex="508" weight="0.154864"/>
         <vertexboneassignment boneindex="8" vertexindex="508" weight="0.836965"/>
-        <vertexboneassignment boneindex="7" vertexindex="509" weight="0.143059"/>
         <vertexboneassignment boneindex="8" vertexindex="509" weight="0.853927"/>
-        <vertexboneassignment boneindex="9" vertexindex="510" weight="0.053561"/>
         <vertexboneassignment boneindex="10" vertexindex="510" weight="0.936524"/>
         <vertexboneassignment boneindex="9" vertexindex="511" weight="0.929856"/>
-        <vertexboneassignment boneindex="10" vertexindex="511" weight="0.062439"/>
         <vertexboneassignment boneindex="9" vertexindex="512" weight="0.925402"/>
-        <vertexboneassignment boneindex="10" vertexindex="512" weight="0.062917"/>
-        <vertexboneassignment boneindex="18" vertexindex="512" weight="0.118350"/>
         <vertexboneassignment boneindex="5" vertexindex="513" weight="0.934853"/>
-        <vertexboneassignment boneindex="6" vertexindex="513" weight="0.058800"/>
-        <vertexboneassignment boneindex="5" vertexindex="514" weight="0.062235"/>
         <vertexboneassignment boneindex="6" vertexindex="514" weight="0.889714"/>
-        <vertexboneassignment boneindex="7" vertexindex="514" weight="0.044911"/>
-        <vertexboneassignment boneindex="5" vertexindex="515" weight="0.058849"/>
         <vertexboneassignment boneindex="6" vertexindex="515" weight="0.889204"/>
-        <vertexboneassignment boneindex="7" vertexindex="515" weight="0.041642"/>
-        <vertexboneassignment boneindex="18" vertexindex="516" weight="0.072362"/>
         <vertexboneassignment boneindex="0" vertexindex="516" weight="0.720452"/>
-        <vertexboneassignment boneindex="1" vertexindex="516" weight="0.029459"/>
-        <vertexboneassignment boneindex="5" vertexindex="516" weight="0.025303"/>
-        <vertexboneassignment boneindex="2" vertexindex="517" weight="0.013576"/>
-        <vertexboneassignment boneindex="5" vertexindex="517" weight="0.490769"/>
-        <vertexboneassignment boneindex="6" vertexindex="517" weight="0.432928"/>
-        <vertexboneassignment boneindex="0" vertexindex="518" weight="0.012654"/>
-        <vertexboneassignment boneindex="1" vertexindex="518" weight="0.434305"/>
-        <vertexboneassignment boneindex="2" vertexindex="518" weight="0.468758"/>
-        <vertexboneassignment boneindex="1" vertexindex="519" weight="0.029381"/>
         <vertexboneassignment boneindex="2" vertexindex="519" weight="0.848349"/>
-        <vertexboneassignment boneindex="5" vertexindex="519" weight="0.034064"/>
-        <vertexboneassignment boneindex="14" vertexindex="519" weight="0.034064"/>
-        <vertexboneassignment boneindex="0" vertexindex="520" weight="0.012654"/>
-        <vertexboneassignment boneindex="1" vertexindex="520" weight="0.434305"/>
-        <vertexboneassignment boneindex="2" vertexindex="520" weight="0.468758"/>
-        <vertexboneassignment boneindex="2" vertexindex="521" weight="0.013576"/>
-        <vertexboneassignment boneindex="5" vertexindex="521" weight="0.490769"/>
-        <vertexboneassignment boneindex="6" vertexindex="521" weight="0.432928"/>
-        <vertexboneassignment boneindex="0" vertexindex="522" weight="0.113878"/>
-        <vertexboneassignment boneindex="18" vertexindex="522" weight="0.042643"/>
-        <vertexboneassignment boneindex="0" vertexindex="523" weight="0.067441"/>
-        <vertexboneassignment boneindex="9" vertexindex="523" weight="0.010006"/>
-        <vertexboneassignment boneindex="18" vertexindex="523" weight="0.045490"/>
         <vertexboneassignment boneindex="0" vertexindex="524" weight="0.629632"/>
-        <vertexboneassignment boneindex="1" vertexindex="524" weight="0.138313"/>
-        <vertexboneassignment boneindex="5" vertexindex="524" weight="0.061576"/>
-        <vertexboneassignment boneindex="9" vertexindex="524" weight="0.020489"/>
-        <vertexboneassignment boneindex="18" vertexindex="524" weight="0.113678"/>
-        <vertexboneassignment boneindex="6" vertexindex="525" weight="0.030764"/>
         <vertexboneassignment boneindex="7" vertexindex="525" weight="0.704902"/>
-        <vertexboneassignment boneindex="8" vertexindex="525" weight="0.254379"/>
         <vertexboneassignment boneindex="7" vertexindex="526" weight="0.913644"/>
-        <vertexboneassignment boneindex="8" vertexindex="526" weight="0.075086"/>
-        <vertexboneassignment boneindex="6" vertexindex="527" weight="0.144145"/>
         <vertexboneassignment boneindex="7" vertexindex="527" weight="0.847684"/>
-        <vertexboneassignment boneindex="5" vertexindex="528" weight="0.062235"/>
         <vertexboneassignment boneindex="6" vertexindex="528" weight="0.889714"/>
-        <vertexboneassignment boneindex="7" vertexindex="528" weight="0.044911"/>
         <vertexboneassignment boneindex="6" vertexindex="529" weight="0.504011"/>
-        <vertexboneassignment boneindex="7" vertexindex="529" weight="0.487534"/>
-        <vertexboneassignment boneindex="6" vertexindex="530" weight="0.144145"/>
         <vertexboneassignment boneindex="7" vertexindex="530" weight="0.847684"/>
         <vertexboneassignment boneindex="10" vertexindex="531" weight="0.836754"/>
-        <vertexboneassignment boneindex="11" vertexindex="531" weight="0.159634"/>
         <vertexboneassignment boneindex="10" vertexindex="532" weight="0.533975"/>
-        <vertexboneassignment boneindex="11" vertexindex="532" weight="0.465220"/>
-        <vertexboneassignment boneindex="10" vertexindex="533" weight="0.079874"/>
         <vertexboneassignment boneindex="11" vertexindex="533" weight="0.919165"/>
-        <vertexboneassignment boneindex="9" vertexindex="534" weight="0.062631"/>
         <vertexboneassignment boneindex="10" vertexindex="534" weight="0.882995"/>
-        <vertexboneassignment boneindex="11" vertexindex="534" weight="0.053745"/>
-        <vertexboneassignment boneindex="9" vertexindex="535" weight="0.085324"/>
         <vertexboneassignment boneindex="10" vertexindex="535" weight="0.861791"/>
-        <vertexboneassignment boneindex="11" vertexindex="535" weight="0.051307"/>
-        <vertexboneassignment boneindex="18" vertexindex="535" weight="0.037103"/>
-        <vertexboneassignment boneindex="10" vertexindex="536" weight="0.106431"/>
         <vertexboneassignment boneindex="11" vertexindex="536" weight="0.889478"/>
-        <vertexboneassignment boneindex="9" vertexindex="537" weight="0.062631"/>
         <vertexboneassignment boneindex="10" vertexindex="537" weight="0.882995"/>
-        <vertexboneassignment boneindex="11" vertexindex="537" weight="0.053745"/>
-        <vertexboneassignment boneindex="10" vertexindex="538" weight="0.097190"/>
         <vertexboneassignment boneindex="11" vertexindex="538" weight="0.900225"/>
         <vertexboneassignment boneindex="10" vertexindex="539" weight="0.870531"/>
-        <vertexboneassignment boneindex="11" vertexindex="539" weight="0.127084"/>
-        <vertexboneassignment boneindex="9" vertexindex="540" weight="0.058977"/>
         <vertexboneassignment boneindex="10" vertexindex="540" weight="0.928867"/>
-        <vertexboneassignment boneindex="9" vertexindex="541" weight="0.053561"/>
         <vertexboneassignment boneindex="10" vertexindex="541" weight="0.936524"/>
         <vertexboneassignment boneindex="10" vertexindex="542" weight="0.870531"/>
-        <vertexboneassignment boneindex="11" vertexindex="542" weight="0.127084"/>
         <vertexboneassignment boneindex="10" vertexindex="543" weight="0.836754"/>
-        <vertexboneassignment boneindex="11" vertexindex="543" weight="0.159634"/>
         <vertexboneassignment boneindex="10" vertexindex="544" weight="0.870531"/>
-        <vertexboneassignment boneindex="11" vertexindex="544" weight="0.127084"/>
         <vertexboneassignment boneindex="10" vertexindex="545" weight="0.531608"/>
-        <vertexboneassignment boneindex="11" vertexindex="545" weight="0.467870"/>
-        <vertexboneassignment boneindex="9" vertexindex="546" weight="0.058977"/>
         <vertexboneassignment boneindex="10" vertexindex="546" weight="0.928867"/>
         <vertexboneassignment boneindex="10" vertexindex="547" weight="0.836754"/>
-        <vertexboneassignment boneindex="11" vertexindex="547" weight="0.159634"/>
-        <vertexboneassignment boneindex="10" vertexindex="548" weight="0.106431"/>
         <vertexboneassignment boneindex="11" vertexindex="548" weight="0.889478"/>
-        <vertexboneassignment boneindex="10" vertexindex="549" weight="0.097190"/>
         <vertexboneassignment boneindex="11" vertexindex="549" weight="0.900225"/>
-        <vertexboneassignment boneindex="10" vertexindex="550" weight="0.062086"/>
         <vertexboneassignment boneindex="11" vertexindex="550" weight="0.937424"/>
         <vertexboneassignment boneindex="10" vertexindex="551" weight="0.531608"/>
-        <vertexboneassignment boneindex="11" vertexindex="551" weight="0.467870"/>
-        <vertexboneassignment boneindex="10" vertexindex="552" weight="0.062086"/>
         <vertexboneassignment boneindex="11" vertexindex="552" weight="0.937424"/>
-        <vertexboneassignment boneindex="10" vertexindex="553" weight="0.097190"/>
         <vertexboneassignment boneindex="11" vertexindex="553" weight="0.900225"/>
         <vertexboneassignment boneindex="11" vertexindex="554" weight="0.977836"/>
         <vertexboneassignment boneindex="10" vertexindex="555" weight="0.531608"/>
-        <vertexboneassignment boneindex="11" vertexindex="555" weight="0.467870"/>
-        <vertexboneassignment boneindex="10" vertexindex="556" weight="0.062086"/>
         <vertexboneassignment boneindex="11" vertexindex="556" weight="0.937424"/>
-        <vertexboneassignment boneindex="10" vertexindex="557" weight="0.079874"/>
         <vertexboneassignment boneindex="11" vertexindex="557" weight="0.919165"/>
         <vertexboneassignment boneindex="11" vertexindex="558" weight="0.972549"/>
         <vertexboneassignment boneindex="11" vertexindex="559" weight="0.979047"/>
         <vertexboneassignment boneindex="11" vertexindex="560" weight="0.982927"/>
-        <vertexboneassignment boneindex="18" vertexindex="560" weight="0.011336"/>
-        <vertexboneassignment boneindex="10" vertexindex="561" weight="0.079874"/>
         <vertexboneassignment boneindex="11" vertexindex="561" weight="0.919165"/>
-        <vertexboneassignment boneindex="10" vertexindex="562" weight="0.062086"/>
         <vertexboneassignment boneindex="11" vertexindex="562" weight="0.937424"/>
         <vertexboneassignment boneindex="11" vertexindex="563" weight="0.982927"/>
-        <vertexboneassignment boneindex="18" vertexindex="563" weight="0.011336"/>
-        <vertexboneassignment boneindex="10" vertexindex="564" weight="0.106431"/>
         <vertexboneassignment boneindex="11" vertexindex="564" weight="0.889478"/>
-        <vertexboneassignment boneindex="10" vertexindex="565" weight="0.079874"/>
         <vertexboneassignment boneindex="11" vertexindex="565" weight="0.919165"/>
         <vertexboneassignment boneindex="11" vertexindex="566" weight="0.979047"/>
-        <vertexboneassignment boneindex="10" vertexindex="567" weight="0.106431"/>
         <vertexboneassignment boneindex="11" vertexindex="567" weight="0.889478"/>
         <vertexboneassignment boneindex="11" vertexindex="568" weight="0.972549"/>
         <vertexboneassignment boneindex="11" vertexindex="569" weight="0.977836"/>
-        <vertexboneassignment boneindex="1" vertexindex="570" weight="0.034794"/>
-        <vertexboneassignment boneindex="2" vertexindex="570" weight="0.055085"/>
-        <vertexboneassignment boneindex="14" vertexindex="570" weight="0.490769"/>
-        <vertexboneassignment boneindex="15" vertexindex="570" weight="0.432928"/>
-        <vertexboneassignment boneindex="1" vertexindex="571" weight="0.017475"/>
-        <vertexboneassignment boneindex="2" vertexindex="571" weight="0.150087"/>
-        <vertexboneassignment boneindex="14" vertexindex="571" weight="0.805811"/>
-        <vertexboneassignment boneindex="15" vertexindex="571" weight="0.073579"/>
-        <vertexboneassignment boneindex="0" vertexindex="572" weight="0.138771"/>
-        <vertexboneassignment boneindex="1" vertexindex="572" weight="0.288450"/>
-        <vertexboneassignment boneindex="2" vertexindex="572" weight="0.017865"/>
-        <vertexboneassignment boneindex="14" vertexindex="572" weight="0.061576"/>
-        <vertexboneassignment boneindex="18" vertexindex="572" weight="0.020489"/>
-        <vertexboneassignment boneindex="9" vertexindex="572" weight="0.113678"/>
-        <vertexboneassignment boneindex="17" vertexindex="573" weight="0.062277"/>
-        <vertexboneassignment boneindex="16" vertexindex="573" weight="0.910058"/>
-        <vertexboneassignment boneindex="16" vertexindex="574" weight="0.138809"/>
-        <vertexboneassignment boneindex="17" vertexindex="574" weight="0.856347"/>
-        <vertexboneassignment boneindex="16" vertexindex="575" weight="0.134789"/>
-        <vertexboneassignment boneindex="17" vertexindex="575" weight="0.861146"/>
-        <vertexboneassignment boneindex="0" vertexindex="576" weight="0.011919"/>
-        <vertexboneassignment boneindex="16" vertexindex="576" weight="0.116826"/>
-        <vertexboneassignment boneindex="15" vertexindex="576" weight="0.868240"/>
-        <vertexboneassignment boneindex="16" vertexindex="577" weight="0.847684"/>
-        <vertexboneassignment boneindex="15" vertexindex="577" weight="0.144145"/>
-        <vertexboneassignment boneindex="2" vertexindex="578" weight="0.044070"/>
-        <vertexboneassignment boneindex="14" vertexindex="578" weight="0.058849"/>
-        <vertexboneassignment boneindex="15" vertexindex="578" weight="0.889204"/>
-        <vertexboneassignment boneindex="16" vertexindex="578" weight="0.041642"/>
-        <vertexboneassignment boneindex="14" vertexindex="579" weight="0.881132"/>
-        <vertexboneassignment boneindex="15" vertexindex="579" weight="0.101907"/>
-        <vertexboneassignment boneindex="14" vertexindex="580" weight="0.085533"/>
-        <vertexboneassignment boneindex="15" vertexindex="580" weight="0.899825"/>
-        <vertexboneassignment boneindex="0" vertexindex="581" weight="0.055448"/>
-        <vertexboneassignment boneindex="2" vertexindex="581" weight="0.020405"/>
-        <vertexboneassignment boneindex="14" vertexindex="581" weight="0.072660"/>
-        <vertexboneassignment boneindex="15" vertexindex="581" weight="0.896390"/>
-        <vertexboneassignment boneindex="0" vertexindex="582" weight="0.052063"/>
-        <vertexboneassignment boneindex="1" vertexindex="582" weight="0.055313"/>
-        <vertexboneassignment boneindex="9" vertexindex="582" weight="0.118350"/>
-        <vertexboneassignment boneindex="18" vertexindex="582" weight="0.925402"/>
-        <vertexboneassignment boneindex="19" vertexindex="582" weight="0.062917"/>
-        <vertexboneassignment boneindex="1" vertexindex="583" weight="0.027384"/>
-        <vertexboneassignment boneindex="9" vertexindex="583" weight="0.059998"/>
-        <vertexboneassignment boneindex="18" vertexindex="583" weight="0.903324"/>
-        <vertexboneassignment boneindex="19" vertexindex="583" weight="0.049583"/>
-        <vertexboneassignment boneindex="0" vertexindex="584" weight="0.256555"/>
-        <vertexboneassignment boneindex="9" vertexindex="584" weight="0.046566"/>
-        <vertexboneassignment boneindex="18" vertexindex="584" weight="0.047961"/>
-        <vertexboneassignment boneindex="0" vertexindex="585" weight="0.230934"/>
-        <vertexboneassignment boneindex="1" vertexindex="585" weight="0.093565"/>
-        <vertexboneassignment boneindex="9" vertexindex="585" weight="0.042643"/>
-        <vertexboneassignment boneindex="0" vertexindex="586" weight="0.059411"/>
-        <vertexboneassignment boneindex="1" vertexindex="586" weight="0.151725"/>
-        <vertexboneassignment boneindex="9" vertexindex="586" weight="0.045490"/>
-        <vertexboneassignment boneindex="18" vertexindex="586" weight="0.010006"/>
-        <vertexboneassignment boneindex="1" vertexindex="587" weight="0.062356"/>
-        <vertexboneassignment boneindex="18" vertexindex="587" weight="0.929856"/>
-        <vertexboneassignment boneindex="19" vertexindex="587" weight="0.062439"/>
-        <vertexboneassignment boneindex="16" vertexindex="588" weight="0.847684"/>
-        <vertexboneassignment boneindex="15" vertexindex="588" weight="0.144145"/>
-        <vertexboneassignment boneindex="0" vertexindex="589" weight="0.011919"/>
-        <vertexboneassignment boneindex="16" vertexindex="589" weight="0.116826"/>
-        <vertexboneassignment boneindex="15" vertexindex="589" weight="0.868240"/>
-        <vertexboneassignment boneindex="17" vertexindex="590" weight="0.050895"/>
-        <vertexboneassignment boneindex="16" vertexindex="590" weight="0.919663"/>
-        <vertexboneassignment boneindex="17" vertexindex="591" weight="0.050895"/>
-        <vertexboneassignment boneindex="16" vertexindex="591" weight="0.919663"/>
-        <vertexboneassignment boneindex="0" vertexindex="592" weight="0.011919"/>
-        <vertexboneassignment boneindex="16" vertexindex="592" weight="0.116826"/>
-        <vertexboneassignment boneindex="15" vertexindex="592" weight="0.868240"/>
-        <vertexboneassignment boneindex="16" vertexindex="593" weight="0.091144"/>
-        <vertexboneassignment boneindex="15" vertexindex="593" weight="0.895332"/>
-        <vertexboneassignment boneindex="1" vertexindex="594" weight="0.034794"/>
-        <vertexboneassignment boneindex="2" vertexindex="594" weight="0.055085"/>
-        <vertexboneassignment boneindex="14" vertexindex="594" weight="0.490769"/>
-        <vertexboneassignment boneindex="15" vertexindex="594" weight="0.432928"/>
-        <vertexboneassignment boneindex="0" vertexindex="595" weight="0.055448"/>
-        <vertexboneassignment boneindex="2" vertexindex="595" weight="0.020405"/>
-        <vertexboneassignment boneindex="14" vertexindex="595" weight="0.072660"/>
-        <vertexboneassignment boneindex="15" vertexindex="595" weight="0.896390"/>
-        <vertexboneassignment boneindex="2" vertexindex="596" weight="0.044070"/>
-        <vertexboneassignment boneindex="14" vertexindex="596" weight="0.058849"/>
-        <vertexboneassignment boneindex="15" vertexindex="596" weight="0.889204"/>
-        <vertexboneassignment boneindex="16" vertexindex="596" weight="0.041642"/>
-        <vertexboneassignment boneindex="1" vertexindex="597" weight="0.062356"/>
-        <vertexboneassignment boneindex="18" vertexindex="597" weight="0.929856"/>
-        <vertexboneassignment boneindex="19" vertexindex="597" weight="0.062439"/>
-        <vertexboneassignment boneindex="1" vertexindex="598" weight="0.040861"/>
-        <vertexboneassignment boneindex="18" vertexindex="598" weight="0.933543"/>
-        <vertexboneassignment boneindex="19" vertexindex="598" weight="0.055943"/>
-        <vertexboneassignment boneindex="1" vertexindex="599" weight="0.028723"/>
-        <vertexboneassignment boneindex="18" vertexindex="599" weight="0.058977"/>
-        <vertexboneassignment boneindex="19" vertexindex="599" weight="0.928867"/>
-        <vertexboneassignment boneindex="17" vertexindex="600" weight="0.254773"/>
-        <vertexboneassignment boneindex="15" vertexindex="600" weight="0.030611"/>
-        <vertexboneassignment boneindex="16" vertexindex="600" weight="0.704585"/>
-        <vertexboneassignment boneindex="16" vertexindex="601" weight="0.154864"/>
-        <vertexboneassignment boneindex="17" vertexindex="601" weight="0.836965"/>
-        <vertexboneassignment boneindex="16" vertexindex="602" weight="0.138809"/>
-        <vertexboneassignment boneindex="17" vertexindex="602" weight="0.856347"/>
-        <vertexboneassignment boneindex="16" vertexindex="603" weight="0.138809"/>
-        <vertexboneassignment boneindex="17" vertexindex="603" weight="0.856347"/>
-        <vertexboneassignment boneindex="17" vertexindex="604" weight="0.062277"/>
-        <vertexboneassignment boneindex="16" vertexindex="604" weight="0.910058"/>
-        <vertexboneassignment boneindex="17" vertexindex="605" weight="0.254379"/>
-        <vertexboneassignment boneindex="15" vertexindex="605" weight="0.030764"/>
-        <vertexboneassignment boneindex="16" vertexindex="605" weight="0.704902"/>
-        <vertexboneassignment boneindex="16" vertexindex="606" weight="0.487534"/>
-        <vertexboneassignment boneindex="15" vertexindex="606" weight="0.504011"/>
-        <vertexboneassignment boneindex="17" vertexindex="607" weight="0.254379"/>
-        <vertexboneassignment boneindex="15" vertexindex="607" weight="0.030764"/>
-        <vertexboneassignment boneindex="16" vertexindex="607" weight="0.704902"/>
-        <vertexboneassignment boneindex="17" vertexindex="608" weight="0.062277"/>
-        <vertexboneassignment boneindex="16" vertexindex="608" weight="0.910058"/>
-        <vertexboneassignment boneindex="16" vertexindex="609" weight="0.134789"/>
-        <vertexboneassignment boneindex="17" vertexindex="609" weight="0.861146"/>
-        <vertexboneassignment boneindex="16" vertexindex="610" weight="0.138809"/>
-        <vertexboneassignment boneindex="17" vertexindex="610" weight="0.856347"/>
-        <vertexboneassignment boneindex="16" vertexindex="611" weight="0.154864"/>
-        <vertexboneassignment boneindex="17" vertexindex="611" weight="0.836965"/>
-        <vertexboneassignment boneindex="14" vertexindex="612" weight="0.062235"/>
-        <vertexboneassignment boneindex="15" vertexindex="612" weight="0.889714"/>
-        <vertexboneassignment boneindex="16" vertexindex="612" weight="0.044911"/>
-        <vertexboneassignment boneindex="14" vertexindex="613" weight="0.085533"/>
-        <vertexboneassignment boneindex="15" vertexindex="613" weight="0.899825"/>
-        <vertexboneassignment boneindex="4" vertexindex="614" weight="0.026182"/>
-        <vertexboneassignment boneindex="14" vertexindex="614" weight="0.948155"/>
-        <vertexboneassignment boneindex="15" vertexindex="614" weight="0.059301"/>
-        <vertexboneassignment boneindex="14" vertexindex="615" weight="0.085533"/>
-        <vertexboneassignment boneindex="15" vertexindex="615" weight="0.899825"/>
-        <vertexboneassignment boneindex="14" vertexindex="616" weight="0.881132"/>
-        <vertexboneassignment boneindex="15" vertexindex="616" weight="0.101907"/>
-        <vertexboneassignment boneindex="4" vertexindex="617" weight="0.026182"/>
-        <vertexboneassignment boneindex="14" vertexindex="617" weight="0.948155"/>
-        <vertexboneassignment boneindex="15" vertexindex="617" weight="0.059301"/>
-        <vertexboneassignment boneindex="1" vertexindex="618" weight="0.017475"/>
-        <vertexboneassignment boneindex="2" vertexindex="618" weight="0.150087"/>
-        <vertexboneassignment boneindex="14" vertexindex="618" weight="0.805811"/>
-        <vertexboneassignment boneindex="15" vertexindex="618" weight="0.073579"/>
-        <vertexboneassignment boneindex="4" vertexindex="619" weight="0.015350"/>
-        <vertexboneassignment boneindex="14" vertexindex="619" weight="0.934853"/>
-        <vertexboneassignment boneindex="15" vertexindex="619" weight="0.058800"/>
+        <vertexboneassignment boneindex="12" vertexindex="571" weight="0.805811"/>
+        <vertexboneassignment boneindex="14" vertexindex="573" weight="0.910058"/>
+        <vertexboneassignment boneindex="15" vertexindex="574" weight="0.856347"/>
+        <vertexboneassignment boneindex="15" vertexindex="575" weight="0.861146"/>
+        <vertexboneassignment boneindex="13" vertexindex="576" weight="0.868240"/>
+        <vertexboneassignment boneindex="14" vertexindex="577" weight="0.847684"/>
+        <vertexboneassignment boneindex="13" vertexindex="578" weight="0.889204"/>
+        <vertexboneassignment boneindex="12" vertexindex="579" weight="0.881132"/>
+        <vertexboneassignment boneindex="13" vertexindex="580" weight="0.899825"/>
+        <vertexboneassignment boneindex="13" vertexindex="581" weight="0.896390"/>
+        <vertexboneassignment boneindex="16" vertexindex="582" weight="0.925402"/>
+        <vertexboneassignment boneindex="16" vertexindex="583" weight="0.903324"/>
+        <vertexboneassignment boneindex="16" vertexindex="587" weight="0.929856"/>
+        <vertexboneassignment boneindex="14" vertexindex="588" weight="0.847684"/>
+        <vertexboneassignment boneindex="13" vertexindex="589" weight="0.868240"/>
+        <vertexboneassignment boneindex="14" vertexindex="590" weight="0.919663"/>
+        <vertexboneassignment boneindex="14" vertexindex="591" weight="0.919663"/>
+        <vertexboneassignment boneindex="13" vertexindex="592" weight="0.868240"/>
+        <vertexboneassignment boneindex="13" vertexindex="593" weight="0.895332"/>
+        <vertexboneassignment boneindex="13" vertexindex="595" weight="0.896390"/>
+        <vertexboneassignment boneindex="13" vertexindex="596" weight="0.889204"/>
+        <vertexboneassignment boneindex="16" vertexindex="597" weight="0.929856"/>
+        <vertexboneassignment boneindex="16" vertexindex="598" weight="0.933543"/>
+        <vertexboneassignment boneindex="17" vertexindex="599" weight="0.928867"/>
+        <vertexboneassignment boneindex="14" vertexindex="600" weight="0.704585"/>
+        <vertexboneassignment boneindex="15" vertexindex="601" weight="0.836965"/>
+        <vertexboneassignment boneindex="15" vertexindex="602" weight="0.856347"/>
+        <vertexboneassignment boneindex="15" vertexindex="603" weight="0.856347"/>
+        <vertexboneassignment boneindex="14" vertexindex="604" weight="0.910058"/>
+        <vertexboneassignment boneindex="14" vertexindex="605" weight="0.704902"/>
+        <vertexboneassignment boneindex="13" vertexindex="606" weight="0.504011"/>
+        <vertexboneassignment boneindex="14" vertexindex="607" weight="0.704902"/>
+        <vertexboneassignment boneindex="14" vertexindex="608" weight="0.910058"/>
+        <vertexboneassignment boneindex="15" vertexindex="609" weight="0.861146"/>
+        <vertexboneassignment boneindex="15" vertexindex="610" weight="0.856347"/>
+        <vertexboneassignment boneindex="15" vertexindex="611" weight="0.836965"/>
+        <vertexboneassignment boneindex="13" vertexindex="612" weight="0.889714"/>
+        <vertexboneassignment boneindex="13" vertexindex="613" weight="0.899825"/>
+        <vertexboneassignment boneindex="12" vertexindex="614" weight="0.948155"/>
+        <vertexboneassignment boneindex="13" vertexindex="615" weight="0.899825"/>
+        <vertexboneassignment boneindex="12" vertexindex="616" weight="0.881132"/>
+        <vertexboneassignment boneindex="12" vertexindex="617" weight="0.948155"/>
+        <vertexboneassignment boneindex="12" vertexindex="618" weight="0.805811"/>
+        <vertexboneassignment boneindex="12" vertexindex="619" weight="0.934853"/>
         <vertexboneassignment boneindex="2" vertexindex="620" weight="0.727884"/>
-        <vertexboneassignment boneindex="5" vertexindex="620" weight="0.129646"/>
-        <vertexboneassignment boneindex="14" vertexindex="620" weight="0.129646"/>
-        <vertexboneassignment boneindex="16" vertexindex="621" weight="0.134789"/>
-        <vertexboneassignment boneindex="17" vertexindex="621" weight="0.861146"/>
-        <vertexboneassignment boneindex="16" vertexindex="622" weight="0.143059"/>
-        <vertexboneassignment boneindex="17" vertexindex="622" weight="0.853927"/>
-        <vertexboneassignment boneindex="16" vertexindex="623" weight="0.913644"/>
-        <vertexboneassignment boneindex="17" vertexindex="623" weight="0.075086"/>
-        <vertexboneassignment boneindex="0" vertexindex="624" weight="0.052063"/>
-        <vertexboneassignment boneindex="1" vertexindex="624" weight="0.055313"/>
-        <vertexboneassignment boneindex="9" vertexindex="624" weight="0.118350"/>
-        <vertexboneassignment boneindex="18" vertexindex="624" weight="0.925402"/>
-        <vertexboneassignment boneindex="19" vertexindex="624" weight="0.062917"/>
-        <vertexboneassignment boneindex="1" vertexindex="625" weight="0.026790"/>
-        <vertexboneassignment boneindex="18" vertexindex="625" weight="0.062631"/>
-        <vertexboneassignment boneindex="19" vertexindex="625" weight="0.882995"/>
-        <vertexboneassignment boneindex="20" vertexindex="625" weight="0.053745"/>
-        <vertexboneassignment boneindex="1" vertexindex="626" weight="0.026162"/>
-        <vertexboneassignment boneindex="9" vertexindex="626" weight="0.037103"/>
-        <vertexboneassignment boneindex="18" vertexindex="626" weight="0.085324"/>
-        <vertexboneassignment boneindex="19" vertexindex="626" weight="0.861791"/>
-        <vertexboneassignment boneindex="20" vertexindex="626" weight="0.051307"/>
-        <vertexboneassignment boneindex="0" vertexindex="627" weight="0.048434"/>
+        <vertexboneassignment boneindex="15" vertexindex="621" weight="0.861146"/>
+        <vertexboneassignment boneindex="15" vertexindex="622" weight="0.853927"/>
+        <vertexboneassignment boneindex="14" vertexindex="623" weight="0.913644"/>
+        <vertexboneassignment boneindex="16" vertexindex="624" weight="0.925402"/>
+        <vertexboneassignment boneindex="17" vertexindex="625" weight="0.882995"/>
+        <vertexboneassignment boneindex="17" vertexindex="626" weight="0.861791"/>
         <vertexboneassignment boneindex="1" vertexindex="627" weight="0.841141"/>
         <vertexboneassignment boneindex="0" vertexindex="628" weight="0.629632"/>
-        <vertexboneassignment boneindex="1" vertexindex="628" weight="0.138313"/>
-        <vertexboneassignment boneindex="5" vertexindex="628" weight="0.061576"/>
-        <vertexboneassignment boneindex="9" vertexindex="628" weight="0.020489"/>
-        <vertexboneassignment boneindex="18" vertexindex="628" weight="0.113678"/>
-        <vertexboneassignment boneindex="0" vertexindex="629" weight="0.067441"/>
-        <vertexboneassignment boneindex="9" vertexindex="629" weight="0.010006"/>
-        <vertexboneassignment boneindex="18" vertexindex="629" weight="0.045490"/>
-        <vertexboneassignment boneindex="16" vertexindex="630" weight="0.091144"/>
-        <vertexboneassignment boneindex="15" vertexindex="630" weight="0.895332"/>
-        <vertexboneassignment boneindex="14" vertexindex="631" weight="0.085533"/>
-        <vertexboneassignment boneindex="15" vertexindex="631" weight="0.899825"/>
-        <vertexboneassignment boneindex="14" vertexindex="632" weight="0.062235"/>
-        <vertexboneassignment boneindex="15" vertexindex="632" weight="0.889714"/>
-        <vertexboneassignment boneindex="16" vertexindex="632" weight="0.044911"/>
-        <vertexboneassignment boneindex="2" vertexindex="633" weight="0.020278"/>
-        <vertexboneassignment boneindex="3" vertexindex="633" weight="0.050422"/>
+        <vertexboneassignment boneindex="13" vertexindex="630" weight="0.895332"/>
+        <vertexboneassignment boneindex="13" vertexindex="631" weight="0.899825"/>
+        <vertexboneassignment boneindex="13" vertexindex="632" weight="0.889714"/>
         <vertexboneassignment boneindex="4" vertexindex="633" weight="0.852789"/>
         <vertexboneassignment boneindex="4" vertexindex="634" weight="0.929873"/>
         <vertexboneassignment boneindex="4" vertexindex="635" weight="0.946155"/>
         <vertexboneassignment boneindex="4" vertexindex="636" weight="0.946155"/>
         <vertexboneassignment boneindex="4" vertexindex="637" weight="0.962092"/>
         <vertexboneassignment boneindex="4" vertexindex="638" weight="0.876114"/>
-        <vertexboneassignment boneindex="2" vertexindex="639" weight="0.099458"/>
-        <vertexboneassignment boneindex="3" vertexindex="639" weight="0.054196"/>
-        <vertexboneassignment boneindex="4" vertexindex="639" weight="0.487010"/>
-        <vertexboneassignment boneindex="5" vertexindex="639" weight="0.038612"/>
-        <vertexboneassignment boneindex="14" vertexindex="639" weight="0.128307"/>
-        <vertexboneassignment boneindex="2" vertexindex="640" weight="0.134504"/>
-        <vertexboneassignment boneindex="3" vertexindex="640" weight="0.197175"/>
-        <vertexboneassignment boneindex="4" vertexindex="640" weight="0.442466"/>
-        <vertexboneassignment boneindex="14" vertexindex="640" weight="0.159573"/>
-        <vertexboneassignment boneindex="2" vertexindex="641" weight="0.074570"/>
-        <vertexboneassignment boneindex="3" vertexindex="641" weight="0.110706"/>
         <vertexboneassignment boneindex="4" vertexindex="641" weight="0.689670"/>
-        <vertexboneassignment boneindex="14" vertexindex="641" weight="0.045689"/>
-        <vertexboneassignment boneindex="2" vertexindex="642" weight="0.074570"/>
-        <vertexboneassignment boneindex="3" vertexindex="642" weight="0.110706"/>
         <vertexboneassignment boneindex="4" vertexindex="642" weight="0.689670"/>
-        <vertexboneassignment boneindex="14" vertexindex="642" weight="0.045689"/>
-        <vertexboneassignment boneindex="2" vertexindex="643" weight="0.020278"/>
-        <vertexboneassignment boneindex="3" vertexindex="643" weight="0.050422"/>
         <vertexboneassignment boneindex="4" vertexindex="643" weight="0.852789"/>
-        <vertexboneassignment boneindex="2" vertexindex="644" weight="0.099458"/>
-        <vertexboneassignment boneindex="3" vertexindex="644" weight="0.054196"/>
-        <vertexboneassignment boneindex="4" vertexindex="644" weight="0.487010"/>
-        <vertexboneassignment boneindex="5" vertexindex="644" weight="0.038612"/>
-        <vertexboneassignment boneindex="14" vertexindex="644" weight="0.128307"/>
-        <vertexboneassignment boneindex="2" vertexindex="645" weight="0.020278"/>
-        <vertexboneassignment boneindex="3" vertexindex="645" weight="0.050422"/>
         <vertexboneassignment boneindex="4" vertexindex="645" weight="0.852789"/>
         <vertexboneassignment boneindex="4" vertexindex="646" weight="0.876114"/>
-        <vertexboneassignment boneindex="2" vertexindex="647" weight="0.099458"/>
-        <vertexboneassignment boneindex="3" vertexindex="647" weight="0.054196"/>
-        <vertexboneassignment boneindex="4" vertexindex="647" weight="0.487010"/>
-        <vertexboneassignment boneindex="5" vertexindex="647" weight="0.038612"/>
-        <vertexboneassignment boneindex="14" vertexindex="647" weight="0.128307"/>
-        <vertexboneassignment boneindex="1" vertexindex="648" weight="0.028723"/>
-        <vertexboneassignment boneindex="18" vertexindex="648" weight="0.058977"/>
-        <vertexboneassignment boneindex="19" vertexindex="648" weight="0.928867"/>
-        <vertexboneassignment boneindex="1" vertexindex="649" weight="0.040861"/>
-        <vertexboneassignment boneindex="18" vertexindex="649" weight="0.933543"/>
-        <vertexboneassignment boneindex="19" vertexindex="649" weight="0.055943"/>
-        <vertexboneassignment boneindex="1" vertexindex="650" weight="0.027384"/>
-        <vertexboneassignment boneindex="9" vertexindex="650" weight="0.059998"/>
-        <vertexboneassignment boneindex="18" vertexindex="650" weight="0.903324"/>
-        <vertexboneassignment boneindex="19" vertexindex="650" weight="0.049583"/>
-        <vertexboneassignment boneindex="2" vertexindex="651" weight="0.134504"/>
-        <vertexboneassignment boneindex="3" vertexindex="651" weight="0.197175"/>
-        <vertexboneassignment boneindex="4" vertexindex="651" weight="0.442466"/>
-        <vertexboneassignment boneindex="14" vertexindex="651" weight="0.159573"/>
-        <vertexboneassignment boneindex="2" vertexindex="652" weight="0.099458"/>
-        <vertexboneassignment boneindex="3" vertexindex="652" weight="0.054196"/>
-        <vertexboneassignment boneindex="4" vertexindex="652" weight="0.487010"/>
-        <vertexboneassignment boneindex="5" vertexindex="652" weight="0.038612"/>
-        <vertexboneassignment boneindex="14" vertexindex="652" weight="0.128307"/>
-        <vertexboneassignment boneindex="2" vertexindex="653" weight="0.191277"/>
-        <vertexboneassignment boneindex="4" vertexindex="653" weight="0.394120"/>
-        <vertexboneassignment boneindex="5" vertexindex="653" weight="0.089797"/>
-        <vertexboneassignment boneindex="14" vertexindex="653" weight="0.879825"/>
-        <vertexboneassignment boneindex="0" vertexindex="654" weight="0.011919"/>
-        <vertexboneassignment boneindex="16" vertexindex="654" weight="0.116826"/>
-        <vertexboneassignment boneindex="15" vertexindex="654" weight="0.868240"/>
-        <vertexboneassignment boneindex="0" vertexindex="655" weight="0.055448"/>
-        <vertexboneassignment boneindex="2" vertexindex="655" weight="0.020405"/>
-        <vertexboneassignment boneindex="14" vertexindex="655" weight="0.072660"/>
-        <vertexboneassignment boneindex="15" vertexindex="655" weight="0.896390"/>
-        <vertexboneassignment boneindex="14" vertexindex="656" weight="0.085533"/>
-        <vertexboneassignment boneindex="15" vertexindex="656" weight="0.899825"/>
-        <vertexboneassignment boneindex="16" vertexindex="657" weight="0.143059"/>
-        <vertexboneassignment boneindex="17" vertexindex="657" weight="0.853927"/>
-        <vertexboneassignment boneindex="16" vertexindex="658" weight="0.154864"/>
-        <vertexboneassignment boneindex="17" vertexindex="658" weight="0.836965"/>
-        <vertexboneassignment boneindex="17" vertexindex="659" weight="0.254379"/>
-        <vertexboneassignment boneindex="15" vertexindex="659" weight="0.030764"/>
-        <vertexboneassignment boneindex="16" vertexindex="659" weight="0.704902"/>
-        <vertexboneassignment boneindex="0" vertexindex="660" weight="0.052063"/>
-        <vertexboneassignment boneindex="1" vertexindex="660" weight="0.055313"/>
-        <vertexboneassignment boneindex="9" vertexindex="660" weight="0.118350"/>
-        <vertexboneassignment boneindex="18" vertexindex="660" weight="0.925402"/>
-        <vertexboneassignment boneindex="19" vertexindex="660" weight="0.062917"/>
-        <vertexboneassignment boneindex="1" vertexindex="661" weight="0.062356"/>
-        <vertexboneassignment boneindex="18" vertexindex="661" weight="0.929856"/>
-        <vertexboneassignment boneindex="19" vertexindex="661" weight="0.062439"/>
-        <vertexboneassignment boneindex="1" vertexindex="662" weight="0.029885"/>
-        <vertexboneassignment boneindex="18" vertexindex="662" weight="0.053561"/>
-        <vertexboneassignment boneindex="19" vertexindex="662" weight="0.936524"/>
-        <vertexboneassignment boneindex="4" vertexindex="663" weight="0.015350"/>
-        <vertexboneassignment boneindex="14" vertexindex="663" weight="0.934853"/>
-        <vertexboneassignment boneindex="15" vertexindex="663" weight="0.058800"/>
-        <vertexboneassignment boneindex="1" vertexindex="664" weight="0.017475"/>
-        <vertexboneassignment boneindex="2" vertexindex="664" weight="0.150087"/>
-        <vertexboneassignment boneindex="14" vertexindex="664" weight="0.805811"/>
-        <vertexboneassignment boneindex="15" vertexindex="664" weight="0.073579"/>
-        <vertexboneassignment boneindex="2" vertexindex="665" weight="0.044070"/>
-        <vertexboneassignment boneindex="14" vertexindex="665" weight="0.058849"/>
-        <vertexboneassignment boneindex="15" vertexindex="665" weight="0.889204"/>
-        <vertexboneassignment boneindex="16" vertexindex="665" weight="0.041642"/>
-        <vertexboneassignment boneindex="0" vertexindex="666" weight="0.138771"/>
-        <vertexboneassignment boneindex="1" vertexindex="666" weight="0.288450"/>
-        <vertexboneassignment boneindex="2" vertexindex="666" weight="0.017865"/>
-        <vertexboneassignment boneindex="14" vertexindex="666" weight="0.061576"/>
-        <vertexboneassignment boneindex="18" vertexindex="666" weight="0.020489"/>
-        <vertexboneassignment boneindex="9" vertexindex="666" weight="0.113678"/>
-        <vertexboneassignment boneindex="0" vertexindex="667" weight="0.059411"/>
-        <vertexboneassignment boneindex="1" vertexindex="667" weight="0.151725"/>
-        <vertexboneassignment boneindex="9" vertexindex="667" weight="0.045490"/>
-        <vertexboneassignment boneindex="18" vertexindex="667" weight="0.010006"/>
-        <vertexboneassignment boneindex="0" vertexindex="668" weight="0.230934"/>
-        <vertexboneassignment boneindex="1" vertexindex="668" weight="0.093565"/>
-        <vertexboneassignment boneindex="9" vertexindex="668" weight="0.042643"/>
-        <vertexboneassignment boneindex="17" vertexindex="669" weight="0.254379"/>
-        <vertexboneassignment boneindex="15" vertexindex="669" weight="0.030764"/>
-        <vertexboneassignment boneindex="16" vertexindex="669" weight="0.704902"/>
-        <vertexboneassignment boneindex="16" vertexindex="670" weight="0.487534"/>
-        <vertexboneassignment boneindex="15" vertexindex="670" weight="0.504011"/>
-        <vertexboneassignment boneindex="16" vertexindex="671" weight="0.847684"/>
-        <vertexboneassignment boneindex="15" vertexindex="671" weight="0.144145"/>
-        <vertexboneassignment boneindex="14" vertexindex="672" weight="0.062235"/>
-        <vertexboneassignment boneindex="15" vertexindex="672" weight="0.889714"/>
-        <vertexboneassignment boneindex="16" vertexindex="672" weight="0.044911"/>
-        <vertexboneassignment boneindex="2" vertexindex="673" weight="0.044070"/>
-        <vertexboneassignment boneindex="14" vertexindex="673" weight="0.058849"/>
-        <vertexboneassignment boneindex="15" vertexindex="673" weight="0.889204"/>
-        <vertexboneassignment boneindex="16" vertexindex="673" weight="0.041642"/>
-        <vertexboneassignment boneindex="16" vertexindex="674" weight="0.847684"/>
-        <vertexboneassignment boneindex="15" vertexindex="674" weight="0.144145"/>
-        <vertexboneassignment boneindex="1" vertexindex="675" weight="0.011591"/>
-        <vertexboneassignment boneindex="19" vertexindex="675" weight="0.079874"/>
-        <vertexboneassignment boneindex="20" vertexindex="675" weight="0.919165"/>
-        <vertexboneassignment boneindex="1" vertexindex="676" weight="0.013240"/>
-        <vertexboneassignment boneindex="19" vertexindex="676" weight="0.533975"/>
-        <vertexboneassignment boneindex="20" vertexindex="676" weight="0.465220"/>
-        <vertexboneassignment boneindex="1" vertexindex="677" weight="0.015073"/>
-        <vertexboneassignment boneindex="19" vertexindex="677" weight="0.836754"/>
-        <vertexboneassignment boneindex="20" vertexindex="677" weight="0.159634"/>
-        <vertexboneassignment boneindex="1" vertexindex="678" weight="0.026790"/>
-        <vertexboneassignment boneindex="18" vertexindex="678" weight="0.062631"/>
-        <vertexboneassignment boneindex="19" vertexindex="678" weight="0.882995"/>
-        <vertexboneassignment boneindex="20" vertexindex="678" weight="0.053745"/>
-        <vertexboneassignment boneindex="19" vertexindex="679" weight="0.097190"/>
-        <vertexboneassignment boneindex="20" vertexindex="679" weight="0.900225"/>
-        <vertexboneassignment boneindex="1" vertexindex="680" weight="0.013281"/>
-        <vertexboneassignment boneindex="19" vertexindex="680" weight="0.106431"/>
-        <vertexboneassignment boneindex="20" vertexindex="680" weight="0.889478"/>
-        <vertexboneassignment boneindex="1" vertexindex="681" weight="0.011828"/>
-        <vertexboneassignment boneindex="19" vertexindex="681" weight="0.870531"/>
-        <vertexboneassignment boneindex="20" vertexindex="681" weight="0.127084"/>
-        <vertexboneassignment boneindex="19" vertexindex="682" weight="0.097190"/>
-        <vertexboneassignment boneindex="20" vertexindex="682" weight="0.900225"/>
-        <vertexboneassignment boneindex="1" vertexindex="683" weight="0.026790"/>
-        <vertexboneassignment boneindex="18" vertexindex="683" weight="0.062631"/>
-        <vertexboneassignment boneindex="19" vertexindex="683" weight="0.882995"/>
-        <vertexboneassignment boneindex="20" vertexindex="683" weight="0.053745"/>
-        <vertexboneassignment boneindex="1" vertexindex="684" weight="0.028723"/>
-        <vertexboneassignment boneindex="18" vertexindex="684" weight="0.058977"/>
-        <vertexboneassignment boneindex="19" vertexindex="684" weight="0.928867"/>
-        <vertexboneassignment boneindex="1" vertexindex="685" weight="0.015073"/>
-        <vertexboneassignment boneindex="19" vertexindex="685" weight="0.836754"/>
-        <vertexboneassignment boneindex="20" vertexindex="685" weight="0.159634"/>
-        <vertexboneassignment boneindex="1" vertexindex="686" weight="0.011828"/>
-        <vertexboneassignment boneindex="19" vertexindex="686" weight="0.870531"/>
-        <vertexboneassignment boneindex="20" vertexindex="686" weight="0.127084"/>
-        <vertexboneassignment boneindex="1" vertexindex="687" weight="0.015073"/>
-        <vertexboneassignment boneindex="19" vertexindex="687" weight="0.836754"/>
-        <vertexboneassignment boneindex="20" vertexindex="687" weight="0.159634"/>
-        <vertexboneassignment boneindex="1" vertexindex="688" weight="0.013240"/>
-        <vertexboneassignment boneindex="19" vertexindex="688" weight="0.533975"/>
-        <vertexboneassignment boneindex="20" vertexindex="688" weight="0.465220"/>
-        <vertexboneassignment boneindex="19" vertexindex="689" weight="0.531608"/>
-        <vertexboneassignment boneindex="20" vertexindex="689" weight="0.467870"/>
-        <vertexboneassignment boneindex="1" vertexindex="690" weight="0.028723"/>
-        <vertexboneassignment boneindex="18" vertexindex="690" weight="0.058977"/>
-        <vertexboneassignment boneindex="19" vertexindex="690" weight="0.928867"/>
-        <vertexboneassignment boneindex="1" vertexindex="691" weight="0.026162"/>
-        <vertexboneassignment boneindex="9" vertexindex="691" weight="0.037103"/>
-        <vertexboneassignment boneindex="18" vertexindex="691" weight="0.085324"/>
-        <vertexboneassignment boneindex="19" vertexindex="691" weight="0.861791"/>
-        <vertexboneassignment boneindex="20" vertexindex="691" weight="0.051307"/>
-        <vertexboneassignment boneindex="1" vertexindex="692" weight="0.013281"/>
-        <vertexboneassignment boneindex="19" vertexindex="692" weight="0.106431"/>
-        <vertexboneassignment boneindex="20" vertexindex="692" weight="0.889478"/>
-        <vertexboneassignment boneindex="19" vertexindex="693" weight="0.531608"/>
-        <vertexboneassignment boneindex="20" vertexindex="693" weight="0.467870"/>
-        <vertexboneassignment boneindex="19" vertexindex="694" weight="0.062086"/>
-        <vertexboneassignment boneindex="20" vertexindex="694" weight="0.937424"/>
-        <vertexboneassignment boneindex="19" vertexindex="695" weight="0.097190"/>
-        <vertexboneassignment boneindex="20" vertexindex="695" weight="0.900225"/>
-        <vertexboneassignment boneindex="19" vertexindex="696" weight="0.062086"/>
-        <vertexboneassignment boneindex="20" vertexindex="696" weight="0.937424"/>
-        <vertexboneassignment boneindex="9" vertexindex="697" weight="0.011336"/>
-        <vertexboneassignment boneindex="20" vertexindex="697" weight="0.982927"/>
-        <vertexboneassignment boneindex="20" vertexindex="698" weight="0.977836"/>
-        <vertexboneassignment boneindex="1" vertexindex="699" weight="0.011591"/>
-        <vertexboneassignment boneindex="19" vertexindex="699" weight="0.079874"/>
-        <vertexboneassignment boneindex="20" vertexindex="699" weight="0.919165"/>
-        <vertexboneassignment boneindex="19" vertexindex="700" weight="0.062086"/>
-        <vertexboneassignment boneindex="20" vertexindex="700" weight="0.937424"/>
-        <vertexboneassignment boneindex="19" vertexindex="701" weight="0.531608"/>
-        <vertexboneassignment boneindex="20" vertexindex="701" weight="0.467870"/>
-        <vertexboneassignment boneindex="9" vertexindex="702" weight="0.011336"/>
-        <vertexboneassignment boneindex="20" vertexindex="702" weight="0.982927"/>
-        <vertexboneassignment boneindex="1" vertexindex="703" weight="0.010045"/>
-        <vertexboneassignment boneindex="20" vertexindex="703" weight="0.979047"/>
-        <vertexboneassignment boneindex="1" vertexindex="704" weight="0.010490"/>
-        <vertexboneassignment boneindex="20" vertexindex="704" weight="0.972549"/>
-        <vertexboneassignment boneindex="1" vertexindex="705" weight="0.011591"/>
-        <vertexboneassignment boneindex="19" vertexindex="705" weight="0.079874"/>
-        <vertexboneassignment boneindex="20" vertexindex="705" weight="0.919165"/>
-        <vertexboneassignment boneindex="1" vertexindex="706" weight="0.010045"/>
-        <vertexboneassignment boneindex="20" vertexindex="706" weight="0.979047"/>
-        <vertexboneassignment boneindex="9" vertexindex="707" weight="0.011336"/>
-        <vertexboneassignment boneindex="20" vertexindex="707" weight="0.982927"/>
-        <vertexboneassignment boneindex="1" vertexindex="708" weight="0.013281"/>
-        <vertexboneassignment boneindex="19" vertexindex="708" weight="0.106431"/>
-        <vertexboneassignment boneindex="20" vertexindex="708" weight="0.889478"/>
-        <vertexboneassignment boneindex="1" vertexindex="709" weight="0.010490"/>
-        <vertexboneassignment boneindex="20" vertexindex="709" weight="0.972549"/>
-        <vertexboneassignment boneindex="1" vertexindex="710" weight="0.010045"/>
-        <vertexboneassignment boneindex="20" vertexindex="710" weight="0.979047"/>
-        <vertexboneassignment boneindex="20" vertexindex="711" weight="0.977836"/>
-        <vertexboneassignment boneindex="1" vertexindex="712" weight="0.010490"/>
-        <vertexboneassignment boneindex="20" vertexindex="712" weight="0.972549"/>
-        <vertexboneassignment boneindex="1" vertexindex="713" weight="0.013281"/>
-        <vertexboneassignment boneindex="19" vertexindex="713" weight="0.106431"/>
-        <vertexboneassignment boneindex="20" vertexindex="713" weight="0.889478"/>
-        <vertexboneassignment boneindex="1" vertexindex="714" weight="0.017475"/>
-        <vertexboneassignment boneindex="2" vertexindex="714" weight="0.150087"/>
-        <vertexboneassignment boneindex="14" vertexindex="714" weight="0.805811"/>
-        <vertexboneassignment boneindex="15" vertexindex="714" weight="0.073579"/>
-        <vertexboneassignment boneindex="14" vertexindex="715" weight="0.054082"/>
+        <vertexboneassignment boneindex="17" vertexindex="648" weight="0.928867"/>
+        <vertexboneassignment boneindex="16" vertexindex="649" weight="0.933543"/>
+        <vertexboneassignment boneindex="16" vertexindex="650" weight="0.903324"/>
+        <vertexboneassignment boneindex="12" vertexindex="653" weight="0.879825"/>
+        <vertexboneassignment boneindex="13" vertexindex="654" weight="0.868240"/>
+        <vertexboneassignment boneindex="13" vertexindex="655" weight="0.896390"/>
+        <vertexboneassignment boneindex="13" vertexindex="656" weight="0.899825"/>
+        <vertexboneassignment boneindex="15" vertexindex="657" weight="0.853927"/>
+        <vertexboneassignment boneindex="15" vertexindex="658" weight="0.836965"/>
+        <vertexboneassignment boneindex="14" vertexindex="659" weight="0.704902"/>
+        <vertexboneassignment boneindex="16" vertexindex="660" weight="0.925402"/>
+        <vertexboneassignment boneindex="16" vertexindex="661" weight="0.929856"/>
+        <vertexboneassignment boneindex="17" vertexindex="662" weight="0.936524"/>
+        <vertexboneassignment boneindex="12" vertexindex="663" weight="0.934853"/>
+        <vertexboneassignment boneindex="12" vertexindex="664" weight="0.805811"/>
+        <vertexboneassignment boneindex="13" vertexindex="665" weight="0.889204"/>
+        <vertexboneassignment boneindex="14" vertexindex="669" weight="0.704902"/>
+        <vertexboneassignment boneindex="13" vertexindex="670" weight="0.504011"/>
+        <vertexboneassignment boneindex="14" vertexindex="671" weight="0.847684"/>
+        <vertexboneassignment boneindex="13" vertexindex="672" weight="0.889714"/>
+        <vertexboneassignment boneindex="13" vertexindex="673" weight="0.889204"/>
+        <vertexboneassignment boneindex="14" vertexindex="674" weight="0.847684"/>
+        <vertexboneassignment boneindex="18" vertexindex="675" weight="0.919165"/>
+        <vertexboneassignment boneindex="17" vertexindex="676" weight="0.533975"/>
+        <vertexboneassignment boneindex="17" vertexindex="677" weight="0.836754"/>
+        <vertexboneassignment boneindex="17" vertexindex="678" weight="0.882995"/>
+        <vertexboneassignment boneindex="18" vertexindex="679" weight="0.900225"/>
+        <vertexboneassignment boneindex="18" vertexindex="680" weight="0.889478"/>
+        <vertexboneassignment boneindex="17" vertexindex="681" weight="0.870531"/>
+        <vertexboneassignment boneindex="18" vertexindex="682" weight="0.900225"/>
+        <vertexboneassignment boneindex="17" vertexindex="683" weight="0.882995"/>
+        <vertexboneassignment boneindex="17" vertexindex="684" weight="0.928867"/>
+        <vertexboneassignment boneindex="17" vertexindex="685" weight="0.836754"/>
+        <vertexboneassignment boneindex="17" vertexindex="686" weight="0.870531"/>
+        <vertexboneassignment boneindex="17" vertexindex="687" weight="0.836754"/>
+        <vertexboneassignment boneindex="17" vertexindex="688" weight="0.533975"/>
+        <vertexboneassignment boneindex="17" vertexindex="689" weight="0.531608"/>
+        <vertexboneassignment boneindex="17" vertexindex="690" weight="0.928867"/>
+        <vertexboneassignment boneindex="17" vertexindex="691" weight="0.861791"/>
+        <vertexboneassignment boneindex="18" vertexindex="692" weight="0.889478"/>
+        <vertexboneassignment boneindex="17" vertexindex="693" weight="0.531608"/>
+        <vertexboneassignment boneindex="18" vertexindex="694" weight="0.937424"/>
+        <vertexboneassignment boneindex="18" vertexindex="695" weight="0.900225"/>
+        <vertexboneassignment boneindex="18" vertexindex="696" weight="0.937424"/>
+        <vertexboneassignment boneindex="18" vertexindex="697" weight="0.982927"/>
+        <vertexboneassignment boneindex="18" vertexindex="698" weight="0.977836"/>
+        <vertexboneassignment boneindex="18" vertexindex="699" weight="0.919165"/>
+        <vertexboneassignment boneindex="18" vertexindex="700" weight="0.937424"/>
+        <vertexboneassignment boneindex="17" vertexindex="701" weight="0.531608"/>
+        <vertexboneassignment boneindex="18" vertexindex="702" weight="0.982927"/>
+        <vertexboneassignment boneindex="18" vertexindex="703" weight="0.979047"/>
+        <vertexboneassignment boneindex="18" vertexindex="704" weight="0.972549"/>
+        <vertexboneassignment boneindex="18" vertexindex="705" weight="0.919165"/>
+        <vertexboneassignment boneindex="18" vertexindex="706" weight="0.979047"/>
+        <vertexboneassignment boneindex="18" vertexindex="707" weight="0.982927"/>
+        <vertexboneassignment boneindex="18" vertexindex="708" weight="0.889478"/>
+        <vertexboneassignment boneindex="18" vertexindex="709" weight="0.972549"/>
+        <vertexboneassignment boneindex="18" vertexindex="710" weight="0.979047"/>
+        <vertexboneassignment boneindex="18" vertexindex="711" weight="0.977836"/>
+        <vertexboneassignment boneindex="18" vertexindex="712" weight="0.972549"/>
+        <vertexboneassignment boneindex="18" vertexindex="713" weight="0.889478"/>
+        <vertexboneassignment boneindex="12" vertexindex="714" weight="0.805811"/>
         <vertexboneassignment boneindex="2" vertexindex="715" weight="0.859132"/>
-        <vertexboneassignment boneindex="5" vertexindex="715" weight="0.054082"/>
-        <vertexboneassignment boneindex="0" vertexindex="716" weight="0.048434"/>
         <vertexboneassignment boneindex="1" vertexindex="716" weight="0.841141"/>
-        <vertexboneassignment boneindex="2" vertexindex="717" weight="0.074782"/>
         <vertexboneassignment boneindex="5" vertexindex="717" weight="0.805811"/>
-        <vertexboneassignment boneindex="6" vertexindex="717" weight="0.073579"/>
-        <vertexboneassignment boneindex="14" vertexindex="718" weight="0.054082"/>
         <vertexboneassignment boneindex="2" vertexindex="718" weight="0.859132"/>
-        <vertexboneassignment boneindex="5" vertexindex="718" weight="0.054082"/>
         <vertexboneassignment boneindex="2" vertexindex="719" weight="0.727884"/>
-        <vertexboneassignment boneindex="5" vertexindex="719" weight="0.129646"/>
-        <vertexboneassignment boneindex="14" vertexindex="719" weight="0.129646"/>
-        <vertexboneassignment boneindex="0" vertexindex="720" weight="0.048434"/>
         <vertexboneassignment boneindex="1" vertexindex="720" weight="0.841141"/>
-        <vertexboneassignment boneindex="1" vertexindex="721" weight="0.019402"/>
-        <vertexboneassignment boneindex="0" vertexindex="722" weight="0.059411"/>
-        <vertexboneassignment boneindex="1" vertexindex="722" weight="0.151725"/>
-        <vertexboneassignment boneindex="9" vertexindex="722" weight="0.045490"/>
-        <vertexboneassignment boneindex="18" vertexindex="722" weight="0.010006"/>
-        <vertexboneassignment boneindex="0" vertexindex="723" weight="0.059411"/>
-        <vertexboneassignment boneindex="1" vertexindex="723" weight="0.151725"/>
-        <vertexboneassignment boneindex="9" vertexindex="723" weight="0.045490"/>
-        <vertexboneassignment boneindex="18" vertexindex="723" weight="0.010006"/>
-        <vertexboneassignment boneindex="1" vertexindex="724" weight="0.019402"/>
-        <vertexboneassignment boneindex="1" vertexindex="725" weight="0.040861"/>
-        <vertexboneassignment boneindex="18" vertexindex="725" weight="0.933543"/>
-        <vertexboneassignment boneindex="19" vertexindex="725" weight="0.055943"/>
-        <vertexboneassignment boneindex="2" vertexindex="726" weight="0.056522"/>
+        <vertexboneassignment boneindex="16" vertexindex="725" weight="0.933543"/>
         <vertexboneassignment boneindex="4" vertexindex="726" weight="0.760040"/>
-        <vertexboneassignment boneindex="5" vertexindex="726" weight="0.032458"/>
-        <vertexboneassignment boneindex="14" vertexindex="726" weight="0.058972"/>
         <vertexboneassignment boneindex="4" vertexindex="727" weight="0.876114"/>
         <vertexboneassignment boneindex="4" vertexindex="728" weight="0.950329"/>
         <vertexboneassignment boneindex="4" vertexindex="729" weight="0.950329"/>
@@ -6882,145 +5595,34 @@
         <vertexboneassignment boneindex="4" vertexindex="736" weight="0.978044"/>
         <vertexboneassignment boneindex="4" vertexindex="737" weight="0.989776"/>
         <vertexboneassignment boneindex="4" vertexindex="738" weight="0.929873"/>
-        <vertexboneassignment boneindex="2" vertexindex="739" weight="0.020278"/>
-        <vertexboneassignment boneindex="3" vertexindex="739" weight="0.050422"/>
         <vertexboneassignment boneindex="4" vertexindex="739" weight="0.852789"/>
-        <vertexboneassignment boneindex="3" vertexindex="740" weight="0.020246"/>
         <vertexboneassignment boneindex="4" vertexindex="740" weight="0.925493"/>
-        <vertexboneassignment boneindex="3" vertexindex="741" weight="0.020246"/>
         <vertexboneassignment boneindex="4" vertexindex="741" weight="0.925493"/>
-        <vertexboneassignment boneindex="2" vertexindex="742" weight="0.020278"/>
-        <vertexboneassignment boneindex="3" vertexindex="742" weight="0.050422"/>
         <vertexboneassignment boneindex="4" vertexindex="742" weight="0.852789"/>
-        <vertexboneassignment boneindex="2" vertexindex="743" weight="0.074570"/>
-        <vertexboneassignment boneindex="3" vertexindex="743" weight="0.110706"/>
         <vertexboneassignment boneindex="4" vertexindex="743" weight="0.689670"/>
-        <vertexboneassignment boneindex="14" vertexindex="743" weight="0.045689"/>
-        <vertexboneassignment boneindex="2" vertexindex="744" weight="0.134504"/>
-        <vertexboneassignment boneindex="3" vertexindex="744" weight="0.197175"/>
-        <vertexboneassignment boneindex="4" vertexindex="744" weight="0.442466"/>
-        <vertexboneassignment boneindex="14" vertexindex="744" weight="0.159573"/>
-        <vertexboneassignment boneindex="2" vertexindex="745" weight="0.307098"/>
-        <vertexboneassignment boneindex="3" vertexindex="745" weight="0.023377"/>
-        <vertexboneassignment boneindex="4" vertexindex="745" weight="0.188890"/>
-        <vertexboneassignment boneindex="5" vertexindex="745" weight="0.048462"/>
-        <vertexboneassignment boneindex="14" vertexindex="745" weight="0.773777"/>
+        <vertexboneassignment boneindex="12" vertexindex="745" weight="0.773777"/>
         <vertexboneassignment boneindex="2" vertexindex="746" weight="0.836845"/>
-        <vertexboneassignment boneindex="4" vertexindex="746" weight="0.035847"/>
-        <vertexboneassignment boneindex="5" vertexindex="746" weight="0.068122"/>
-        <vertexboneassignment boneindex="14" vertexindex="746" weight="0.068122"/>
-        <vertexboneassignment boneindex="2" vertexindex="747" weight="0.061749"/>
-        <vertexboneassignment boneindex="3" vertexindex="747" weight="0.126443"/>
         <vertexboneassignment boneindex="4" vertexindex="747" weight="0.773333"/>
-        <vertexboneassignment boneindex="2" vertexindex="748" weight="0.074570"/>
-        <vertexboneassignment boneindex="3" vertexindex="748" weight="0.110706"/>
         <vertexboneassignment boneindex="4" vertexindex="748" weight="0.689670"/>
-        <vertexboneassignment boneindex="14" vertexindex="748" weight="0.045689"/>
-        <vertexboneassignment boneindex="2" vertexindex="749" weight="0.134504"/>
-        <vertexboneassignment boneindex="3" vertexindex="749" weight="0.197175"/>
-        <vertexboneassignment boneindex="4" vertexindex="749" weight="0.442466"/>
-        <vertexboneassignment boneindex="14" vertexindex="749" weight="0.159573"/>
-        <vertexboneassignment boneindex="1" vertexindex="750" weight="0.027384"/>
-        <vertexboneassignment boneindex="9" vertexindex="750" weight="0.059998"/>
-        <vertexboneassignment boneindex="18" vertexindex="750" weight="0.903324"/>
-        <vertexboneassignment boneindex="19" vertexindex="750" weight="0.049583"/>
-        <vertexboneassignment boneindex="1" vertexindex="751" weight="0.040861"/>
-        <vertexboneassignment boneindex="18" vertexindex="751" weight="0.933543"/>
-        <vertexboneassignment boneindex="19" vertexindex="751" weight="0.055943"/>
-        <vertexboneassignment boneindex="1" vertexindex="752" weight="0.019402"/>
-        <vertexboneassignment boneindex="0" vertexindex="753" weight="0.230934"/>
-        <vertexboneassignment boneindex="1" vertexindex="753" weight="0.093565"/>
-        <vertexboneassignment boneindex="9" vertexindex="753" weight="0.042643"/>
-        <vertexboneassignment boneindex="0" vertexindex="754" weight="0.256555"/>
-        <vertexboneassignment boneindex="9" vertexindex="754" weight="0.046566"/>
-        <vertexboneassignment boneindex="18" vertexindex="754" weight="0.047961"/>
+        <vertexboneassignment boneindex="16" vertexindex="750" weight="0.903324"/>
+        <vertexboneassignment boneindex="16" vertexindex="751" weight="0.933543"/>
         <vertexboneassignment boneindex="0" vertexindex="755" weight="0.867352"/>
-        <vertexboneassignment boneindex="1" vertexindex="755" weight="0.012512"/>
-        <vertexboneassignment boneindex="0" vertexindex="756" weight="0.012654"/>
-        <vertexboneassignment boneindex="1" vertexindex="756" weight="0.434305"/>
-        <vertexboneassignment boneindex="2" vertexindex="756" weight="0.468758"/>
-        <vertexboneassignment boneindex="1" vertexindex="757" weight="0.034794"/>
-        <vertexboneassignment boneindex="2" vertexindex="757" weight="0.055085"/>
-        <vertexboneassignment boneindex="14" vertexindex="757" weight="0.490769"/>
-        <vertexboneassignment boneindex="15" vertexindex="757" weight="0.432928"/>
-        <vertexboneassignment boneindex="9" vertexindex="758" weight="0.072362"/>
-        <vertexboneassignment boneindex="0" vertexindex="758" weight="0.328847"/>
-        <vertexboneassignment boneindex="1" vertexindex="758" weight="0.123478"/>
-        <vertexboneassignment boneindex="14" vertexindex="758" weight="0.025303"/>
-        <vertexboneassignment boneindex="1" vertexindex="759" weight="0.029381"/>
         <vertexboneassignment boneindex="2" vertexindex="759" weight="0.848349"/>
-        <vertexboneassignment boneindex="5" vertexindex="759" weight="0.034064"/>
-        <vertexboneassignment boneindex="14" vertexindex="759" weight="0.034064"/>
-        <vertexboneassignment boneindex="14" vertexindex="760" weight="0.881132"/>
-        <vertexboneassignment boneindex="15" vertexindex="760" weight="0.101907"/>
-        <vertexboneassignment boneindex="1" vertexindex="761" weight="0.034794"/>
-        <vertexboneassignment boneindex="2" vertexindex="761" weight="0.055085"/>
-        <vertexboneassignment boneindex="14" vertexindex="761" weight="0.490769"/>
-        <vertexboneassignment boneindex="15" vertexindex="761" weight="0.432928"/>
-        <vertexboneassignment boneindex="2" vertexindex="762" weight="0.359165"/>
-        <vertexboneassignment boneindex="4" vertexindex="762" weight="0.047761"/>
-        <vertexboneassignment boneindex="5" vertexindex="762" weight="0.311680"/>
-        <vertexboneassignment boneindex="14" vertexindex="762" weight="0.311680"/>
-        <vertexboneassignment boneindex="2" vertexindex="763" weight="0.191277"/>
-        <vertexboneassignment boneindex="4" vertexindex="763" weight="0.394120"/>
-        <vertexboneassignment boneindex="5" vertexindex="763" weight="0.089797"/>
-        <vertexboneassignment boneindex="14" vertexindex="763" weight="0.879825"/>
-        <vertexboneassignment boneindex="2" vertexindex="764" weight="0.099458"/>
-        <vertexboneassignment boneindex="3" vertexindex="764" weight="0.054196"/>
-        <vertexboneassignment boneindex="4" vertexindex="764" weight="0.487010"/>
-        <vertexboneassignment boneindex="5" vertexindex="764" weight="0.038612"/>
-        <vertexboneassignment boneindex="14" vertexindex="764" weight="0.128307"/>
-        <vertexboneassignment boneindex="3" vertexindex="765" weight="0.023743"/>
+        <vertexboneassignment boneindex="12" vertexindex="760" weight="0.881132"/>
+        <vertexboneassignment boneindex="12" vertexindex="763" weight="0.879825"/>
         <vertexboneassignment boneindex="4" vertexindex="765" weight="0.788578"/>
-        <vertexboneassignment boneindex="5" vertexindex="765" weight="0.128307"/>
-        <vertexboneassignment boneindex="14" vertexindex="765" weight="0.038612"/>
-        <vertexboneassignment boneindex="2" vertexindex="766" weight="0.045410"/>
-        <vertexboneassignment boneindex="4" vertexindex="766" weight="0.032314"/>
         <vertexboneassignment boneindex="5" vertexindex="766" weight="0.879825"/>
-        <vertexboneassignment boneindex="14" vertexindex="766" weight="0.089797"/>
-        <vertexboneassignment boneindex="2" vertexindex="767" weight="0.359165"/>
-        <vertexboneassignment boneindex="4" vertexindex="767" weight="0.047761"/>
-        <vertexboneassignment boneindex="5" vertexindex="767" weight="0.311680"/>
-        <vertexboneassignment boneindex="14" vertexindex="767" weight="0.311680"/>
         <vertexboneassignment boneindex="5" vertexindex="768" weight="0.881132"/>
-        <vertexboneassignment boneindex="6" vertexindex="768" weight="0.101907"/>
         <vertexboneassignment boneindex="5" vertexindex="769" weight="0.948155"/>
-        <vertexboneassignment boneindex="6" vertexindex="769" weight="0.059301"/>
-        <vertexboneassignment boneindex="2" vertexindex="770" weight="0.138481"/>
-        <vertexboneassignment boneindex="4" vertexindex="770" weight="0.049059"/>
         <vertexboneassignment boneindex="5" vertexindex="770" weight="0.773777"/>
-        <vertexboneassignment boneindex="14" vertexindex="770" weight="0.048462"/>
         <vertexboneassignment boneindex="5" vertexindex="771" weight="0.934853"/>
-        <vertexboneassignment boneindex="6" vertexindex="771" weight="0.058800"/>
-        <vertexboneassignment boneindex="2" vertexindex="772" weight="0.045410"/>
-        <vertexboneassignment boneindex="4" vertexindex="772" weight="0.032314"/>
         <vertexboneassignment boneindex="5" vertexindex="772" weight="0.879825"/>
-        <vertexboneassignment boneindex="14" vertexindex="772" weight="0.089797"/>
-        <vertexboneassignment boneindex="2" vertexindex="773" weight="0.138481"/>
-        <vertexboneassignment boneindex="4" vertexindex="773" weight="0.049059"/>
         <vertexboneassignment boneindex="5" vertexindex="773" weight="0.773777"/>
-        <vertexboneassignment boneindex="14" vertexindex="773" weight="0.048462"/>
-        <vertexboneassignment boneindex="2" vertexindex="774" weight="0.307098"/>
-        <vertexboneassignment boneindex="3" vertexindex="774" weight="0.023377"/>
-        <vertexboneassignment boneindex="4" vertexindex="774" weight="0.188890"/>
-        <vertexboneassignment boneindex="5" vertexindex="774" weight="0.048462"/>
-        <vertexboneassignment boneindex="14" vertexindex="774" weight="0.773777"/>
-        <vertexboneassignment boneindex="2" vertexindex="775" weight="0.191277"/>
-        <vertexboneassignment boneindex="4" vertexindex="775" weight="0.394120"/>
-        <vertexboneassignment boneindex="5" vertexindex="775" weight="0.089797"/>
-        <vertexboneassignment boneindex="14" vertexindex="775" weight="0.879825"/>
-        <vertexboneassignment boneindex="4" vertexindex="776" weight="0.015350"/>
-        <vertexboneassignment boneindex="14" vertexindex="776" weight="0.934853"/>
-        <vertexboneassignment boneindex="15" vertexindex="776" weight="0.058800"/>
-        <vertexboneassignment boneindex="2" vertexindex="777" weight="0.307098"/>
-        <vertexboneassignment boneindex="3" vertexindex="777" weight="0.023377"/>
-        <vertexboneassignment boneindex="4" vertexindex="777" weight="0.188890"/>
-        <vertexboneassignment boneindex="5" vertexindex="777" weight="0.048462"/>
-        <vertexboneassignment boneindex="14" vertexindex="777" weight="0.773777"/>
-        <vertexboneassignment boneindex="4" vertexindex="778" weight="0.026182"/>
-        <vertexboneassignment boneindex="14" vertexindex="778" weight="0.948155"/>
-        <vertexboneassignment boneindex="15" vertexindex="778" weight="0.059301"/>
-        <vertexboneassignment boneindex="14" vertexindex="779" weight="0.881132"/>
-        <vertexboneassignment boneindex="15" vertexindex="779" weight="0.101907"/>
+        <vertexboneassignment boneindex="12" vertexindex="774" weight="0.773777"/>
+        <vertexboneassignment boneindex="12" vertexindex="775" weight="0.879825"/>
+        <vertexboneassignment boneindex="12" vertexindex="776" weight="0.934853"/>
+        <vertexboneassignment boneindex="12" vertexindex="777" weight="0.773777"/>
+        <vertexboneassignment boneindex="12" vertexindex="778" weight="0.948155"/>
+        <vertexboneassignment boneindex="12" vertexindex="779" weight="0.881132"/>
     </boneassignments>
 </mesh>
