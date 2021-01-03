@@ -10,11 +10,11 @@ int main(int argc, char* argv[])
 {
     try
     {
-        App app;
-        app.initApp();
+		App* app = App::getInstance();
+        app->initApp();
 
 
-		auto m_pRenderWnd = app.getRenderWindow();
+		auto m_pRenderWnd = app->getRenderWindow();
 
 		size_t hWnd = 0;
 		OIS::ParamList paramList;
@@ -27,10 +27,11 @@ int main(int argc, char* argv[])
 		auto keyboard = static_cast<OIS::Keyboard*>(InputManager->createInputObject(OIS::OISKeyboard, true));
 		auto mouse = static_cast<OIS::Mouse*>(InputManager->createInputObject(OIS::OISMouse, true));
 
-		auto window = app.getRenderWindow();
+		auto window = app->getRenderWindow();
 		auto timer = new Ogre::Timer();
+		auto shouldCloseApplication = false;
 
-		while (!window->isClosed())
+		while (!window->isClosed() && !shouldCloseApplication)
 		{
 			Ogre::Real deltaTime = timer->getMilliseconds()/1000.0F;
 			timer->reset();
@@ -46,17 +47,17 @@ int main(int argc, char* argv[])
 
 			// This update some internal counters and listeners.
 			// Each render surface (window/rtt/mrt) that is 'auto-updated' has got its 'update' function called.
-			app.getRoot()->renderOneFrame();
+			app->getRoot()->renderOneFrame();
 			keyboard->capture();
 			mouse->capture();
 
 			if (keyboard->isKeyDown(OIS::KC_ESCAPE)) {
-				// TODO: exit safely
+				shouldCloseApplication = true;
 			}
 
-			app.update(deltaTime, keyboard, mouse);
+			app->update(deltaTime, keyboard, mouse);
 		}
-        app.closeApp();
+        app->closeApp();
 
     }
     catch (Ogre::Exception& e)

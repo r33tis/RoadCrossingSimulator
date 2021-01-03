@@ -10,6 +10,8 @@
 
 void App::setup(void)
 {
+    gameState = GameState::Playing;
+
     // do not forget to call the base first
     OgreBites::ApplicationContext::setup();
     
@@ -59,8 +61,8 @@ void App::setup(void)
 
     this->characterHandler = CharacterHandler::getInstance();
     this->characterHandler->init(scnMgr);
-    auto player = this->characterHandler->createCharacter<PlayerCharacter>(0, 0, SpaceClamper::getInstance()->clampZ(0.0));
-    player->getMainNode()->yaw(Radian(Degree(180)));
+    this->player = (PlayerCharacter*) this->characterHandler->createCharacter<PlayerCharacter>(0, 0, SpaceClamper::getInstance()->clampZ(0.0));
+    this->player->getMainNode()->yaw(Radian(Degree(180)));
 
     this->laneHandler = LaneHandler::getInstance();
     this->laneHandler->init(scnMgr, laneLength, -worldWidth/2.0, worldWidth/2.0, 0.5, 1.5, 4.0, 8.0, 1, 10);
@@ -76,9 +78,26 @@ void App::setup(void)
 }
 
 void App::update(Real elapsedTime, OIS::Keyboard* keyboard, OIS::Mouse* mouse) {
-    this->characterHandler->update(elapsedTime, keyboard, mouse);
-    this->tileHandler->update(elapsedTime);
-    this->laneHandler->update(elapsedTime, keyboard, mouse);
-    this->cameraHandler->update(elapsedTime, keyboard);
-    this->gameController->update(elapsedTime, keyboard);
+    if (player->getPlayerState() == PlayerState::Lost) {
+        gameState = GameState::Lost;
+    }
+    else if(player->getPlayerState() == PlayerState::Won){
+        gameState = GameState::Won;
+    }
+
+    if (gameState == GameState::Playing) {
+        this->characterHandler->update(elapsedTime, keyboard, mouse);
+        this->tileHandler->update(elapsedTime);
+        this->laneHandler->update(elapsedTime, keyboard, mouse);
+        this->cameraHandler->update(elapsedTime, keyboard);
+        this->gameController->update(elapsedTime, keyboard);
+    }
+    else {
+        if (keyboard->isKeyDown(OIS::KC_SPACE)) {
+            player->setPlayerState(PlayerState::Playing);
+            gameController->resetSky();
+            //gameController->updateScore(0);
+            gameState = GameState::Playing;
+        }
+    }
 }

@@ -36,6 +36,7 @@ public:
 		return &instance;
 	}
 	void init(SceneManager* sceneMgr, Character* quarry, float endTime, float laneLength);
+	void resetSky();
 	void initNumbers();
 	void update(Real elapsedTIme, OIS::Keyboard* input);
 	void updateSky(Real elapsedTime);

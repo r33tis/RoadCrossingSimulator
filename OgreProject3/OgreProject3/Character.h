@@ -36,6 +36,9 @@ public:
     Vector3 getWorldPosition() {
         return mMainNode->_getDerivedPosition();
     }
+    void setWorldPosition(Vector3 pos) {
+        mMainNode->setPosition(pos);
+    }
     AxisAlignedBox getBbox() {
         return this->mMainNode->_getWorldAABB();
     }

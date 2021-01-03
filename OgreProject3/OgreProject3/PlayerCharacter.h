@@ -9,14 +9,23 @@
 using namespace Ogre;
 using namespace std;
 
+enum class PlayerState {
+    Playing,
+    Lost,
+    Won
+};
+
 class PlayerCharacter : public CollidableCharacter {
 protected:
     Vector3 targetPosition;
     Vector3 lastPosition;
     float movementFulfilled;
+    PlayerState playerState;
 public:
     void create(SceneManager* mSceneMgr, float x, float y, float z);
     void update(Real elapsedTime, OIS::Keyboard* keyboard, OIS::Mouse* mouse);
+    PlayerState getPlayerState();
+    void setPlayerState(PlayerState playerState);
 private:
     void initFlashlight();
     void setMoveTarget(int x, int y, int z);

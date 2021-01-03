@@ -37,7 +37,7 @@ public:
 template<class T>
 inline Character* CharacterHandler::createCharacter(float x, float y, float z)
 {
-	Character* object = new T();
+	Character* object = new T;
 	std::ostringstream oss;
 	oss << characterCount;
 	object->_setName(oss.str().c_str());

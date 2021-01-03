@@ -54,7 +54,7 @@ inline Car* LaneHandler::createCar(Lane* lane) {
 
 inline Lane* LaneHandler::createLane(float z)
 {
-	Lane* lane = new Lane();
+	Lane* lane = new Lane;
 
 	lane->z = z;
 
