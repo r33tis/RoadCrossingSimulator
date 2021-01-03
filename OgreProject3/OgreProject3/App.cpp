@@ -8,6 +8,7 @@
 #include <OgreFrameListener.h>
 #include <OgreOverlaySystem.h>
 #include "GameOverScreen.h"
+#include "GameWonScreen.h"
 
 void App::setup(void)
 {
@@ -59,7 +60,7 @@ void App::setup(void)
 
     this->tileHandler = TileHandler::getInstance();
     this->tileHandler->init(scnMgr, 10.0);
-    this->tileHandler->createTiles(-worldWidth / 2.0, worldWidth / 2.0, -worldLength, 6*laneLength);
+    this->tileHandler->createTiles(-worldWidth / 2.0, worldWidth / 2.0, -worldLength + laneLength, 6*laneLength);
 
     this->characterHandler = CharacterHandler::getInstance();
     this->characterHandler->init(scnMgr);
@@ -94,6 +95,7 @@ void App::update(Real elapsedTime, OIS::Keyboard* keyboard, OIS::Mouse* mouse) {
         }
         else if (player->getPlayerState() == PlayerState::Won) {
             gameState = GameState::Won;
+            activeScreen = new GameWonScreen();
         }
         this->characterHandler->update(elapsedTime, keyboard, mouse);
         this->tileHandler->update(elapsedTime);
@@ -101,7 +103,7 @@ void App::update(Real elapsedTime, OIS::Keyboard* keyboard, OIS::Mouse* mouse) {
         this->cameraHandler->update(elapsedTime, keyboard);
         this->gameController->update(elapsedTime, keyboard);
     }
-    else if (gameState == GameState::Lost) {
+    else {
         if (keyboard->isKeyDown(OIS::KC_SPACE)) {
             player->setPlayerState(PlayerState::Playing);
             gameController->reset();

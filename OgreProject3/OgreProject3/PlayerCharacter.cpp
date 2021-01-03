@@ -127,6 +127,10 @@ void PlayerCharacter::update(Real elapsedTime, OIS::Keyboard* keyboard, OIS::Mou
         std::cout << "PLAYER DIED!\n";
         playerState = PlayerState::Lost;
     }
+    if (playerState == PlayerState::Playing && this->getZ() <= topBound) {
+        std::cout << "PLAYER WON!\n";
+        playerState = PlayerState::Won;
+    }
 }
 
 PlayerState PlayerCharacter::getPlayerState()

@@ -156,6 +156,7 @@
     <ClCompile Include="DummyCharacter.cpp" />
     <ClCompile Include="GameController.cpp" />
     <ClCompile Include="GameOverScreen.cpp" />
+    <ClCompile Include="GameWonScreen.cpp" />
     <ClCompile Include="Lane.cpp" />
     <ClCompile Include="LaneHandler.cpp" />
     <ClCompile Include="OgreProject3.cpp" />
@@ -175,6 +176,7 @@
     <ClInclude Include="CollidableCharacter.h" />
     <ClInclude Include="DummyCharacter.h" />
     <ClInclude Include="GameOverScreen.h" />
+    <ClInclude Include="GameWonScreen.h" />
     <ClInclude Include="Screen.h" />
     <ClInclude Include="SpaceClamper.h" />
     <ClInclude Include="Lane.h" />

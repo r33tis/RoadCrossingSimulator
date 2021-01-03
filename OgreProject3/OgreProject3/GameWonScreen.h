@@ -6,9 +6,9 @@
 #include <OgreApplicationContext.h> 
 #include "Screen.h"
 
-class GameOverScreen : public Screen
+class GameWonScreen : public Screen
 {
 public:
-	GameOverScreen();
+	GameWonScreen();
 };
 
