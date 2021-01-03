@@ -6,7 +6,7 @@ void TileHandler::init(SceneManager* sceneMgr, float tileSize) {
 	this->sceneMgr = sceneMgr;
 	this->tiles = std::vector<Ogre::SceneNode*>();
 	this->gen = std::mt19937(rd());
-	this->threeDis = std::uniform_int_distribution<>(0, 2);
+	this->twoDis = std::uniform_int_distribution<>(0, 1);
 
 	auto textureManager = TextureManager::getSingletonPtr();
 
@@ -60,7 +60,6 @@ void TileHandler::createTiles(float x0, float x1, float z0, float z1) {
 		std::cout << "attempted to create grid with invalid shape\n";
 		return;
 	}
-	
 
 	float z = z0;
 	while (z < z1) {
@@ -80,6 +79,13 @@ void TileHandler::createTiles(float x0, float x1, float z0, float z1) {
 	auto textureName = "environmentColors.png";
 	float m_x = SpaceClamper::getInstance()->clampX((x0 + x1) / 2);
 
+	const char* meshName;
+	meshName = "Road_Lane";
+	std::string buf(meshName);
+	buf.append(".mesh");
+	Entity* envEntity = sceneMgr->createEntity("ruling_stick", buf);
+	Ogre::Real ratio = (2 * tileSize) / envEntity->getBoundingBox().getSize().z;
+		
 	// University
 	for (int i = -1; i <= 1; i++) {
 		if (i == 0) {
@@ -91,10 +97,11 @@ void TileHandler::createTiles(float x0, float x1, float z0, float z1) {
 			Ogre::SceneNode* university = sceneMgr->getRootSceneNode()->createChildSceneNode();
 			university->rotate(Vector3::UNIT_Y, Degree(180));
 			university->attachObject(uniEntity);
+			university->setScale(ratio, ratio, ratio);
 			university->setPosition(
-				m_x + Ogre::Real(i) * uniEntity->getBoundingBox().getSize().x,
+				m_x + Ogre::Real(i) * uniEntity->getBoundingBox().getSize().x * ratio,
 				0.0,
-				z0 - uniEntity->getBoundingBox().getHalfSize().z - Ogre::Real(2.5)
+				z0 - uniEntity->getBoundingBox().getHalfSize().z * ratio
 			);
 		}
 		else {
@@ -106,10 +113,11 @@ void TileHandler::createTiles(float x0, float x1, float z0, float z1) {
 			Ogre::SceneNode* antiversity = sceneMgr->getRootSceneNode()->createChildSceneNode();
 			antiversity->rotate(Vector3::UNIT_Y, Degree(180));
 			antiversity->attachObject(antiEntity);
+			antiversity->setScale(ratio, ratio, ratio);
 			antiversity->setPosition(
-				m_x + Ogre::Real(i) * antiEntity->getBoundingBox().getSize().x,
+				m_x + Ogre::Real(i) * antiEntity->getBoundingBox().getSize().x * ratio,
 				0.0,
-				z0 - antiEntity->getBoundingBox().getHalfSize().z - Ogre::Real(2.5)
+				z0 - antiEntity->getBoundingBox().getHalfSize().z * ratio
 			);
 		}
 	}
@@ -124,10 +132,11 @@ void TileHandler::createTiles(float x0, float x1, float z0, float z1) {
 		Ogre::SceneNode* antiversity = sceneMgr->getRootSceneNode()->createChildSceneNode();
 		antiversity->rotate(Vector3::UNIT_Y, Degree(180));
 		antiversity->attachObject(antiEntity);
+		antiversity->setScale(ratio, ratio, ratio);
 		antiversity->setPosition(
-			m_x + Ogre::Real(i) * antiEntity->getBoundingBox().getSize().x,
+			m_x + Ogre::Real(i) * antiEntity->getBoundingBox().getSize().x * ratio,
 			0.0,
-			z1 + tileSize
+			z1 - tileSize - 1.5
 		);
 	}
 }
@@ -137,12 +146,11 @@ void TileHandler::createPauseLane(float x0, float x1, float z) {
 	ResourceGroupManager& resMng = ResourceGroupManager::getSingleton();
 
 	const char* meshName;
-	int v = threeDis(gen);
+	int v = twoDis(gen);
 	switch (v) {
-	case 0: meshName = "Grass_Lane"; break;
-	case 1: meshName = "2_Tree_Lane"; break;
-	case 2: meshName = "3_Tree_Lane"; break;
-	default: meshName = "Grass_Lane"; break;
+	case 0: meshName = "2_Tree_Lane"; break;
+	case 1: meshName = "3_Tree_Lane"; break;
+	default: meshName = "2_Tree_Lane"; break;
 	}
 	auto textureName = "environmentColors.png";
 	std::string buf(meshName);

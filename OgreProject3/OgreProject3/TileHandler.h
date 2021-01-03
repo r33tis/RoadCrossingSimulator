@@ -16,7 +16,7 @@ private:
 	Ogre::MaterialPtr tileMaterial;
 	std::random_device rd;
 	std::mt19937 gen;
-	std::uniform_int_distribution<> threeDis;
+	std::uniform_int_distribution<> twoDis;
 	TileHandler() {};
 public:
 	static TileHandler* getInstance() {

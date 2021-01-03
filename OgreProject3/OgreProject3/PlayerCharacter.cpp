@@ -3,14 +3,11 @@
 #include <OgreLight.h>
 #include <sstream>
 #include "Car.h"
-#include "App.h"
 
 void PlayerCharacter::create(SceneManager* sceneMgr, float x, float y, float z) {
     mSceneMgr = sceneMgr;
     mMainNode = mSceneMgr->getRootSceneNode()->createChildSceneNode(mName);
     mMainNode->translate(Vector3(x, y, z));
-
-    this->playerState = PlayerState::Playing;
 
     this->loadModel("Student", "studentColors.png");
     mEntity->setCastShadows(true);
@@ -87,49 +84,49 @@ float easeInOutQuad(float t) {
 
 
 void PlayerCharacter::update(Real elapsedTime, OIS::Keyboard* keyboard, OIS::Mouse* mouse) {
-    if (playerState == PlayerState::Playing) {
-        // Cheat ahead
-        if (movementFulfilled >= 0.7) {
-            mMainNode->setPosition(targetPosition);
-            lastPosition = this->getWorldPosition();
-            if (keyboard->isKeyDown(OIS::KC_W)) {
-                setMoveTarget(0, 0, -1);
-            }
-            if (keyboard->isKeyDown(OIS::KC_S)) {
-                setMoveTarget(0, 0, 1);
-            }
-            if (keyboard->isKeyDown(OIS::KC_A)) {
-                setMoveTarget(-1, 0, 0);
-            }
-            if (keyboard->isKeyDown(OIS::KC_D)) {
-                setMoveTarget(1, 0, 0);
-            }
+    if (this->placeMeeting<Car>(0, 0)) {
+        //std::cout << "collision!\n";
+        //auto startPos = Vector3(0, 0, 0);
+        //lastPosition = startPos;
+        //targetPosition = startPos;
+        //mMainNode->setPosition(Vector3(0, 0, 0));
+    }
+    // Cheat ahead
+    if (movementFulfilled >= 0.7) {
+        mMainNode->setPosition(targetPosition);
+        lastPosition = this->getWorldPosition();
+        if (keyboard->isKeyDown(OIS::KC_W)) {
+            setMoveTarget(0, 0, -1);
         }
-        else {
-            auto state = mEntity->getAnimationState("Walk");
-            state->addTime(0.1);
-            auto position = lastPosition + (targetPosition - lastPosition) * easeInOutQuad(movementFulfilled);
-            position.y = (0.5 - std::abs(0.5 - easeInOutQuad(movementFulfilled))) * 4.0;
-
-            mMainNode->setPosition(position);
-            auto lookAtPosition = targetPosition;
-            lookAtPosition.y = position.y;
-
-            Quaternion o = flashlightNode->_getDerivedOrientation();
-            mMainNode->lookAt(lookAtPosition, Ogre::Node::TS_WORLD, -Ogre::Vector3::UNIT_Z);
-            flashlightNode->_setDerivedOrientation(o);
-
-            movementFulfilled += 0.15;
+        if (keyboard->isKeyDown(OIS::KC_S)) {
+            setMoveTarget(0, 0, 1);
         }
-
-        int shiftX = mouse->getMouseState().X.rel;
-        flashlightNode->yaw(Radian(-shiftX * elapsedTime * 0.1));
-
-        if (this->placeMeeting<Car>(0, 0)) {
-            std::cout << "PLAYER DIED!\n";
-            playerState = PlayerState::Lost;
+        if (keyboard->isKeyDown(OIS::KC_A)) {
+            setMoveTarget(-1, 0, 0);
+        }
+        if (keyboard->isKeyDown(OIS::KC_D)) {
+            setMoveTarget(1, 0, 0);
         }
     }
+    else {
+        auto state = mEntity->getAnimationState("Walk");
+        state->addTime(0.1);
+        auto position = lastPosition + (targetPosition - lastPosition) * easeInOutQuad(movementFulfilled);
+        position.y = (0.5 - std::abs(0.5 - easeInOutQuad(movementFulfilled))) * 4.0;
+        
+        mMainNode->setPosition(position);
+        auto lookAtPosition = targetPosition;
+        lookAtPosition.y = position.y;
+
+        Quaternion o = flashlightNode->_getDerivedOrientation();
+        mMainNode->lookAt(lookAtPosition, Ogre::Node::TS_WORLD, -Ogre::Vector3::UNIT_Z);
+        flashlightNode->_setDerivedOrientation(o);
+
+        movementFulfilled += elapsedTime * 3;
+    }
+    
+    int shiftX = mouse->getMouseState().X.rel;
+    flashlightNode->yaw(Radian(-shiftX * elapsedTime * 0.1));
 }
 
 PlayerState PlayerCharacter::getPlayerState()
@@ -147,4 +144,3 @@ void PlayerCharacter::setPlayerState(PlayerState playerState)
     }
     this->playerState = playerState;
 }
-
