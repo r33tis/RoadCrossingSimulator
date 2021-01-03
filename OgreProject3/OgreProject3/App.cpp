@@ -28,7 +28,8 @@ void App::setup(void)
     scnMgr->setShadowTextureSettings(2048, 6);
     scnMgr->setShadowTechnique(ShadowTechnique::SHADOWTYPE_TEXTURE_ADDITIVE);
     scnMgr->setShadowTextureSelfShadow(true);
-
+    scnMgr->setAmbientLight(Ogre::ColourValue(0.7, 0.5, 0.5));
+    
     // add resource folder to resourcegroupmanager
     Ogre::ResourceGroupManager::getSingleton().addResourceLocation("resources", "FileSystem");
     Ogre::ResourceGroupManager::getSingleton().addResourceLocation("resources/environment", "FileSystem");
@@ -75,6 +76,7 @@ void App::setup(void)
     this->cameraHandler->init(scnMgr, player, 1.0);
     auto cam = this->cameraHandler->createCamera();
     getRenderWindow()->addViewport(cam);
+    cam->setAutoAspectRatio(true);
 
     this->gameController = GameController::getInstance();
     this->gameController->init(scnMgr, player, dayTime, laneLength);
