@@ -31,14 +31,9 @@ void GameController::init(SceneManager* sceneMgr, Character* quarry, float endTi
 }
 
 void GameController::resetSky() {
+	std::cout << "reseting sky!\n";
+	updateSky(-time);
 	this->time = 0.0;
-	this->sky->setDiffuseColour(Ogre::ColourValue(1.0, 1.0, 1.0));
-	this->sky->setSpecularColour(Ogre::ColourValue(1.0, 1.0, 1.0));
-	this->skyNode->pitch(Radian(Degree(0)));
-	this->skyNode->roll(Radian(Degree(0)));
-	this->skyNode->yaw(Radian(Degree(0)));
-	this->skyNode->setDirection(Vector3(0, -1, 0));
-
 }
 
 void GameController::initNumbers() {
