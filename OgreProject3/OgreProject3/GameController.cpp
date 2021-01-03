@@ -82,9 +82,6 @@ void GameController::update(Real elapsedTime, OIS::Keyboard* keyboard) {
 	time += elapsedTime * mod;
 	ticker -= elapsedTime;
 
-	//TODO: Replace score with UI and stop printing out time.
-	//std::cout << "Time: "<< time << "/" << endTime << "\t" << "Score: " << bestDistance << "\n";
-
 	int distance = (-quarry->getZ() / laneLength);
 	if (distance > bestDistance) {
 		bestDistance = distance;

@@ -51,7 +51,7 @@ void App::setup(void)
 
     scnMgr->showBoundingBoxes(false);
 
-    float dayTime = 160.0;
+    float dayTime = 90.0;
     float worldWidth = 240.0;
     float worldLength = 1200.0;
     float laneLength = 10.0;
@@ -78,6 +78,7 @@ void App::setup(void)
     auto cam = this->cameraHandler->createCamera();
     getRenderWindow()->addViewport(cam);
     cam->setAutoAspectRatio(true);
+    
 
     this->gameController = GameController::getInstance();
     this->gameController->init(scnMgr, player, dayTime, laneLength);
