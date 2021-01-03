@@ -123,7 +123,7 @@ void PlayerCharacter::update(Real elapsedTime, OIS::Keyboard* keyboard, OIS::Mou
     int shiftX = mouse->getMouseState().X.rel;
     flashlightNode->yaw(Radian(-shiftX * elapsedTime * 0.1));
 
-    if (this->placeMeeting<Car>(0, 0)) {
+    if (playerState == PlayerState::Playing && this->placeMeeting<Car>(0, 0)) {
         std::cout << "PLAYER DIED!\n";
         playerState = PlayerState::Lost;
     }
@@ -136,6 +136,7 @@ PlayerState PlayerCharacter::getPlayerState()
 
 void PlayerCharacter::setPlayerState(PlayerState playerState)
 {
+    this->playerState = playerState;
     if (playerState == PlayerState::Playing) {
         auto newPos = Vector3(0, 0, 0);
         this->setWorldPosition(newPos);

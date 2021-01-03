@@ -101,10 +101,9 @@ inline void LaneHandler::createLanes(int n)
 		float z0 = SpaceClamper::getInstance()->clampZ(-float(i) * laneLength);
 		float z1 = SpaceClamper::getInstance()->clampZ(-float(i + 1) * laneLength);
 		if (lanesUntilPause <= 0) {
-			// Would a pause lane still be a lane, just of a different kind?
 			TileHandler::getInstance()->createPauseLane(leftBound, rightBound, z0);
-			
-			lanesUntilPause = pauseDis(gen);
+			lanesUntilPause = pauseDis(gen) * ((float)(i + n/2) / (float)(n + n/2));
+			if (lanesUntilPause <= 0) { lanesUntilPause = 1; }
 		}
 		else {
 			TileHandler::getInstance()->createRoadLanes(leftBound, rightBound, z0, z1);
