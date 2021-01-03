@@ -1,9 +1,30 @@
-21:08:15: Creating resource group General
-21:08:15: Creating resource group OgreInternal
-21:08:15: Creating resource group OgreAutodetect
-21:08:15: Registering ResourceManager for type Material
-21:08:15: Registering ResourceManager for type Skeleton
-21:08:15: Registering ResourceManager for type Mesh
-21:08:15: Unregistering ResourceManager for type Mesh
-21:08:15: Unregistering ResourceManager for type Skeleton
-21:08:15: Unregistering ResourceManager for type Material
+21:58:05: Creating resource group General
+21:58:05: Creating resource group OgreInternal
+21:58:05: Creating resource group OgreAutodetect
+21:58:05: Registering ResourceManager for type Material
+21:58:05: Registering ResourceManager for type Skeleton
+21:58:05: Registering ResourceManager for type Mesh
+21:58:05: Skeleton: Loading Cube.skeleton
+21:58:05: Error: Unable to load skeleton 'Cube.skeleton' for Mesh 'conversion'. This Mesh will not be animated. You can ignore this message if you are using an offline tool.
+21:58:05: MeshSerializer writing mesh data to stream C:\Users\eston\Documents\GitHub\RoadCrossingSimulator2\Media\Models\Student\Cube.mesh...
+21:58:05: File header written.
+21:58:05: Writing mesh data...
+21:58:05: Writing submesh...
+21:58:05: Exporting submesh texture aliases...
+21:58:05: Submesh texture aliases exported.
+21:58:05: Submesh exported.
+21:58:05: Exporting skeleton link...
+21:58:05: Skeleton link exported.
+21:58:05: Exporting shared geometry bone assignments...
+21:58:05: Shared geometry bone assignments exported.
+21:58:05: Exporting bounds information....
+21:58:05: Bounds information exported.
+21:58:05: Exporting submesh name table...
+21:58:05: Submesh name table exported.
+21:58:05: Exporting edge lists...
+21:58:05: Edge lists exported
+21:58:05: Mesh data exported.
+21:58:05: MeshSerializer export successful.
+21:58:05: Unregistering ResourceManager for type Mesh
+21:58:05: Unregistering ResourceManager for type Skeleton
+21:58:05: Unregistering ResourceManager for type Material

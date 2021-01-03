@@ -13,6 +13,7 @@ void Car::create(SceneManager* sceneMgr, float x, float y, float z) {
     std::vector< std::vector<const char*> > choices;
     choices.push_back(std::vector<const char*> { "Car", "carColors.png" });
     choices.push_back(std::vector<const char*> { "Jeep", "jeepColors.png" });
+    choices.push_back(std::vector<const char*> { "Car", "carColors.png" });
     choices.push_back(std::vector<const char*> { "Lorry", "lorryColors.png" });
 
     std::vector<std::vector<const char*>>::iterator randIt = choices.begin();
