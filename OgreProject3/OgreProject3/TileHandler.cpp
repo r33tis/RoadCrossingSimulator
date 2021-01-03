@@ -76,30 +76,60 @@ void TileHandler::createTiles(float x0, float x1, float z0, float z1) {
 		z += tileSize;
 	}
 
-	// LOAD TERRAIN MODEL
 	ResourceGroupManager& resMng = ResourceGroupManager::getSingleton();
-
-
-	// EXAMPLE ON HOW TO SPAWN UNIVErSITY
-	const char* meshName = "University";
 	auto textureName = "environmentColors.png";
+	float m_x = SpaceClamper::getInstance()->clampX((x0 + x1) / 2);
 
-	std::string buf(meshName);
-	buf.append(".mesh");
+	// University
+	for (int i = -1; i <= 1; i++) {
+		if (i == 0) {
+			const char* uniMeshName = "University";
+			std::string uBuf(uniMeshName);
+			uBuf.append(".mesh");
+			Entity* uniEntity = sceneMgr->createEntity("u" + std::to_string(i), uBuf);
+			uniEntity->setCastShadows(false);
+			Ogre::SceneNode* university = sceneMgr->getRootSceneNode()->createChildSceneNode();
+			university->rotate(Vector3::UNIT_Y, Degree(180));
+			university->attachObject(uniEntity);
+			university->setPosition(
+				m_x + Ogre::Real(i) * uniEntity->getBoundingBox().getSize().x,
+				0.0,
+				z0 - uniEntity->getBoundingBox().getHalfSize().z - Ogre::Real(2.5)
+			);
+		}
+		else {
+			const char* antiMeshName = "Grass_Lane";
+			std::string aBuf(antiMeshName);
+			aBuf.append(".mesh");
+			Entity* antiEntity = sceneMgr->createEntity("u" + std::to_string(i), aBuf);
+			antiEntity->setCastShadows(false);
+			Ogre::SceneNode* antiversity = sceneMgr->getRootSceneNode()->createChildSceneNode();
+			antiversity->rotate(Vector3::UNIT_Y, Degree(180));
+			antiversity->attachObject(antiEntity);
+			antiversity->setPosition(
+				m_x + Ogre::Real(i) * antiEntity->getBoundingBox().getSize().x,
+				0.0,
+				z0 - antiEntity->getBoundingBox().getHalfSize().z - Ogre::Real(2.5)
+			);
+		}
+	}
 
-
-	Entity* envEntity = sceneMgr->createEntity("University", buf);
-	envEntity->setCastShadows(false);
-
-	Ogre::SceneNode* university = sceneMgr->getRootSceneNode()->createChildSceneNode();
-
-	university->rotate(Vector3::UNIT_Y, Degree(180));
-	university->attachObject(envEntity);
-	university->setPosition(
-		SpaceClamper::getInstance()->clampX((x0 + x1) / 2),
-		0.0,
-		z0 - envEntity->getBoundingBox().getHalfSize().z
-	);
+	// Antiversity
+	for (int i = -1; i <= 1; i++) {
+		const char* antiMeshName = "Grass_Lane";
+		std::string aBuf(antiMeshName);
+		aBuf.append(".mesh");
+		Entity* antiEntity = sceneMgr->createEntity("a" + std::to_string(i), aBuf);
+		antiEntity->setCastShadows(false);
+		Ogre::SceneNode* antiversity = sceneMgr->getRootSceneNode()->createChildSceneNode();
+		antiversity->rotate(Vector3::UNIT_Y, Degree(180));
+		antiversity->attachObject(antiEntity);
+		antiversity->setPosition(
+			m_x + Ogre::Real(i) * antiEntity->getBoundingBox().getSize().x,
+			0.0,
+			z1 + tileSize
+		);
+	}
 }
 
 void TileHandler::createPauseLane(float x0, float x1, float z) {
@@ -119,8 +149,9 @@ void TileHandler::createPauseLane(float x0, float x1, float z) {
 	buf.append(".mesh");
 
 	float x = x0;
+	float x_end = x1;
 	bool first = true;
-	while (x < x1) {
+	while (x < x_end) {
 		Entity* envEntity = sceneMgr->createEntity("PauseLane_" + std::to_string(z) + "_" + std::to_string(x), buf);
 		envEntity->setCastShadows(false);
 		Ogre::Real ratio = tileSize / envEntity->getBoundingBox().getSize().z;
@@ -131,6 +162,7 @@ void TileHandler::createPauseLane(float x0, float x1, float z) {
 		lane->attachObject(envEntity);
 		if (first) {
 			x -= envEntity->getBoundingBox().getHalfSize().x * ratio;
+			x_end += envEntity->getBoundingBox().getHalfSize().x * ratio;
 			first = false;
 		}
 		lane->setPosition(
@@ -154,9 +186,10 @@ void TileHandler::createRoadLanes(float x0, float x1, float z0, float z1) {
 
 
 	float x = x0;
+	float x_end = x1;
 	float z = (SpaceClamper::getInstance()->clampZ(z0) + SpaceClamper::getInstance()->clampZ(z1)) / 2.0;
 	bool first = true;
-	while (x < x1) {
+	while (x < x_end) {
 		Entity* envEntity = sceneMgr->createEntity("RoadLane_" + std::to_string(z) + "_" + std::to_string(x), buf);
 		envEntity->setCastShadows(false);
 		Ogre::Real ratio = (2 * tileSize) / envEntity->getBoundingBox().getSize().z;
@@ -167,6 +200,7 @@ void TileHandler::createRoadLanes(float x0, float x1, float z0, float z1) {
 		lane->attachObject(envEntity);
 		if (first) {
 			x -= envEntity->getBoundingBox().getHalfSize().x * ratio;
+			x_end += envEntity->getBoundingBox().getHalfSize().x * ratio;
 			first = false;
 		}
 		lane->setPosition(

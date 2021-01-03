@@ -21,6 +21,7 @@ protected:
 	OIS::InputManager* InputManager;
 	OIS::Keyboard* Keyboard;
 	OIS::Mouse* Mouse;
+	bool inited;
 public:
 	void setup(void);
 	void update(Real elapsedTime, OIS::Keyboard* keyboard, OIS::Mouse* mouse);

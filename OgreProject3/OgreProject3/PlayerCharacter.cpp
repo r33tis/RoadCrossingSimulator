@@ -26,6 +26,13 @@ void PlayerCharacter::create(SceneManager* sceneMgr, float x, float y, float z) 
     movementFulfilled = 0.0;
 }
 
+void PlayerCharacter::init(float leftBound, float rightBound, float botBound, float topBound) {
+    this->leftBound = leftBound;
+    this->rightBound = rightBound;
+    this->botBound = botBound;
+    this->topBound = topBound;
+}
+
 void PlayerCharacter::initFlashlight() {
     Light* ambientLight = this->mSceneMgr->createLight("ambientLight");
     ambientLight->setDiffuseColour(0.09, 0.085, 0.08);
@@ -58,7 +65,17 @@ void PlayerCharacter::setMoveTarget(int offx, int offy, int offz) {
     targetPosition.x = round(getX() / tileSize) * tileSize + offx * tileSize;
     targetPosition.y = round(getY() / tileSize) * tileSize + offy * tileSize;
     targetPosition.z = round(getZ() / tileSize) * tileSize + offz * tileSize;
-    movementFulfilled = 0.0;
+
+    if (targetPosition.x < leftBound ||
+        targetPosition.x > rightBound ||
+        targetPosition.z < topBound ||
+        targetPosition.z > botBound)
+    {
+        targetPosition = lastPosition;
+    } else {
+        movementFulfilled = 0.0;
+    }
+
 }
 
 float easeInOutQuad(float t) {

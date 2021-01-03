@@ -14,9 +14,14 @@ protected:
     Vector3 targetPosition;
     Vector3 lastPosition;
     float movementFulfilled;
+    float leftBound;
+    float rightBound;
+    float botBound;
+    float topBound;
 public:
     void create(SceneManager* mSceneMgr, float x, float y, float z);
     void update(Real elapsedTime, OIS::Keyboard* keyboard, OIS::Mouse* mouse);
+    void init(float leftBound, float rightBound, float botBound, float topBound);
 private:
     void initFlashlight();
     void setMoveTarget(int x, int y, int z);

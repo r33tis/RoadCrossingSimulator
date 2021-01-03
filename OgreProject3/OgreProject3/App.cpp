@@ -16,6 +16,8 @@ void App::setup(void)
     // register for input events
     addInputListener(this);
 
+    inited = false;
+
     // get a pointer to the already created root
     Ogre::Root* root = getRoot();
     Ogre::SceneManager* scnMgr = root->createSceneManager();
@@ -59,11 +61,12 @@ void App::setup(void)
 
     this->characterHandler = CharacterHandler::getInstance();
     this->characterHandler->init(scnMgr);
-    auto player = this->characterHandler->createCharacter<PlayerCharacter>(0, 0, SpaceClamper::getInstance()->clampZ(0.0));
+    auto player = this->characterHandler->createCharacter<PlayerCharacter>(0, 0, 0);
     player->getMainNode()->yaw(Radian(Degree(180)));
+    static_cast<PlayerCharacter*>(player)->init(-worldWidth / 2.0, worldWidth / 2.0, laneLength, -worldLength);
 
     this->laneHandler = LaneHandler::getInstance();
-    this->laneHandler->init(scnMgr, laneLength, -worldWidth/2.0, worldWidth/2.0, 0.5, 1.5, 4.0, 8.0, 1, 10);
+    this->laneHandler->init(scnMgr, laneLength, -worldWidth / 2.0, worldWidth / 2.0, 0.5, 1.5, 4.0, 8.0, 1, 10);
     this->laneHandler->createLanes(worldLength / laneLength);
 
     this->cameraHandler = CameraHandler::getInstance();
@@ -73,9 +76,14 @@ void App::setup(void)
 
     this->gameController = GameController::getInstance();
     this->gameController->init(scnMgr, player, dayTime, laneLength);
+
+    inited = true;
 }
 
 void App::update(Real elapsedTime, OIS::Keyboard* keyboard, OIS::Mouse* mouse) {
+    if (!inited) {
+        return;
+    }
     this->characterHandler->update(elapsedTime, keyboard, mouse);
     this->tileHandler->update(elapsedTime);
     this->laneHandler->update(elapsedTime, keyboard, mouse);
